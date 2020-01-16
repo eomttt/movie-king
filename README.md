@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project design [Movie King](https://app.zeplin.io/project/5dc8c93f0eb3b183b2a5a560/dashboard).
 
+by Bobby Kim.
+
 ## Available Scripts
 
 In the project directory, you can run:
