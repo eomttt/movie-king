@@ -1,7 +1,7 @@
 import React from 'react';
 
-const App = () => {
-  return <div className="App" />;
-};
+import Main from './components/main';
+
+const App = () => <Main />;
 
 export default App;

@@ -40,6 +40,8 @@
             "jsx": "never",
             "ts": "never",
             "tsx": "never"
-        }]
+        }],
+        "import/prefer-default-export": "off",
+        "react/prop-types": "off"
     }
 }
