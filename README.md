@@ -6,6 +6,10 @@ This project design [Movie King](https://app.zeplin.io/project/5dc8c93f0eb3b183b
 
 by Bobby Kim.
 
+## Spec
+
+CRA, TypeScript, Styled-components
+
 ## Available Scripts
 
 In the project directory, you can run:
