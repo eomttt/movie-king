@@ -5,12 +5,13 @@ import { mobileOffSet } from '../styles';
 
 const Container = styled.div`
   width: 100%;
+  max-width: ${mobileOffSet}px;
   display: flex;
 `;
 
 const Content = styled.div`
   width: 100%;
-  max-width: ${mobileOffSet}px;
+  padding: 5%;
   margin: 0 auto;
 `;
 
