@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createGlobalStyle } from 'styled-components';
 
-import Main from './pages/Main';
+import Main from '@/src/pages/Main';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -17,4 +17,5 @@ const App = () => (
     <Main />
   </>
 );
+
 export default App;
