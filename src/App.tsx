@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createGlobalStyle } from 'styled-components';
 
-import Main from '@/src/pages/Main';
+import Main from '@pages/Main';
 
 const GlobalStyle = createGlobalStyle`
     body {
