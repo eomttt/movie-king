@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { boxShadow } from '../../styles';
+import { boxShadow } from '@styles/common';
 
 interface IProps {
   text: string;

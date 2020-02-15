@@ -44,6 +44,13 @@
         }],
         "import/prefer-default-export": "off",
         "import/no-unresolved": "off",
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "no-unused-vars": [
+            "warn",
+            { 
+                "vars": "all",
+                "varsIgnorePattern": "[I]\\w+"
+            }
+        ]
     }
 }

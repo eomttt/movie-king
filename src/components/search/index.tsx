@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { boxShadow } from '../../styles';
+import { boxShadow } from '@styles/common';
 import { SEARCH_ICON, PLACEHOLDER } from '../../constants/search';
 
 const Container = styled.div`

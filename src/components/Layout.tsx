@@ -1,18 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { mobileOffSet } from '../styles';
+import { mobileOffSet } from '@styles/common';
 
 const Container = styled.div`
   width: 100%;
-  max-width: ${mobileOffSet}px;
   display: flex;
 `;
 
 const Content = styled.div`
-  width: 100%;
-  padding: 5%;
+  max-width: ${mobileOffSet}px;
   margin: 0 auto;
+  border: 1px solid gray;
+`;
+
+const Pages = styled.div`
+  padding: 5%;
 `;
 
 interface IProps {
@@ -21,7 +24,9 @@ interface IProps {
 
 const Layout: React.FunctionComponent<IProps> = ({ children }) => (
   <Container>
-    <Content>{children}</Content>
+    <Content>
+      <Pages>{children}</Pages>
+    </Content>
   </Container>
 );
 
