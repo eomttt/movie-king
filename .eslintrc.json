@@ -51,6 +51,7 @@
                 "vars": "all",
                 "varsIgnorePattern": "[I]\\w+"
             }
-        ]
+        ],
+        "arrow-parens": "off"
     }
 }
