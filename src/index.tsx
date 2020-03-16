@@ -14,23 +14,23 @@ const client = new ApolloClient({
 });
 
 // For test movie query
-client
-  .query({
-    query: gql`
-      query {
-        testMovies(limit: 3, rating: 9) {
-          id
-          title
-          rating
-        }
-        testMovie(id: 15553) {
-          title
-          summary
-        }
-      }
-    `,
-  })
-  .then(result => console.log(result));
+// client
+//   .query({
+//     query: gql`
+//       query {
+//         testMovies(limit: 3, rating: 9) {
+//           id
+//           title
+//           rating
+//         }
+//         testMovie(id: 15553) {
+//           title
+//           summary
+//         }
+//       }
+//     `,
+//   })
+//   .then(result => console.log(result));
 
 ReactDOM.render(
   <ApolloProvider client={client}>
