@@ -13,6 +13,7 @@ const client = new ApolloClient({
       : '',
 });
 
+
 // For test movie query
 client
   .query({
