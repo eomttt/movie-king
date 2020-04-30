@@ -1,5 +1,5 @@
 import {
-  defaultBackgroundColor,
+  navBarColor,
   mobileOffSet,
   topNavBarHeight,
   topNavBarZIndex,
@@ -13,7 +13,7 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   z-index: ${topNavBarZIndex};
-  background-color: ${defaultBackgroundColor};
+  background-color: ${navBarColor};
 `;
 
 export const Content = styled.div`

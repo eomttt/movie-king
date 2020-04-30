@@ -1,10 +1,10 @@
 import Layout from '@components/Layout';
-import MainMovies from '@containers/MainMovies';
+import MainMoviesContainer from '@containers/MainMovies';
 import React from 'react';
 
 const Main = () => (
   <Layout>
-    <MainMovies />
+    <MainMoviesContainer />
   </Layout>
 );
 

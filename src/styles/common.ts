@@ -1,6 +1,7 @@
 export const defaultFontColor = '#000000';
 export const reservationButtonColor = '#e5c05c';
-export const defaultBackgroundColor = '#272727';
+export const navBarColor = '#272727';
+export const defaultBackgroundColor = '#1f1f1f';
 
 export const mobileOffSet = 415;
 

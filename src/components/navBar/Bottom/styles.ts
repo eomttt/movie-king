@@ -1,7 +1,7 @@
 import {
   bottomNavBarHeight,
   bottomNavBarZIndex,
-  defaultBackgroundColor,
+  navBarColor,
   mobileOffSet,
 } from '@styles/common';
 import styled from 'styled-components';
@@ -13,26 +13,25 @@ export const Container = styled.div`
   position: fixed;
   bottom: 0;
   z-index: ${bottomNavBarZIndex};
-  background-color: ${defaultBackgroundColor};
+  background-color: ${navBarColor};
 `;
 
 export const Content = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-`;
-
-export const Item = styled.div`
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  & img {
-    width: 20px;
-    margin: auto;
-  }
-  & div {
-    margin: auto;
-    color: white;
-    font-size: 9px;
+  & a {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    & img {
+      width: 20px;
+      margin: auto;
+    }
+    & div {
+      margin: auto;
+      color: white;
+      font-size: 9px;
+    }
   }
 `;
