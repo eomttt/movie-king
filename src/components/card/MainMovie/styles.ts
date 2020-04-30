@@ -1,21 +1,12 @@
-import React from 'react';
-
+import { defaultBorder, reservationButtonColor } from '@styles/common';
 import styled from 'styled-components';
 
-import { reservationButtonColor, defaultBorder } from '@styles/common';
-
-import { IMovieCard } from '@interfaces/card';
-
-interface IProps extends IMovieCard {
-  rank: number;
-}
-
-const Container = styled.div`
+export const Container = styled.div`
   border-radius: ${defaultBorder};
   overflow: hidden;
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   position: relative;
   & img {
     width: 100%;
@@ -24,7 +15,7 @@ const Content = styled.div`
   }
 `;
 
-const Ranking = styled.div`
+export const Ranking = styled.div`
   font-size: 55px;
   color: white;
   text-shadow: 1px 1px 1px gray;
@@ -33,7 +24,7 @@ const Ranking = styled.div`
   left: 10px;
 `;
 
-const Menu = styled.div`
+export const Menu = styled.div`
   position: absolute;
   width: 100%;
   height: 68px;
@@ -41,7 +32,7 @@ const Menu = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-const MenuContent = styled.div`
+export const MenuContent = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -49,20 +40,20 @@ const MenuContent = styled.div`
   position: relative;
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
   color: white;
   font-size: 18px;
   margin: 15px auto 3px 20px;
 `;
 
-const Rating = styled.div`
+export const Rating = styled.div`
   color: white;
   opacity: 0.6;
   font-size: 14px;
   margin: 0 auto auto 20px;
 `;
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   position: absolute;
   background-color: ${reservationButtonColor};
   display: flex;
@@ -78,30 +69,3 @@ const ButtonContainer = styled.div`
     margin-top: 7px;
   }
 `;
-
-const MainMovie: React.FunctionComponent<IProps> = ({
-  rank,
-  image,
-  title,
-  rating,
-}) => (
-  <Container>
-    <Content>
-      <Ranking>
-        {rank}
-      </Ranking>
-      <img src={image} alt="Movie" />
-      <Menu>
-        <MenuContent>
-          <Title>{title}</Title>
-          <Rating>{`* ${rating}`}</Rating>
-          <ButtonContainer>
-            <div>예매하기</div>
-          </ButtonContainer>
-        </MenuContent>
-      </Menu>
-    </Content>
-  </Container>
-);
-
-export default MainMovie;

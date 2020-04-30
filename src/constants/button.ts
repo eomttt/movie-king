@@ -4,5 +4,5 @@ export const DATE = {
   TOMORROW: '내일',
 };
 
-export const PLACE_ICON = 'https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15450158976787.svg';
-export const DATE_ICON = 'https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15450158976787.svg';
+export const PLACE_ICON =  'https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15450158976787.svg';
+export const DATE_ICON =  'https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15450158976787.svg';

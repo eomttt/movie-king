@@ -5,10 +5,10 @@ import { createGlobalStyle } from 'styled-components';
 import Main from '@pages/Main';
 
 const GlobalStyle = createGlobalStyle`
-    body {
-        padding: 0;
-        margin: 0;
-    }
+  body {
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const App = () => (

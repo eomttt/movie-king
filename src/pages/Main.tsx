@@ -1,8 +1,6 @@
-import React from 'react';
-
-import MainMovies from '@containers/card/MainMovies';
-
 import Layout from '@components/Layout';
+import MainMovies from '@containers/MainMovies';
+import React from 'react';
 
 const Main = () => (
   <Layout>
