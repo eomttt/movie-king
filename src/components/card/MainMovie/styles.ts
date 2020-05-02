@@ -1,5 +1,5 @@
-import { defaultBorder, reservationButtonColor } from '@styles/common';
-import styled from 'styled-components';
+import { defaultBorder, reservationButtonColor } from 'styles/common';
+import styled from '@emotion/styled';
 
 export const Container = styled.div`
   border-radius: ${defaultBorder};

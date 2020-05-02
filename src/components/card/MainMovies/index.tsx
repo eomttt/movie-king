@@ -1,5 +1,5 @@
-import MainMovie from '@components/card/MainMovie';
-import { IMovieCard } from '@interfaces/card';
+import MainMovie from 'components/card/MainMovie';
+import { IMovieCard } from 'interfaces/card';
 import React from 'react';
 import * as Styles from './styles';
 

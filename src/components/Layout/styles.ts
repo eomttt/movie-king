@@ -4,8 +4,8 @@ import {
   mobileOffSet,
   topNavBarHeight,
   defaultBackgroundColor,
-} from '@styles/common';
-import styled from 'styled-components';
+} from 'styles/common';
+import styled from '@emotion/styled';
 
 export const Container = styled.div`
   width: 100%;

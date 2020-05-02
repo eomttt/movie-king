@@ -1,5 +1,5 @@
-import SearchedMovie from '@components/card/SearchedMovie';
-import { ISearchedMovieCard } from '@interfaces/card';
+import SearchedMovie from 'components/card/SearchedMovie';
+import { ISearchedMovieCard } from 'interfaces/card';
 import React from 'react';
 import * as Styles from './styles';
 

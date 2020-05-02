@@ -5,15 +5,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 const client = new ApolloClient({
-  uri:
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:4000/graphql'
-      : '',
+  uri: 'http://localhost:4000/graphql',
 });
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <App />,
   </ApolloProvider>,
   document.getElementById('root'),
 );

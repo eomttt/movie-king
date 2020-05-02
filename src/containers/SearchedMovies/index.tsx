@@ -1,6 +1,6 @@
-import SearchedMovies from '@components/card/SearchedMovies';
-import dummy from '@dummy/searchedMovieCards';
-import { ISearchedMovieCard } from '@interfaces/card';
+import SearchedMovies from 'components/card/SearchedMovies';
+import dummy from 'dummy/searchedMovieCards';
+import { ISearchedMovieCard } from 'interfaces/card';
 import React, { useEffect, useState } from 'react';
 
 const SearchedMoviesContainer = () => {

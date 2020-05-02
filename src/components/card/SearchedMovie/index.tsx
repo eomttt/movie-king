@@ -1,4 +1,4 @@
-import { ISearchedMovieCard } from '@interfaces/card';
+import { ISearchedMovieCard } from 'interfaces/card';
 import React from 'react';
 import * as Styles from './styles';
 

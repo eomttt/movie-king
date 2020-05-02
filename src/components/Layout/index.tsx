@@ -1,5 +1,5 @@
-import Bottom from '@components/navBar/Bottom';
-import Top from '@components/navBar/Top';
+import Bottom from 'components/navBar/Bottom';
+import Top from 'components/navBar/Top';
 import React from 'react';
 import * as Styles from './styles';
 

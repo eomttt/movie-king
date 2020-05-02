@@ -1,4 +1,4 @@
-import { MovieType } from '@constants/movie';
+import { MovieType } from 'constants/movie';
 
 export interface IMovieCard {
   id: string;

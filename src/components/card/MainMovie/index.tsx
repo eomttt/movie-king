@@ -1,4 +1,4 @@
-import { IMovieCard } from '@interfaces/card';
+import { IMovieCard } from 'interfaces/card';
 import React from 'react';
 import * as Styles from './styles';
 

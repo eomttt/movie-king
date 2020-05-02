@@ -1,4 +1,4 @@
-import { MovieType } from '@constants/movie';
+import { MovieType } from 'constants/movie';
 
 const datam = [
   {
