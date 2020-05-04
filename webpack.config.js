@@ -41,14 +41,14 @@ const config = {
       cache: true,
       parallel: true,
       terserOptions: {
-          warnings: false,
-          compress: {
-              warnings: false,
-              unused: true,
-          },
-          ecma: 6,
-          mangle: true,
-          unused: true,
+        warnings: false,
+        compress: {
+            warnings: false,
+            unused: true,
+        },
+        ecma: 6,
+        mangle: true,
+        unused: true,
       },
       sourceMap: true,
     })
