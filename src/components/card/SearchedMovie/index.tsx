@@ -1,6 +1,6 @@
 import { ISearchedMovieCard } from 'interfaces/card';
 import React from 'react';
-import * as Styles from './styles'
+import * as Styles from './styles';
 
 const SearchedMovie: React.FunctionComponent<ISearchedMovieCard> = ({
   time,
