@@ -1,10 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const path = require('path');
 
-module.exports = {
-  mode: 'development',
-  devtool: 'eval',
+const isDev = process.env.NODE_ENV === 'development';
+
+const config = {
+  mode: process.env.NODE_ENV,
+  devtool: isDev ? 'eval' : 'source-map',
   entry: {
     app: './src/index.tsx'
   },
@@ -35,17 +37,31 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     }),
-    new UglifyPlugin({
-      uglifyOptions: {
-        compress: {
-          unused: false
-        }
-      }
+    new TerserPlugin({
+      cache: true,
+      parallel: true,
+      terserOptions: {
+          warnings: false,
+          compress: {
+              warnings: false,
+              unused: true,
+          },
+          ecma: 6,
+          mangle: true,
+          unused: true,
+      },
+      sourceMap: true,
     })
   ],
   output: {
     filename: 'app.js',
     path: path.join(__dirname, 'build')
   },
-
+  devServer: {
+    contentBase: path.join(__dirname, 'build'),
+    compress: true,
+    port: 9000
+  }
 };
+
+module.exports = config

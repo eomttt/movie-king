@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 const App = () => (
   <BrowserRouter>
-    <Route path="/" component={Main} />
+    <Route exact path="/" component={Main} />
     <Route path="/search" component={Search} />
   </BrowserRouter>
 );

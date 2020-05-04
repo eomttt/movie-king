@@ -22,9 +22,6 @@
       "interfaces/*": ["interfaces/*"],
       "dummy/*": ["dummy/*"]
     }
-  },
-  "exclude": [
-    "node_modules"
-  ]
+  }
 }
 
