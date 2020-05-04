@@ -24,6 +24,7 @@
     "@typescript-eslint"
   ],
   "settings": {
+    "babel-module": {},
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"],

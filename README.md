@@ -23,7 +23,7 @@
 
 > $ yarn add babel-loader babel-plugin-module-resolver --dev
 
-> $ yarn add eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react --dev
+> $ yarn add eslint eslint-config-airbnb eslint-import-resolver-babel-module eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-react --dev
 
 > $ yarn add prettier --dev
 
