@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require("terser-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -8,14 +8,11 @@ const config = {
   mode: process.env.NODE_ENV,
   devtool: isDev ? 'eval' : 'source-map',
   entry: {
-    app: './src/index.tsx'
+    app: './src/index.tsx',
   },
   resolve: {
     extensions: ['.jsx', '.js', '.tsx', '.ts', '.json'],
-    modules: [
-      path.resolve(__dirname, './src'),
-      'node_modules'
-    ],
+    modules: [path.resolve(__dirname, './src'), 'node_modules'],
     symlinks: false,
   },
   module: {
@@ -25,17 +22,17 @@ const config = {
         use: ['babel-loader'],
         exclude: [/node_modules/],
       },
-     {
-      test: /\.(ts|tsx)$/,
-      use: ['ts-loader'],
-      exclude: [/node_modules/],
-     }
-   ]
+      {
+        test: /\.(ts|tsx)$/,
+        use: ['ts-loader'],
+        exclude: [/node_modules/],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
     }),
     new TerserPlugin({
       cache: true,
@@ -43,25 +40,25 @@ const config = {
       terserOptions: {
         warnings: false,
         compress: {
-            warnings: false,
-            unused: true,
+          warnings: false,
+          unused: true,
         },
         ecma: 6,
         mangle: true,
         unused: true,
       },
       sourceMap: true,
-    })
+    }),
   ],
   output: {
     filename: 'app.js',
-    path: path.join(__dirname, 'build')
+    path: path.join(__dirname, 'build'),
   },
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     compress: true,
-    port: 9000
-  }
+    port: 9000,
+  },
 };
 
-module.exports = config
+module.exports = config;

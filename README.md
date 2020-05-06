@@ -41,4 +41,11 @@
 
 > $ yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser --dev
 
+
+### Typescript file
 > $ vi tsconfig.json
+
+## Installation & Execute
+> $ yarn install
+
+> $ yarn run dev
