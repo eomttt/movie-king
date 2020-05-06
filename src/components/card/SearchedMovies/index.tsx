@@ -9,8 +9,8 @@ interface IProps {
 
 const SearchedMovies: React.FunctionComponent<IProps> = ({ movies }) => (
   <Styles.Container>
-    {movies.map((movie: ISearchedMovieCard) => (
-      <Styles.Content key={movie.id}>
+    {movies.map((movie: ISearchedMovieCard, index: number) => (
+      <Styles.Content key={movie.id} index={index}>
         <SearchedMovie
           id={movie.id}
           time={movie.time}

@@ -11,7 +11,7 @@ const Layout: React.FunctionComponent<IProps> = ({ children }) => (
   <Styles.Container>
     <Styles.Content>
       <Top />
-      <Styles.Pages>{children}</Styles.Pages>
+      <Styles.Pages height={window.innerHeight}>{children}</Styles.Pages>
       <Bottom />
     </Styles.Content>
   </Styles.Container>

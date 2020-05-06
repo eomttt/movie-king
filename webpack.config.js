@@ -56,6 +56,7 @@ const config = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'build'),
+    historyApiFallback: true,
     compress: true,
     port: 9000,
   },

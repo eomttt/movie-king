@@ -14,3 +14,5 @@ export const topNavBarZIndex = 5;
 
 export const bottomNavBarHeight = 50;
 export const bottomNavBarZIndex = 5;
+
+export const pagesPadding = 10;
