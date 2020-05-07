@@ -18,6 +18,15 @@
         "dummy": "./src/dummy"
       }
     }
+  ],
+  [
+    "emotion",
+    {
+     "sourceMap": true,
+     "autoLabel": true,
+     "cssPropOptimization": true,
+     "labelFormat": "[dirname]-[filename]--[local]"
+    }
   ]
  ]
 }
