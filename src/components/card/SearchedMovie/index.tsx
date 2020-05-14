@@ -16,9 +16,9 @@ const SearchedMovie: React.FunctionComponent<ISearchedMovieCard> = ({
       <Styles.Menu>
         <Styles.MenuContent>
           <Styles.Title>{title}</Styles.Title>
-          <Styles.Rating>{`* ${type}`}</Styles.Rating>
+          <Styles.Rating>{`* ${location}`}</Styles.Rating>
           <Styles.ButtonContainer>
-            <div>예매하기</div>
+            <div>{type}</div>
           </Styles.ButtonContainer>
         </Styles.MenuContent>
       </Styles.Menu>
