@@ -1,4 +1,8 @@
-import { defaultBorder, reservationButtonColor } from 'styles/common';
+import {
+  defaultBorder,
+  searchMovieTextColor,
+  defaultBackgroundColor,
+} from 'styles/common';
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
@@ -14,57 +18,35 @@ export const Content = styled.div`
   }
 `;
 
-export const Ranking = styled.div`
-  font-size: 55px;
-  color: white;
-  text-shadow: 1px 1px 1px gray;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-`;
-
 export const Menu = styled.div`
   position: absolute;
   width: 100%;
-  height: 68px;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const MenuContent = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  margin: auto auto 7px 7px;
 `;
 
-export const Title = styled.div`
-  color: white;
-  font-size: 18px;
-  margin: 15px auto 3px 20px;
+const MovieText = styled.div`
+  color: ${searchMovieTextColor};
+  font-size: 12px;
+  text-shadow: 1px 1px 1px ${defaultBackgroundColor};
 `;
 
-export const Rating = styled.div`
-  color: white;
-  opacity: 0.6;
-  font-size: 14px;
-  margin: 0 auto auto 20px;
+export const MovieType = styled(MovieText)`
+  color: ${(props) => props.color};
 `;
 
-export const ButtonContainer = styled.div`
-  position: absolute;
-  background-color: ${reservationButtonColor};
-  display: flex;
-  width: 77px;
-  height: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: ${defaultBorder};
-  right: 20px;
-  & div {
-    width: 100%;
-    text-align: center;
-    margin-top: 7px;
-  }
+export const MovieLocation = styled(MovieText)``;
+
+export const MovieTitle = styled(MovieText)`
+  font-size: 13px;
+`;
+
+export const MovieTime = styled(MovieText)`
+  font-size: 16px;
 `;

@@ -12,7 +12,7 @@ const MainMovies: React.FunctionComponent<IProps> = ({ movies }) => (
     {movies.map((movie: IMovieCard, index: number) => (
       <Styles.Content key={movie.id}>
         <MainMovie
-          rank={index}
+          rank={index + 1}
           id={movie.id}
           title={movie.title}
           image={movie.image}
