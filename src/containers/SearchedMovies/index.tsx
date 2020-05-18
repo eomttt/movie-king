@@ -106,9 +106,12 @@ const SearchedMoviesContainer = () => {
         }
       }
     }
-    console.log('theaterList', theaterList);
     setNearByTheaters(theaterList);
   }, [nowPosition]);
+
+  useEffect(() => {
+    // TODO: Get movie time table api
+  }, [nearByTheaters]);
 
   return <SearchedMovies movies={movies} />;
 };
