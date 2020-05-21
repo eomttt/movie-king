@@ -23,7 +23,6 @@ const SearchedMoviesContainer = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          console.log('Position', position);
           const { coords } = position;
           const { latitude, longitude } = coords;
           setNowPosition({
