@@ -9,7 +9,7 @@
 
 ## Ref
 > - [react-router-dom](https://reacttraining.com/react-router/web/api/Router/history-object)
-> - [emmotion](https://emotion.sh/docs/introduction)
+> - [emotion](https://emotion.sh/docs/introduction)
 > - [cross-env](https://www.npmjs.com/package/cross-env)
 
 ## Custom React project
