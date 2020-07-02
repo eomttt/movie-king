@@ -22,10 +22,10 @@
   [
     "emotion",
     {
-     "sourceMap": true,
-     "autoLabel": true,
-     "cssPropOptimization": true,
-     "labelFormat": "[dirname]-[filename]--[local]"
+      "sourceMap": true,
+      "autoLabel": true,
+      "labelFormat": "[dirname]-[filename]--[local]",
+      "cssPropOptimization": true
     }
   ]
  ]
