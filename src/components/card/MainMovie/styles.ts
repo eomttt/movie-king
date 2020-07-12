@@ -1,5 +1,6 @@
-import { defaultBorder, reservationButtonColor } from 'styles/common';
 import styled from '@emotion/styled';
+import { ButtonColor } from 'styles/color';
+import { defaultBorder } from 'styles/common';
 
 export const Container = styled.div`
   border-radius: ${defaultBorder};
@@ -55,7 +56,7 @@ export const Rating = styled.div`
 
 export const ButtonContainer = styled.div`
   position: absolute;
-  background-color: ${reservationButtonColor};
+  background-color: ${ButtonColor.RESERVATION};
   display: flex;
   width: 77px;
   height: 30px;

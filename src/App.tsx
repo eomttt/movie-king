@@ -3,14 +3,14 @@ import Main from 'pages/Main';
 import Search from 'pages/Search';
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { defaultBackgroundColor } from 'styles/common';
+import { BackgroundColor } from 'styles/color';
 
 const App = () => (
   <>
     <Global
       styles={css`
         body {
-          background-color: ${defaultBackgroundColor} !important;
+          background-color: ${BackgroundColor} !important;
           margin: 0 !important;
         }
       `}

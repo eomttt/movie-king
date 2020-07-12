@@ -1,9 +1,6 @@
-import {
-  defaultBorder,
-  searchMovieTextColor,
-  defaultBackgroundColor,
-} from 'styles/common';
 import styled from '@emotion/styled';
+import { FontColor, BackgroundColor } from 'styles/color';
+import { defaultBorder } from 'styles/common';
 
 export const Container = styled.div`
   border-radius: ${defaultBorder};
@@ -32,9 +29,9 @@ export const MenuContent = styled.div`
 `;
 
 const MovieText = styled.div`
-  color: ${searchMovieTextColor};
+  color: ${FontColor.POINT};
   font-size: 12px;
-  text-shadow: 1px 1px 1px ${defaultBackgroundColor};
+  text-shadow: 1px 1px 1px ${BackgroundColor};
 `;
 
 export const MovieType = styled(MovieText)`

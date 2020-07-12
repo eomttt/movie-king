@@ -1,10 +1,10 @@
+import styled from '@emotion/styled';
+import { NavBarColor } from 'styles/color';
 import {
   bottomNavBarHeight,
   bottomNavBarZIndex,
-  navBarColor,
   mobileOffSet,
 } from 'styles/common';
-import styled from '@emotion/styled';
 
 export const Container = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   position: fixed;
   bottom: 0;
   z-index: ${bottomNavBarZIndex};
-  background-color: ${navBarColor};
+  background-color: ${NavBarColor};
 `;
 
 export const Content = styled.div`

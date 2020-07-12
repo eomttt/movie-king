@@ -1,7 +1,7 @@
 import { MovieType } from 'constants/movie';
 import { ISearchedMovieCard } from 'interfaces/card';
 import React, { useMemo } from 'react';
-import { movieTypeColor } from 'styles/common';
+import { MovieTypeColor } from 'styles/color';
 import * as Styles from './styles';
 
 const SearchedMovie: React.FunctionComponent<ISearchedMovieCard> = ({
@@ -27,7 +27,7 @@ const SearchedMovie: React.FunctionComponent<ISearchedMovieCard> = ({
         <img src={image} alt="Movie" />
         <Styles.Menu>
           <Styles.MenuContent>
-            <Styles.MovieType color={movieTypeColor[type]}>
+            <Styles.MovieType color={MovieTypeColor[type]}>
               {movieType}
             </Styles.MovieType>
             <Styles.MovieLocation>{location}</Styles.MovieLocation>
