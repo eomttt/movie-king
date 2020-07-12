@@ -29,9 +29,6 @@ export const Content = styled.div`
 export const Pages = styled.div<PageProps>`
   margin-top: ${topNavBarHeight}px;
   margin-bottom: ${bottomNavBarHeight}px;
-  min-height: ${(props) => {
-    const { height } = props;
-    return height - topNavBarHeight - bottomNavBarHeight - pagesPadding * 2;
-  }}px;
+  min-height: ${(props) => props.height}px;
   padding: ${pagesPadding}px;
 `;

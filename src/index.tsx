@@ -3,6 +3,7 @@ import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { AppHeightProvider } from 'contexts/AppHeight';
 import App from './App';
 
 const client = new ApolloClient({
@@ -11,9 +12,11 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <AppHeightProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AppHeightProvider>
   </ApolloProvider>,
   document.getElementById('root'),
 );

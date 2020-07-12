@@ -5,6 +5,7 @@ import { IMovieCard } from 'interfaces/card';
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-apollo';
 import { Loading } from 'components/Loading';
+import { Error } from 'components/Error';
 
 const GET_BOXOFFICE_QUERY = gql`
   {
@@ -16,17 +17,24 @@ const GET_BOXOFFICE_QUERY = gql`
 `;
 
 const MainMoviesContainer = () => {
+  // dummy data
+  const { loading, error, data } = {
+    loading: false,
+    error: 'Error',
+    data: dummy,
+  };
   // const { loading, error, data } = useQuery(GET_BOXOFFICE_QUERY);
-  const { loading, error, data } = { loading: true, error: false, data: dummy };
   const [movies, setMovies] = useState<IMovieCard[]>([]);
 
   useEffect(() => {
-    console.log("AAA", data);
-    setMovies(data);
+    if (data) {
+      const { boxOffice } = data;
+      setMovies(boxOffice);
+    }
   }, [data]);
 
   if (loading) return <Loading />;
-  if (error) return <div>{`잠시 후 다시시도해주세요. Error: ${error}`}</div>;
+  if (error) return <Error errorContent={error} />;
 
   return <MainMovies movies={movies} />;
 };
