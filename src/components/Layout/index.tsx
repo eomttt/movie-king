@@ -1,20 +1,36 @@
 import Bottom from 'components/navBar/Bottom';
 import Top from 'components/navBar/Top';
-import React from 'react';
+import { AppHeightContext } from 'contexts/AppHeight';
+import React, { useContext, useEffect } from 'react';
+import {
+  bottomNavBarHeight,
+  pagesPadding,
+  topNavBarHeight,
+} from 'styles/common';
 import * as Styles from './styles';
 
 interface IProps {
   children: any;
 }
 
-const Layout: React.FunctionComponent<IProps> = ({ children }) => (
-  <Styles.Container>
-    <Styles.Content>
-      <Top />
-      <Styles.Pages height={window.innerHeight}>{children}</Styles.Pages>
-      <Bottom />
-    </Styles.Content>
-  </Styles.Container>
-);
+const Layout: React.FunctionComponent<IProps> = ({ children }) => {
+  const { appHeight, setAppHeight } = useContext(AppHeightContext);
+
+  useEffect(() => {
+    const { innerHeight } = window;
+    const height = innerHeight - topNavBarHeight - bottomNavBarHeight - pagesPadding * 2;
+    setAppHeight(height);
+  }, []);
+
+  return (
+    <Styles.Container>
+      <Styles.Content>
+        <Top />
+        <Styles.Pages height={appHeight}>{children}</Styles.Pages>
+        <Bottom />
+      </Styles.Content>
+    </Styles.Container>
+  );
+};
 
 export default Layout;
