@@ -20,7 +20,7 @@ const MainMoviesContainer = () => {
   // dummy data
   const { loading, error, data } = {
     loading: false,
-    error: 'Error',
+    error: null,
     data: dummy,
   };
   // const { loading, error, data } = useQuery(GET_BOXOFFICE_QUERY);
