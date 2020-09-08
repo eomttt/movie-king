@@ -4,7 +4,7 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --mode development --open",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "dependencies": {
