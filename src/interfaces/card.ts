@@ -15,3 +15,16 @@ export interface ISearchedMovieCard {
   title: string;
   time: string;
 }
+
+export interface IMyMovieCard {
+  id: string;
+  title: string;
+  time: string;
+  location: string;
+  audiences: IMyMovieAudience[];
+  fare: string;
+}
+
+export interface IMyMovieAudience {
+  seat: string;
+}
