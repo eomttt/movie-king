@@ -73,9 +73,13 @@ export const Col = styled.div`
 
 export const Data = styled.div`
   color: white;
+  margin: 2px auto 3px 2px;
+  // text-align: left;
   flex-shrink: 0;
   margin-left: auto;
   justify-content: flex-end;
+  font-size: 13px;
+  font-style: normal;
 `;
 
 export const Table = styled.table`
