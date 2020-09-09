@@ -14,6 +14,7 @@ const MyMovies: React.FunctionComponent<IProps> = ({ myMovies }) => (
         <MyMovie
           id={movie.id}
           title={movie.title}
+          runningtime={movie.runningtime}
           time={movie.time}
           location={movie.location}
           audiences={movie.audiences}

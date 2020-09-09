@@ -5,26 +5,48 @@ import * as Styles from './styles';
 const MyMovie: React.FunctionComponent<IMyMovieCard> = ({
   id,
   title,
+  runningtime,
   time,
   location,
   audiences,
   fare
 }) => {
-  console.log('id : '+id);
-  console.log('title : '+title);
-  console.log('time : '+time);
+  let seatText = ''
+  for (let i=0; i<audiences.length; i++) {
+    seatText += audiences[i].seat;
+    if (i < audiences.length-1) {
+      seatText += ', ';
+    }
+  }
   return (
     <Styles.Container>
       <Styles.Content>
-        <Styles.Ranking>{id}</Styles.Ranking>
-        {/* <img src={image} alt="Movie" /> */}
         <Styles.Menu>
           <Styles.MenuContent>
+            <Styles.Time>{runningtime}</Styles.Time>
             <Styles.Title>{title}</Styles.Title>
-            <Styles.Rating>{time}</Styles.Rating>
-            {/* <Styles.Rating>{`* ${rating}`}</Styles.Rating> */}
+            <Styles.Row>
+              <Styles.Col>상영시간</Styles.Col>
+              <Styles.Data>{time}분</Styles.Data>
+            </Styles.Row>
+            <Styles.Row>
+              <Styles.Col>상영관</Styles.Col>
+              <Styles.Data>{location}</Styles.Data>
+            </Styles.Row>
+            <Styles.Row>
+              <Styles.Col>관람인원</Styles.Col>
+              <Styles.Data>{audiences.length}명</Styles.Data>
+            </Styles.Row>
+            <Styles.Row>
+              <Styles.Col>좌석</Styles.Col>
+              <Styles.Data>{seatText}</Styles.Data>
+            </Styles.Row>
+            <Styles.Row>
+              <Styles.Col>결제금액</Styles.Col>
+              <Styles.Data>{fare}원</Styles.Data>
+            </Styles.Row>
             <Styles.ButtonContainer>
-              <div>취소하기</div>
+              <Styles.Button>취소하기</Styles.Button>
             </Styles.ButtonContainer>
           </Styles.MenuContent>
         </Styles.Menu>
