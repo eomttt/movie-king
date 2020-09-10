@@ -1,5 +1,5 @@
 export enum MovieType {
-  CGV = 'CGV',
-  LOTTE = 'Lotte',
-  MEGABOX = 'MegaBox',
+  CGV = 'cgv',
+  LOTTE = 'lotte',
+  MEGABOX = 'megaBox',
 }
