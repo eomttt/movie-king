@@ -7,7 +7,7 @@ export const Container = styled.div`
   border-radius: ${defaultBorder};
   overflow: hidden;
   * {
-    font-family: Verdana;
+    font-family: Apple SD 산돌고딕 Neo 일반체;
     letter-spacing: -1px;
   }
 `;
@@ -149,8 +149,7 @@ export const ButtonContainer = styled.div`
 
 export const Button = styled.div`
   font-size: 14px;
-  color: #2E64FE;
-  text-shadow: 1px 1px 1px #blue-grey;
+  color: ${ButtonColor.RESERVATION};
   width: 100%;
   text-align: center;
   margin-top: 10px;
