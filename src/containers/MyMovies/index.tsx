@@ -7,19 +7,6 @@ import { useQuery } from 'react-apollo';
 import { Loading } from 'components/Loading';
 import { Error } from 'components/Error';
 
-const GET_MYMOVIE_QUERY = gql`
-  {
-    myMovie {
-      id
-      title
-      time
-      location
-      audiences
-      fare
-    }
-  }
-`;
-
 const MyMoviesContainer = () => {
 
   const { loading, error, data } = {

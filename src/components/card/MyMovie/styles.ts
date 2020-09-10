@@ -2,49 +2,67 @@ import styled from '@emotion/styled';
 import { ButtonColor } from 'styles/color';
 import { defaultBorder } from 'styles/common';
 import { NavBarColor } from 'styles/color';
+import { FontColor } from 'styles/color';
 
 export const Container = styled.div`
+  width: 100%;  
   border-radius: ${defaultBorder};
   overflow: hidden;
-  * {
-    font-family: Apple SD 산돌고딕 Neo 일반체;
-    letter-spacing: -1px;
-  }
+  letter-spacing: -1px;
 `;
 
 export const Content = styled.div`
-  position: relative;
   width: 100%;
-  height: 255px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: ${NavBarColor};
 `;
 
 export const Menu = styled.div`
   width: 100%;
-  height: 400px;
-  background-color: ${NavBarColor} !important;
+  background-color: ${NavBarColor};
 `;
 
 export const MenuContent = styled.div`
-  width: 100%;
-  height: 100%;
+  x-index: 0px;
+  y-index: 70px;
+  height: 277px;
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: ${NavBarColor};
 `;
 
 export const Time = styled.div`
   display: flex;
-  font-size: 15px;
-  color: grey;
-  margin-left: 7px;
-  margin-top: 16px;
+  height: 20px;
+  x-index: 13px;
+  y-index: 90px;
+  margin-top: 20px;
+  margin-left: 13px;
+  font-size: 16px;
+  opacity: 0.60;
+  margin-bottom: 0.5px;
+  color: ${FontColor['POINT']};
+  vertical-align: top;
 `;
 
 export const Title = styled.div`
-  color: #BDBDBD;
-  font-size: 16px;
-  margin: 10px auto 3px 10px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 327px;
+  x-index: 15px;
+  y-index: 120px;
+  width: 100%;
+  height: 24px;
+  opacity: 0.87;
+  font-size: 20px;
+  color: ${FontColor['POINT']};
+  margin-bottom: 0.5px;
+  letter-spacing: -0.83pt;
+  vertical-align: top;
 `;
 
 export const Row = styled.div`
@@ -55,102 +73,40 @@ export const Row = styled.div`
 `;
 
 export const Col = styled.div`
-  color: #A4A4A4;
-  flex-basis: 20%;
+  color: ${FontColor['POINT']};
+  opacity: 0.6;
+  flex-basis: 72px;
   display: block; 
-  color: grey;
-  margin-left: 10px;
-  // margin: 5px auto 3px 10px;
-  // height: 10px;
-  // font-size: 13px;
-  font-size: 13px;
+  margin-left: 15px;
+  font-size: 15px;
   font-style: normal;
-  // line-height: 1.58;
-  // justify-content: flex-start;
 `;
 
 export const Data = styled.div`
-  color: #A4A4A4;
-  right: 80%
-  margin-left: 5px;
-  text-align: left;
-  flex-shrink: 0;
-  // justify-content: flex-end;
-  font-size: 13px;
-  font-style: normal;
+  color: ${FontColor['POINT']};
+  right: 20px;
+  opacity: 0.87;
+  font-size: 15px;
 `;
 
-export const Table = styled.table`
-  display:flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  overflow-x: auto;
-  overflow-y: hidden;
-  font-size: 12px;
-  margin: 10px auto 3px 10px;
-  flex-direction: column;
-  & tbody {
-    display:flex
-  },
-  & tr {
-    display: block; float: left;
-    text-align: left;
-    & th {
-      text-indent: 0px;
-      display: block; 
-      color: grey;
-    },
-    & td {
-      text-indent: 20px;
-      display: block; 
-      color: #A4A4A4;
-    }
-  },
-`;
-
-
-export const Tbody = styled.tbody`
-  display:flex
-  & tr {
-    & td {
-      text-indent: 50px;
-    }
-  }
-`;
-
-export const TR = styled.tr`
-  display: block; float: left;
-`;
-
-
-export const RunningTime = styled.div`
-  color: #A4A4A4;
-  opacity: 0.6;
-  font-size: 14px;
-  margin: 0 auto auto 20px;
-`;
-
-//background-color: ${ButtonColor.RESERVATION};
 export const ButtonContainer = styled.div`
   position: absolute;
-  top: 51%;
-  left: 2%;
-  right: 2%;
-  border: 1px solid grey;
-  //display: flex;
-  width: 96%;
-  height: 41px;
-  justify-content: center;
-  vertical-align: middle
-  // transform: translateY(-50%);
-  max-width: 100%;
-  font-color: #A4A4A4;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 325px;
+  height: 50px;
+  text-align: center;
+  margin-top: 210px;
+  margin-left: 15px;
+  // margin-right: 10px;
 `;
 
 export const Button = styled.div`
-  font-size: 14px;
+  font-size: 18px;
   color: ${ButtonColor.RESERVATION};
-  width: 100%;
+  width: 347px;
+  height: 21px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 14px;
+  letter-spacing: 0px;
+  vertical-align: top;
 `;

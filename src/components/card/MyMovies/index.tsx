@@ -9,7 +9,7 @@ interface IProps {
 
 const MyMovies: React.FunctionComponent<IProps> = ({ myMovies }) => (
   <Styles.Container>
-    {myMovies.map((movie: IMyMovieCard, index: number) => (
+    {myMovies.map((movie: IMyMovieCard) => (
       <Styles.Content key={movie.id}>
         <MyMovie
           id={movie.id}

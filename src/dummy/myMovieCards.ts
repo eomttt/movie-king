@@ -4,7 +4,7 @@ const datam = [
     title: '타이타닉',
     runningtime: '오늘 17:30',
     time: '210',
-    location: 'CGV 강남역점 5관[SKT 5GX 부스트파크관]',
+    location: 'CGV 강남역점 5관',
     audiences: [
       {
         seat: 'I13'
