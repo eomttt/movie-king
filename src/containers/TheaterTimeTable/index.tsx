@@ -49,6 +49,9 @@ const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = ({
         location: title,
         title: tableTitle,
         time: info.time,
+        // TODO:
+        // Image도 어떻게 할지 생각을 해봐야겠다.
+        // 지금 타임 테이블에 대해서는 이미지를 가지고 오지 않는데... 큰일이네
         image: 'http://www.kobis.or.kr/common/mast/movie/2020/01/a880f5d250f04e6bacc786342972ddf4.jpg',
       }),
     );
