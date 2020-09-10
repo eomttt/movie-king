@@ -112,6 +112,9 @@ const SearchedMoviesContainer = () => {
   }, [nearByTheaters]);
 
   if (nearByTheaters) {
+    // TODO nearyByTheaters 에 찾은 영화 정보들은 다 API 콜해서 각각 타임 테이블 가져와서 렌더링
+    // TheaterTimeTable은 하나의 nearByTheater 에만 반응
+    // 또한 가공이 필요한데... 시간 별로 정렬이 필요...
     return <TheaterTimeTable theaterInfo={nearByTheaters[0]} />;
   }
 
