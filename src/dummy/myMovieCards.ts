@@ -4,7 +4,7 @@ const datam = [
     title: '타이타닉',
     runningtime: '오늘 17:30',
     time: '210',
-    location: '강남CGV',
+    location: 'CGV 강남역점 5관[SKT 5GX 부스트파크관]',
     audiences: [
       {
         seat: 'I13'
@@ -20,7 +20,7 @@ const datam = [
     title: '어바웃 타임',
     runningtime: '09/18 18:20',
     time: '124',
-    location: '인천CGV',
+    location: 'CGV 인천점 1관[CGV아트하우스]',
     audiences: [
       {
         seat: 'J13'
@@ -36,7 +36,7 @@ const datam = [
     title: '인셉션',
     runningtime: '10/08 14:00',
     time: '162',
-    location: '용산IMAX',
+    location: 'CGV 용산아이파크몰 SKYBOX 1',
     audiences: [
       {
         seat: 'K13'

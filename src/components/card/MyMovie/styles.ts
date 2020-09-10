@@ -6,36 +6,24 @@ import { NavBarColor } from 'styles/color';
 export const Container = styled.div`
   border-radius: ${defaultBorder};
   overflow: hidden;
+  * {
+    font-family: Verdana;
+    letter-spacing: -1px;
+  }
 `;
 
 export const Content = styled.div`
   position: relative;
   width: 100%;
-  height: 260px;
+  height: 255px;
   display: block;
-`;
-
-export const Time = styled.div`
-  font-size: 15px;
-  color: grey;
-  top: 10px;
-  left: 10px;
-`;
-
-export const Ranking = styled.div`
-  font-size: 55px;
-  color: white;
-  text-shadow: 1px 1px 1px gray;
-  // position: absolute;
-  top: 10px;
-  left: 10px;
 `;
 
 export const Menu = styled.div`
   width: 100%;
   height: 400px;
   background-color: ${NavBarColor} !important;
-  `;
+`;
 
 export const MenuContent = styled.div`
   width: 100%;
@@ -45,8 +33,16 @@ export const MenuContent = styled.div`
   position: relative;
 `;
 
+export const Time = styled.div`
+  display: flex;
+  font-size: 15px;
+  color: grey;
+  margin-left: 7px;
+  margin-top: 16px;
+`;
+
 export const Title = styled.div`
-  color: white;
+  color: #BDBDBD;
   font-size: 16px;
   margin: 10px auto 3px 10px;
 `;
@@ -55,29 +51,31 @@ export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-top: 5px;
 `;
 
 export const Col = styled.div`
-  color: white;
-  flex-basis: 30%;
+  color: #A4A4A4;
+  flex-basis: 20%;
   display: block; 
   color: grey;
-  margin: 5px auto 3px 10px;
+  margin-left: 10px;
+  // margin: 5px auto 3px 10px;
   // height: 10px;
   // font-size: 13px;
   font-size: 13px;
   font-style: normal;
-  line-height: 1.58;
-  justify-content: flex-start;
+  // line-height: 1.58;
+  // justify-content: flex-start;
 `;
 
 export const Data = styled.div`
-  color: white;
-  margin: 2px auto 3px 2px;
-  // text-align: left;
+  color: #A4A4A4;
+  right: 80%
+  margin-left: 5px;
+  text-align: left;
   flex-shrink: 0;
-  margin-left: auto;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   font-size: 13px;
   font-style: normal;
 `;
@@ -105,7 +103,7 @@ export const Table = styled.table`
     & td {
       text-indent: 20px;
       display: block; 
-      color: white;
+      color: #A4A4A4;
     }
   },
 `;
@@ -126,7 +124,7 @@ export const TR = styled.tr`
 
 
 export const RunningTime = styled.div`
-  color: white;
+  color: #A4A4A4;
   opacity: 0.6;
   font-size: 14px;
   margin: 0 auto auto 20px;
@@ -134,15 +132,19 @@ export const RunningTime = styled.div`
 
 //background-color: ${ButtonColor.RESERVATION};
 export const ButtonContainer = styled.div`
-  border: 1px solid white;
   position: absolute;
-  display: flex;
-  width: 90%;
+  top: 51%;
+  left: 2%;
+  right: 2%;
+  border: 1px solid grey;
+  //display: flex;
+  width: 96%;
   height: 41px;
-  top: 220px;
-  transform: translateY(-50%);
-  right: 20px;
-  font-color: white;
+  justify-content: center;
+  vertical-align: middle
+  // transform: translateY(-50%);
+  max-width: 100%;
+  font-color: #A4A4A4;
 `;
 
 export const Button = styled.div`
@@ -151,5 +153,5 @@ export const Button = styled.div`
   text-shadow: 1px 1px 1px #blue-grey;
   width: 100%;
   text-align: center;
-  margin-top: 7px;
+  margin-top: 10px;
 `;
