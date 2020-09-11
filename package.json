@@ -4,8 +4,8 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development GQL_ENV=deny webpack-dev-server --mode development --open",
-    "start": "NODE_ENV=development GQL_ENV=allow webpack-dev-server --mode development --open",
+    "dev": "cross-env NODE_ENV=development GQL_ENV=deny webpack-dev-server --mode development --open",
+    "start": "cross-env NODE_ENV=development GQL_ENV=allow webpack-dev-server --mode development --open",
     "build": "cross-env NODE_ENV=production GQL_ENV=allow webpack --mode production"
   },
   "dependencies": {

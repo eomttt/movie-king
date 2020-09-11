@@ -92,12 +92,11 @@ export const Data = styled.div`
 export const ButtonContainer = styled.div`
   position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 325px;
+  width: 347px;
   height: 50px;
   text-align: center;
   margin-top: 210px;
   margin-left: 15px;
-  // margin-right: 10px;
 `;
 
 export const Button = styled.div`
