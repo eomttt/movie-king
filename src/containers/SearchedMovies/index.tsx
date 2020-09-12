@@ -1,23 +1,21 @@
-import SearchedMovies from 'components/card/SearchedMovies';
+import { Loading } from 'components/Loading';
+import { MovieType } from 'constants/movie';
 import dummy from 'dummy/searchedMovieCards';
 import { ISearchedMovieCard } from 'interfaces/card';
-import React, { useEffect, useState, useCallback } from 'react';
-
+import { TheaterInfo } from 'interfaces/theater';
 import { THEATERS as cgvTheaters } from 'lib/datum/theaters/cgv';
 import { THEATERS as lotteTheaters } from 'lib/datum/theaters/lotte';
 import { THEATERS as megaTheaters } from 'lib/datum/theaters/megaBox';
-import { MovieType } from 'constants/movie';
+import React, { useCallback, useEffect, useState } from 'react';
+import TheaterTimeTable from 'containers/TheaterTimeTable';
 
 const NEARBY_KM = 3;
 
 const SearchedMoviesContainer = () => {
   // Default is seoul city hall
-  const [nowPosition, setNowPosition] = useState({
-    lat: 37.566,
-    lng: 126.9784,
-  });
-  const [nearByTheaters, setNearByTheaters] = useState([]);
-  const [movies, setMovies] = useState<ISearchedMovieCard[]>([]);
+  const [nowPosition, setNowPosition] = useState(null);
+  const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>(null);
+  const [movies, setMovies] = useState<ISearchedMovieCard[]>(null);
 
   const getLocation = useCallback(() => {
     if (navigator.geolocation) {
@@ -41,7 +39,7 @@ const SearchedMoviesContainer = () => {
     } else {
       alert('위치 정보를 지원하지 않습니다.');
     }
-  }, []);
+  }, [navigator.geolocation]);
 
   const arePointsNear = useCallback(
     (checkPoint) => {
@@ -55,65 +53,72 @@ const SearchedMoviesContainer = () => {
   );
 
   useEffect(() => {
-    setMovies(dummy);
-  }, []);
-
-  useEffect(() => {
     getLocation();
   }, []);
 
   useEffect(() => {
-    const theaterList = [];
-    // eslint-disable-next-line no-restricted-syntax
-    for (const theaters of cgvTheaters) {
+    if (nowPosition) {
+      const theaterList = [];
       // eslint-disable-next-line no-restricted-syntax
-      for (const theater of theaters) {
-        const { location } = theater;
-        if (arePointsNear(location)) {
-          theaterList.push({
-            ...theater,
-            type: MovieType.CGV,
-          });
+      for (const theaters of cgvTheaters) {
+        // eslint-disable-next-line no-restricted-syntax
+        for (const theater of theaters) {
+          const { location } = theater;
+          if (arePointsNear(location)) {
+            theaterList.push({
+              ...theater,
+              type: MovieType.CGV,
+            });
+          }
         }
       }
-    }
 
-    // eslint-disable-next-line no-restricted-syntax
-    for (const theaters of lotteTheaters) {
       // eslint-disable-next-line no-restricted-syntax
-      for (const theater of theaters) {
-        const { location } = theater;
-        if (arePointsNear(location)) {
-          theaterList.push({
-            ...theater,
-            type: MovieType.LOTTE,
-          });
+      for (const theaters of lotteTheaters) {
+        // eslint-disable-next-line no-restricted-syntax
+        for (const theater of theaters) {
+          const { location } = theater;
+          if (arePointsNear(location)) {
+            theaterList.push({
+              ...theater,
+              type: MovieType.LOTTE,
+            });
+          }
         }
       }
-    }
 
-    // eslint-disable-next-line no-restricted-syntax
-    for (const theaters of megaTheaters) {
       // eslint-disable-next-line no-restricted-syntax
-      for (const theater of theaters) {
-        const { location } = theater;
-        if (arePointsNear(location)) {
-          theaterList.push({
-            ...theater,
-            type: MovieType.MEGABOX,
-          });
+      for (const theaters of megaTheaters) {
+        // eslint-disable-next-line no-restricted-syntax
+        for (const theater of theaters) {
+          const { location } = theater;
+          if (arePointsNear(location)) {
+            theaterList.push({
+              ...theater,
+              type: MovieType.MEGABOX,
+            });
+          }
         }
       }
+      setNearByTheaters(theaterList);
     }
-    setNearByTheaters(theaterList);
   }, [nowPosition]);
 
   useEffect(() => {
-    console.log('nearByTheaters', nearByTheaters);
-    // TODO: Get movie time table api
+    if (nearByTheaters) {
+      console.log('Near by theaters', nearByTheaters);
+      setMovies(dummy);
+    }
   }, [nearByTheaters]);
 
-  return <SearchedMovies movies={movies} />;
+  if (nearByTheaters) {
+    // TODO nearyByTheaters 에 찾은 영화 정보들은 다 API 콜해서 각각 타임 테이블 가져와서 렌더링
+    // TheaterTimeTable은 하나의 nearByTheater 에만 반응
+    // 또한 가공이 필요한데... 시간 별로 정렬이 필요...
+    return <TheaterTimeTable theaterInfo={nearByTheaters[0]} />;
+  }
+
+  return <Loading />;
 };
 
 export default SearchedMoviesContainer;
