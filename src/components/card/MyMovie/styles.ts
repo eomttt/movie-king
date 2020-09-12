@@ -44,7 +44,7 @@ export const Time = styled.div`
   font-size: 16px;
   opacity: 0.60;
   margin-bottom: 0.5px;
-  color: ${FontColor['POINT']};
+  color: ${FontColor.POINT};
   vertical-align: top;
 `;
 
@@ -59,7 +59,7 @@ export const Title = styled.div`
   height: 24px;
   opacity: 0.87;
   font-size: 20px;
-  color: ${FontColor['POINT']};
+  color: ${FontColor.POINT};
   margin-bottom: 0.5px;
   letter-spacing: -0.83pt;
   vertical-align: top;
@@ -73,7 +73,7 @@ export const Row = styled.div`
 `;
 
 export const Col = styled.div`
-  color: ${FontColor['POINT']};
+  color: ${FontColor.POINT};
   opacity: 0.6;
   flex-basis: 72px;
   display: block; 
@@ -83,7 +83,7 @@ export const Col = styled.div`
 `;
 
 export const Data = styled.div`
-  color: ${FontColor['POINT']};
+  color: ${FontColor.POINT};
   right: 20px;
   opacity: 0.87;
   font-size: 15px;
