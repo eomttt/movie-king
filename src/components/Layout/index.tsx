@@ -18,8 +18,9 @@ const Layout: React.FunctionComponent<IProps> = ({ children }) => {
 
   useEffect(() => {
     const { innerHeight } = window;
-    const height = innerHeight - topNavBarHeight - bottomNavBarHeight - pagesPadding * 2;
-    setAppHeight(height);
+    setAppHeight(
+      innerHeight - topNavBarHeight - bottomNavBarHeight - pagesPadding * 2,
+    );
   }, []);
 
   return (
