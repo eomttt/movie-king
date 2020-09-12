@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
-import { ButtonColor } from 'styles/color';
+import { ButtonColor, NavBarColor, FontColor } from 'styles/color';
 import { defaultBorder } from 'styles/common';
-import { NavBarColor } from 'styles/color';
-import { FontColor } from 'styles/color';
 
 export const Container = styled.div`
   width: 100%;  
@@ -25,8 +23,6 @@ export const Menu = styled.div`
 `;
 
 export const MenuContent = styled.div`
-  x-index: 0px;
-  y-index: 70px;
   height: 277px;
   display: flex;
   flex-direction: column;
@@ -37,8 +33,6 @@ export const MenuContent = styled.div`
 export const Time = styled.div`
   display: flex;
   height: 20px;
-  x-index: 13px;
-  y-index: 90px;
   margin-top: 20px;
   margin-left: 13px;
   font-size: 16px;
@@ -53,8 +47,6 @@ export const Title = styled.div`
   margin-top: 10px;
   margin-left: 15px;
   margin-right: 327px;
-  x-index: 15px;
-  y-index: 120px;
   width: 100%;
   height: 24px;
   opacity: 0.87;
