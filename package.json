@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development GQL_ENV=deny webpack-dev-server --mode development --open",
     "start": "cross-env NODE_ENV=development GQL_ENV=allow webpack-dev-server --mode development --open",
-    "build": "cross-env NODE_ENV=production GQL_ENV=allow webpack --mode production"
+    "build": "cross-env NODE_ENV=production GQL_ENV=allow webpack --mode production",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",

@@ -8,7 +8,6 @@ import { Loading } from 'components/Loading';
 import { Error } from 'components/Error';
 
 const MyMoviesContainer = () => {
-
   const { loading, error, data } = {
     loading: false,
     error: '',

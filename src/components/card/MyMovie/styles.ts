@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import { ButtonColor, NavBarColor, FontColor } from 'styles/color';
+import { ButtonColor, FontColor, NavBarColor } from 'styles/color';
 import { defaultBorder } from 'styles/common';
 
 export const Container = styled.div`
-  width: 100%;  
+  width: 100%;
   border-radius: ${defaultBorder};
   overflow: hidden;
   letter-spacing: -1px;
@@ -36,7 +36,7 @@ export const Time = styled.div`
   margin-top: 20px;
   margin-left: 13px;
   font-size: 16px;
-  opacity: 0.60;
+  opacity: 0.6;
   margin-bottom: 0.5px;
   color: ${FontColor.POINT};
   vertical-align: top;
@@ -68,7 +68,7 @@ export const Col = styled.div`
   color: ${FontColor.POINT};
   opacity: 0.6;
   flex-basis: 72px;
-  display: block; 
+  display: block;
   margin-left: 15px;
   font-size: 15px;
   font-style: normal;

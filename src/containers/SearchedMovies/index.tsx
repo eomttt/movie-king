@@ -109,7 +109,7 @@ const SearchedMoviesContainer = () => {
   }, [nowPosition]);
 
   useEffect(() => {
-    console.log("nearByTheaters", nearByTheaters);
+    console.log('nearByTheaters', nearByTheaters);
     // TODO: Get movie time table api
   }, [nearByTheaters]);
 

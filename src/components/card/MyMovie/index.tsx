@@ -9,11 +9,11 @@ const MyMovie: React.FunctionComponent<IMyMovieCard> = ({
   time,
   location,
   audiences,
-  fare
+  fare,
 }) => {
   const seatText = audiences.reduce((acc, cur, index) => {
     const isLast = index === audiences.length - 1;
-    return `${acc}${cur.seat}${isLast ? '' : ', '}`
+    return `${acc}${cur.seat}${isLast ? '' : ', '}`;
   }, '');
   return (
     <Styles.Container>
@@ -24,7 +24,7 @@ const MyMovie: React.FunctionComponent<IMyMovieCard> = ({
             <Styles.Title>{title}</Styles.Title>
             <Styles.Row>
               <Styles.Col>상영시간</Styles.Col>
-              <Styles.Data>{time}분</Styles.Data>
+              <Styles.Data>{`${time}분`}</Styles.Data>
             </Styles.Row>
             <Styles.Row>
               <Styles.Col>상영관</Styles.Col>
@@ -32,7 +32,7 @@ const MyMovie: React.FunctionComponent<IMyMovieCard> = ({
             </Styles.Row>
             <Styles.Row>
               <Styles.Col>관람인원</Styles.Col>
-              <Styles.Data>{audiences.length}명</Styles.Data>
+              <Styles.Data>{`${audiences.length}명`}</Styles.Data>
             </Styles.Row>
             <Styles.Row>
               <Styles.Col>좌석</Styles.Col>
@@ -40,7 +40,7 @@ const MyMovie: React.FunctionComponent<IMyMovieCard> = ({
             </Styles.Row>
             <Styles.Row>
               <Styles.Col>결제금액</Styles.Col>
-              <Styles.Data>{fare}원</Styles.Data>
+              <Styles.Data>{`${fare}원`}</Styles.Data>
             </Styles.Row>
             <Styles.ButtonContainer>
               <Styles.Button>취소하기</Styles.Button>
@@ -49,7 +49,7 @@ const MyMovie: React.FunctionComponent<IMyMovieCard> = ({
         </Styles.Menu>
       </Styles.Content>
     </Styles.Container>
-  )
+  );
 };
 
 export default MyMovie;
