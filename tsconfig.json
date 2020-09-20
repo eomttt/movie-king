@@ -21,7 +21,9 @@
       "containers/*": ["containers/*"],
       "styles/*": ["styles/*"],
       "interfaces/*": ["interfaces/*"],
-      "dummy/*": ["dummy/*"]
+      "dummy/*": ["dummy/*"],
+      "query/*": ["query/*"],
+      "apis/*": ["api/*"]
     }
   },
   "exclude": [

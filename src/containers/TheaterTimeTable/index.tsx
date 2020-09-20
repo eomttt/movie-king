@@ -1,26 +1,14 @@
-import { gql } from 'apollo-boost';
-import { TheaterInfo } from 'interfaces/theater';
-import React, { useEffect } from 'react';
+import SearchedMovies from 'components/card/SearchedMovies';
+import timeTableDummy from 'dummy/timetable';
 // import { useQuery } from 'react-apollo';
 import { ISearchedMovieCard } from 'interfaces/card';
-import timeTableDummy from 'dummy/timetable';
-import SearchedMovies from 'components/card/SearchedMovies';
+import { TheaterInfo } from 'interfaces/theater';
+import React from 'react';
 
 interface TheaterTimeTableProps {
   theaterInfo: TheaterInfo;
   onSetMovies?: (movieCard: ISearchedMovieCard) => void;
 }
-
-// const GET_TIMETABLE_QUERY = gql`
-//   query TimeTable($type: String!, $link: String!) {
-//     timeTable(type: $type, theaterLink: $link) {
-//       title
-//       timeInfo {
-//         time
-//       }
-//     }
-//   }
-// `;
 
 const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = ({
   theaterInfo,

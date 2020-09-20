@@ -1,20 +1,9 @@
-import { gql } from 'apollo-boost';
 import MainMovies from 'components/card/MainMovies';
+import { Error } from 'components/Error';
+import { Loading } from 'components/Loading';
 import dummy from 'dummy/movieCards';
 import { IMovieCard } from 'interfaces/card';
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-apollo';
-import { Loading } from 'components/Loading';
-import { Error } from 'components/Error';
-
-const GET_BOXOFFICE_QUERY = gql`
-  {
-    boxOffice {
-      image
-      title
-    }
-  }
-`;
 
 const MainMoviesContainer = () => {
   // dummy data
