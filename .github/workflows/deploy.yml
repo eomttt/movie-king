@@ -1,4 +1,4 @@
-name: React build
+name: Deploy to PUBLIC
 on: 
   push:
     branches:
