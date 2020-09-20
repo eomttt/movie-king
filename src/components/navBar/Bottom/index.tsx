@@ -16,7 +16,7 @@ const Bottom = () => (
       </Link>
       <Link to="/myPage">
         <img src={MY_PAGE} alt="myPage" />
-        <div>마이페이지</div>
+        <div>배포테스트</div>
       </Link>
     </Styles.Content>
   </Styles.Container>
