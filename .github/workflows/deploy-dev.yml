@@ -1,4 +1,4 @@
-name: React build
+name: Deploy to DEV
 on: 
   push:
     branches:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout source code.
-        uses: actions/checkout@develop
+        uses: actions/checkout@master
 
       - name: Cache node modules      # node modules 캐싱
         uses: actions/cache@v1
