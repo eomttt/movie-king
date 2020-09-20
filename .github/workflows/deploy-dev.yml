@@ -42,4 +42,3 @@ jobs:
           SLACK_USERNAME: deploy-bot
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_TITLE: 'Deploy DEV'
-          SLACK_MESSAGE: 'http://movieking-dev.s3-website.ap-northeast-2.amazonaws.com/'
