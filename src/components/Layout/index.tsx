@@ -21,6 +21,7 @@ const Layout: React.FunctionComponent<IProps> = ({ children }) => {
     setAppHeight(
       innerHeight - topNavBarHeight - bottomNavBarHeight - pagesPadding * 2,
     );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
