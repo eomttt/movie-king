@@ -21,7 +21,8 @@
   "plugins": [
     "react",
     "prettier",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "react-hooks"
   ],
   "settings": {
     "babel-module": {},
@@ -47,6 +48,8 @@
     "import/no-unresolved": "off",
     "react/prop-types": "off",
     "no-unused-vars": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

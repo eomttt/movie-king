@@ -63,6 +63,7 @@ const SearchedMoviesContainer = () => {
 
   useEffect(() => {
     getLocation();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -111,14 +112,14 @@ const SearchedMoviesContainer = () => {
       }
       setNearByTheaters(theaterList);
     }
-  }, [nowPosition]);
+  }, [arePointsNear, nowPosition]);
 
   useEffect(() => {
     const isAllFull = movies.every((item) => item);
     if (movies.length === nearByTheaters.length && isAllFull) {
       console.log('Finish get movies', movies.flatMap((item) => item));
     }
-  }, [movies]);
+  }, [movies, nearByTheaters.length]);
 
   useEffect(() => {
     if (nearByTheaters) {
