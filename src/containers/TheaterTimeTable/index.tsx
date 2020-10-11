@@ -55,7 +55,7 @@ const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.m
   }
 
   if (error) {
-    console.log("Error", error);
+    console.log('Error', error);
     return null;
   }
 
