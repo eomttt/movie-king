@@ -18,7 +18,7 @@ const MyMoviesContainer = () => {
     if (data) {
       setMyMovies(dummy);
     }
-  }, [dummy]);
+  }, [data]);
 
   if (loading) return <Loading />;
   if (error) return <Error errorContent={error} />;
