@@ -1,34 +1,33 @@
 import SearchedMovies from 'components/card/SearchedMovies';
 import timeTableDummy from 'dummy/timetable';
-// import { useQuery } from 'react-apollo';
+import { useQuery } from 'react-apollo';
 import { ISearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { GET_TIMETABLE_QUERY } from 'query/TimeTable';
+import { Loading } from 'components/Loading';
+import { ITimeTableData } from 'interfaces/timeTable';
 
 interface TheaterTimeTableProps {
   theaterInfo: TheaterInfo;
-  onSetMovies?: (movieCard: ISearchedMovieCard) => void;
+  onSetMovies?: (movieCard: ISearchedMovieCard[]) => void;
 }
 
-const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = ({
+const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.memo(({
   theaterInfo,
   onSetMovies,
 }: TheaterTimeTableProps) => {
   const { title, type, link } = theaterInfo;
-  const { loading, error, data } = {
-    loading: false,
-    error: null,
-    data: timeTableDummy,
-  };
-  // const { loading, error, data } = useQuery(GET_TIMETABLE_QUERY, {
-  //   variables: { type, link },
-  // });
+  // const { loading, error, data } = {
+  //   loading: false,
+  //   error: null,
+  //   data: timeTableDummy,
+  // };
+  const { loading, error, data } = useQuery<ITimeTableData>(GET_TIMETABLE_QUERY, {
+    variables: { type, link },
+  });
 
-  if (loading || error) {
-    return null;
-  }
-  const { timeTable } = timeTableDummy;
-  const movies = timeTable.flatMap((table, index) => {
+  const movies: ISearchedMovieCard[] = data?.timeTable.flatMap((table, index) => {
     const { title: tableTitle, timeInfo } = table;
     return timeInfo.map(
       (info, timeIndex): ISearchedMovieCard => ({
@@ -45,7 +44,22 @@ const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = ({
     );
   });
 
-  return <SearchedMovies movies={movies} />;
-};
+  useEffect(() => {
+    if (onSetMovies && movies) {
+      onSetMovies(movies);
+    }
+  }, [movies, onSetMovies]);
+
+  if (loading) {
+    return null;
+  }
+
+  if (error) {
+    console.log("Error", error);
+    return null;
+  }
+
+  return <></>;
+});
 
 export default TheaterTimeTable;
