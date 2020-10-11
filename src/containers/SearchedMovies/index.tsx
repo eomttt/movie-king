@@ -14,8 +14,9 @@ const NEARBY_KM = 3;
 const SearchedMoviesContainer = () => {
   // Default is seoul city hall
   const [nowPosition, setNowPosition] = useState(null);
-  const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>(null);
-  const [movies, setMovies] = useState<ISearchedMovieCard[]>(null);
+  const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>([]);
+  const [movies, setMovies] = useState<ISearchedMovieCard[][]>([]);
+  const [flatMovieCards, setFlatMovieCards] = useState<ISearchedMovieCard[]>([]);
 
   const getLocation = useCallback(() => {
     if (navigator.geolocation) {
@@ -51,6 +52,14 @@ const SearchedMoviesContainer = () => {
     },
     [nowPosition],
   );
+
+  const handleSetMovies = useCallback((searchedMovieCards: ISearchedMovieCard[], index: number) => {
+    if (!movies[index]) {
+      const movieItem = movies.map((item) => (item ? [...item] : null));
+      movieItem[index] = [...searchedMovieCards];
+      setMovies(movieItem);
+    }
+  }, [movies]);
 
   useEffect(() => {
     getLocation();
@@ -105,9 +114,16 @@ const SearchedMoviesContainer = () => {
   }, [nowPosition]);
 
   useEffect(() => {
+    const isAllFull = movies.every((item) => item);
+    if (movies.length === nearByTheaters.length && isAllFull) {
+      console.log('Finish get movies', movies.flatMap((item) => item));
+    }
+  }, [movies]);
+
+  useEffect(() => {
     if (nearByTheaters) {
       console.log('Near by theaters', nearByTheaters);
-      setMovies(dummy);
+      setMovies(Array(nearByTheaters.length).fill(null));
     }
   }, [nearByTheaters]);
 
@@ -115,7 +131,17 @@ const SearchedMoviesContainer = () => {
     // TODO nearyByTheaters 에 찾은 영화 정보들은 다 API 콜해서 각각 타임 테이블 가져와서 렌더링
     // TheaterTimeTable은 하나의 nearByTheater 에만 반응
     // 또한 가공이 필요한데... 시간 별로 정렬이 필요...
-    return <TheaterTimeTable theaterInfo={nearByTheaters[0]} />;
+    return (
+      nearByTheaters.map((nearByTheater, index) => (
+        <TheaterTimeTable
+          key={`${nearByTheater.type}-${nearByTheater.title}`}
+          theaterInfo={nearByTheater}
+          onSetMovies={
+            (searchedMovieCards: ISearchedMovieCard[]) => handleSetMovies(searchedMovieCards, index)
+          }
+        />
+      ))
+    );
   }
 
   return <Loading />;
