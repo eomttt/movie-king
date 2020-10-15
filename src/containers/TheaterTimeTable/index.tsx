@@ -18,14 +18,14 @@ const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.m
   onSetMovies,
 }: TheaterTimeTableProps) => {
   const { title, type, link } = theaterInfo;
-  // const { loading, error, data } = {
-  //   loading: false,
-  //   error: null,
-  //   data: timeTableDummy,
-  // };
-  const { loading, error, data } = useQuery<ITimeTableData>(GET_TIMETABLE_QUERY, {
-    variables: { type, link },
-  });
+  const { loading, error, data } = {
+    loading: false,
+    error: null,
+    data: timeTableDummy,
+  };
+  // const { loading, error, data } = useQuery<ITimeTableData>(GET_TIMETABLE_QUERY, {
+  //   variables: { type, link },
+  // });
 
   const movies: ISearchedMovieCard[] = data?.timeTable.flatMap((table, index) => {
     const { title: tableTitle, timeInfo } = table;

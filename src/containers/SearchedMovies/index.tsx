@@ -117,7 +117,8 @@ const SearchedMoviesContainer = () => {
   useEffect(() => {
     const isAllFull = movies.every((item) => item);
     if (movies.length === nearByTheaters.length && isAllFull) {
-      console.log('Finish get movies', movies.flatMap((item) => item));
+      // console.log('Finish get movies', movies.flatMap((item) => item));
+      setFlatMovieCards(movies.flatMap((item) => item));
     }
   }, [movies, nearByTheaters.length]);
 
@@ -128,10 +129,17 @@ const SearchedMoviesContainer = () => {
     }
   }, [nearByTheaters]);
 
+  if (flatMovieCards.length > 0) {
+    return (
+      <>
+        {
+        flatMovieCards.map((faltMovieCard) => <div style={{color: 'white'}} key={`faltMovieCard.id-${Math.random()}`}>{faltMovieCard.title}</div>)
+      }
+      </>
+    );
+  }
+
   if (nearByTheaters) {
-    // TODO nearyByTheaters 에 찾은 영화 정보들은 다 API 콜해서 각각 타임 테이블 가져와서 렌더링
-    // TheaterTimeTable은 하나의 nearByTheater 에만 반응
-    // 또한 가공이 필요한데... 시간 별로 정렬이 필요...
     return (
       nearByTheaters.map((nearByTheater, index) => (
         <TheaterTimeTable
