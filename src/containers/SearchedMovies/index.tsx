@@ -40,7 +40,7 @@ const SearchedMoviesContainer = () => {
     } else {
       alert('위치 정보를 지원하지 않습니다.');
     }
-  }, [navigator.geolocation]);
+  }, []);
 
   const arePointsNear = useCallback(
     (checkPoint) => {
@@ -133,7 +133,7 @@ const SearchedMoviesContainer = () => {
     return (
       <>
         {
-        flatMovieCards.map((faltMovieCard) => <div style={{color: 'white'}} key={`faltMovieCard.id-${Math.random()}`}>{faltMovieCard.title}</div>)
+        flatMovieCards.map((faltMovieCard) => <div style={{ color: 'white' }} key={`faltMovieCard.id-${Math.random()}`}>{faltMovieCard.title}</div>)
       }
       </>
     );
