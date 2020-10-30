@@ -46,8 +46,7 @@ export const Title = styled.div`
   display: flex;
   margin-top: 10px;
   margin-left: 15px;
-  margin-right: 327px;
-  width: 100%;
+  width: 80%;
   height: 24px;
   opacity: 0.87;
   font-size: 20px;
@@ -89,6 +88,7 @@ export const ButtonContainer = styled.div`
   text-align: center;
   margin-top: 210px;
   margin-left: 15px;
+  margin-right: 15px;
 `;
 
 export const Button = styled.div`
