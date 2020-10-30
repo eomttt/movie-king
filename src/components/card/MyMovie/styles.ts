@@ -46,7 +46,7 @@ export const Title = styled.div`
   display: flex;
   margin-top: 10px;
   margin-left: 15px;
-  width: 80%;
+  width: 100%;
   height: 24px;
   opacity: 0.87;
   font-size: 20px;
