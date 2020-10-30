@@ -11,10 +11,8 @@ const MyMovie: React.FunctionComponent<IMyMovieCard> = ({
   audiences,
   fare,
 }) => {
-  const seatText = audiences.reduce((acc, cur, index) => {
-    const isLast = index === audiences.length - 1;
-    return `${acc}${cur.seat}${isLast ? '' : ', '}`;
-  }, '');
+  const seats = audiences.map(audience => audience.seat);
+  const seatText = seats.join(', ');
   return (
     <Styles.Container>
       <Styles.Content>
