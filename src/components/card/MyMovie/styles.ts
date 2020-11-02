@@ -23,7 +23,7 @@ export const Menu = styled.div`
 `;
 
 export const MenuContent = styled.div`
-  height: 277px;
+  margin-bottom: 17px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -94,7 +94,6 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.div`
-  font-size: 18px;
   color: ${ButtonColor.RESERVATION};
   width: 100%;
   height: 21px;
