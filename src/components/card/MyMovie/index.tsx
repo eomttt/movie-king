@@ -13,19 +13,19 @@ const MyMovie: React.FunctionComponent<IMyMovieCard> = ({
 }) => {
   const seats = audiences.map(audience => audience.seat);
   const seatText = seats.join(', ');
-  const month = (new Date().getMonth()+1).toString();
+  const month = (new Date().getMonth() + 1).toString();
   const day = new Date().getDate().toString();
-  const today = day.length === 1 ? month+'0'+day : month+day;
+  const today = day.length === 1 ? `${month}0${day}` : month + day;
   let button;
   let runningTime = runningtime;
-  if (runningtime.replace('/', '').substr(0,4) >= today) {
-    button = 
+  if (runningtime.replace('/', '').substr(0, 4) >= today) {
+    button = (
       <Styles.ButtonContainer>
         <Styles.Button>취소하기</Styles.Button>
       </Styles.ButtonContainer>
-    ;
-    if (runningtime.replace('/', '').substr(0,4) === today) {
-      runningTime = '오늘 ' + runningtime.slice(-5);
+    );
+    if (runningtime.replace('/', '').substr(0, 4) === today) {
+      runningTime = `오늘 ${runningtime.slice(-5)}`;
     }
   }
   return (
