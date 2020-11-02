@@ -2,7 +2,7 @@ const datam = [
   {
     id: '1',
     title: '타이타닉',
-    runningtime: '오늘 17:30',
+    runningtime: '11/02 17:30',
     time: '210',
     location: 'CGV 강남역점 5관',
     audiences: [
@@ -18,7 +18,7 @@ const datam = [
   {
     id: '2',
     title: '어바웃 타임',
-    runningtime: '09/18 18:20',
+    runningtime: '11/18 18:20',
     time: '124',
     location: 'CGV 인천점 1관[CGV아트하우스]',
     audiences: [
