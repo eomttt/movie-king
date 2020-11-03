@@ -17,13 +17,14 @@ export interface ISearchedMovieCard {
 }
 
 export interface IMyMovieCard {
-  time: string;
+  runningTime: number;
   id: string;
   title: string;
-  runningtime: string;
+  startDate: string;
+  startTime: string;
   location: string;
   audiences: IMyMovieAudience[];
-  fare: string;
+  fare: number;
 }
 
 export interface IMyMovieAudience {

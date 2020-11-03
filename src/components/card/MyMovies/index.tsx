@@ -1,5 +1,6 @@
 import MyMovie from 'components/card/MyMovie';
 import { IMyMovieCard } from 'interfaces/card';
+import { getNumberWithComma } from 'lib/utils/common';
 import React from 'react';
 import * as Styles from './styles';
 
@@ -9,17 +10,9 @@ interface IProps {
 
 const MyMovies: React.FunctionComponent<IProps> = ({ myMovies }) => (
   <Styles.Container>
-    {myMovies.map((movie: IMyMovieCard) => (
-      <Styles.Content key={movie.id}>
-        <MyMovie
-          id={movie.id}
-          title={movie.title}
-          runningtime={movie.runningtime}
-          time={movie.time}
-          location={movie.location}
-          audiences={movie.audiences}
-          fare={movie.fare}
-        />
+    {myMovies.map((movieCard) => (
+      <Styles.Content key={movieCard.id}>
+        <MyMovie movieCard={movieCard} />
       </Styles.Content>
     ))}
   </Styles.Container>

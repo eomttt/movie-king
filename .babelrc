@@ -5,29 +5,30 @@
    "@babel/preset-typescript"
  ],
  "plugins": [
-  [
-    "module-resolver",
-    {
-      "root": ["./src"],
-      "alias": {
-        "pages": "./src/pages",
-        "components": "./src/components",
-        "constants": "./src/constants",
-        "containers": "./src/containers",
-        "styles": "./src/styles",
-        "interfaces": "./src/interfaces",
-        "dummy": "./src/dummy"
+    ["transform-class-properties"],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "pages": "./src/pages",
+          "components": "./src/components",
+          "constants": "./src/constants",
+          "containers": "./src/containers",
+          "styles": "./src/styles",
+          "interfaces": "./src/interfaces",
+          "dummy": "./src/dummy"
+        }
       }
-    }
-  ],
-  [
-    "emotion",
-    {
-      "sourceMap": true,
-      "autoLabel": true,
-      "labelFormat": "[dirname]_[local]",
-      "cssPropOptimization": true
-    }
-  ]
+    ],
+    [
+      "emotion",
+      {
+        "sourceMap": true,
+        "autoLabel": true,
+        "labelFormat": "[dirname]_[local]",
+        "cssPropOptimization": true
+      }
+    ]
  ]
 }

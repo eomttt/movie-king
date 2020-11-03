@@ -22,7 +22,7 @@ const MyMoviesContainer = () => {
 
   if (loading) return <Loading />;
   if (error) return <Error errorContent={error} />;
-  console.log(myMovies);
+
   return <MyMovies myMovies={myMovies} />;
 };
 
