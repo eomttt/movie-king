@@ -23,7 +23,7 @@ export const Menu = styled.div`
 `;
 
 export const MenuContent = styled.div`
-  height: 277px;
+  margin-bottom: 17px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -42,11 +42,14 @@ export const Time = styled.div`
   vertical-align: top;
 `;
 
+export const Wrapper = styled.div`
+  margin-left: 15px;
+`;
+
 export const Title = styled.div`
   display: flex;
   margin-top: 10px;
-  margin-left: 15px;
-  margin-right: 327px;
+  max-width: 100%px;
   width: 100%;
   height: 24px;
   opacity: 0.87;
@@ -62,6 +65,7 @@ export const Row = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   margin-top: 5px;
+  font-size: 15px;
 `;
 
 export const Col = styled.div`
@@ -69,8 +73,6 @@ export const Col = styled.div`
   opacity: 0.6;
   flex-basis: 72px;
   display: block;
-  margin-left: 15px;
-  font-size: 15px;
   font-style: normal;
 `;
 
@@ -78,26 +80,25 @@ export const Data = styled.div`
   color: ${FontColor.POINT};
   right: 20px;
   opacity: 0.87;
-  font-size: 15px;
 `;
 
 export const ButtonContainer = styled.div`
-  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 347px;
   height: 50px;
   text-align: center;
-  margin-top: 210px;
+  margin-top: 11px;
   margin-left: 15px;
+  margin-right: 15px;
 `;
 
 export const Button = styled.div`
-  font-size: 18px;
   color: ${ButtonColor.RESERVATION};
-  width: 347px;
+  width: 100%;
   height: 21px;
   text-align: center;
-  margin-top: 14px;
+  padding: 14px;
   letter-spacing: 0px;
   vertical-align: top;
 `;
