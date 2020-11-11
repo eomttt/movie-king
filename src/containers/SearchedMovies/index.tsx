@@ -124,7 +124,7 @@ const SearchedMoviesContainer = () => {
 
   useEffect(() => {
     if (nearByTheaters) {
-      console.log('Near by theaters', nearByTheaters);
+      console.log('https:// 된 기념 확인차 로그. Near by theaters', nearByTheaters);
       setMovies(Array(nearByTheaters.length).fill(null));
     }
   }, [nearByTheaters]);
