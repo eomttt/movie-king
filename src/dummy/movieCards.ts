@@ -9,7 +9,7 @@ const datam = {
     },
     {
       id: '2',
-      title: '작은 아씨들',
+      title: '작은 아씨들-test',
       image:
         'http://www.kobis.or.kr/common/mast/movie/2020/01/24088dd8a25143199a6654a6cd85dd63.jpg',
       rating: '4.4',
