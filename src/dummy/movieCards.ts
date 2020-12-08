@@ -2,7 +2,7 @@ const datam = {
   boxOffice: [
     {
       id: '1',
-      title: '정직한 후보',
+      title: '정직한 후보-test',
       image:
         'http://www.kobis.or.kr/common/mast/movie/2020/01/a880f5d250f04e6bacc786342972ddf4.jpg',
       rating: '3.4',
