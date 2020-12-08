@@ -12,7 +12,7 @@ const MainMoviesContainer = () => {
   let isError = false;
   let data = dummy.boxOffice;
 
-  console.log("CHECK", process.env.GQL_DEV)
+  console.log('CHECK', process.env.GQL_DEV);
   if (process.env.GQL_DEV === 'production') {
     const res = useQuery('boxoffice', getBoxOffice);
     isLoading = res.isLoading;
