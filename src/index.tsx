@@ -13,6 +13,8 @@ const queryCache = new QueryCache();
 //   uri: 'http://localhost:4000/graphql',
 // });
 
+console.log('TEST', process.env.GQL_DEV);
+
 ReactDOM.render(
   <ReactQueryCacheProvider queryCache={queryCache}>
     <AppHeightProvider>
