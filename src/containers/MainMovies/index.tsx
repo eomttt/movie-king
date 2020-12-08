@@ -22,8 +22,8 @@ const MainMoviesContainer = () => {
 
   const test = async () => {
     const res = await getBoxOffice();
-    console.log("CCCC", res);
-  }
+    console.log('CCCC', res);
+  };
 
   useEffect(() => {
     test();
