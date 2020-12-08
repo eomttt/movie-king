@@ -23,7 +23,8 @@ class Api {
   };
 
   private handleError = (error: AxiosError) => {
-    // TODO: Error control
+    console.error('Api error', error);
+    throw new Error();
   };
 
   async get<P, R = undefined>(params?: P): Promise<R | null> {

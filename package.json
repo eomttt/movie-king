@@ -4,9 +4,9 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development GQL_ENV=deny webpack-dev-server --mode development --open",
-    "start": "cross-env NODE_ENV=development GQL_ENV=allow webpack-dev-server --mode development --open",
-    "build": "cross-env NODE_ENV=production GQL_ENV=allow webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+    "start": "cross-env NODE_ENV=production webpack-dev-server --mode development --open",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix"
   },
   "husky": {

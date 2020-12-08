@@ -1,9 +1,18 @@
+import { IMovieCard } from 'interfaces/card';
 import { MovieApi } from 'apis/Api';
 
-export const getBoxOffice = () => MovieApi.get<{
+interface Parameter {
   request: string;
   theater: string;
-}>({
-  request: 'box-office',
-  theater: 'cgv',
-});
+}
+
+export const getBoxOffice = () => {
+  try {
+    return MovieApi.get<Parameter, IMovieCard[]>({
+      request: 'box-office',
+      theater: 'cgv',
+    });
+  } catch (error) {
+    return error;
+  }
+};
