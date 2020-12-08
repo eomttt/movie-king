@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -43,6 +45,9 @@ const config = {
         unused: true,
       },
       sourceMap: true,
+    }),
+    new Dotenv({
+      path: isDev ? '.env' : '.env',
     }),
   ],
   output: {

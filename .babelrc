@@ -1,6 +1,13 @@
 {
  "presets": [
-   "@babel/preset-env",
+   [
+     "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ],
    "@babel/preset-react",
    "@babel/preset-typescript"
  ],
@@ -17,7 +24,8 @@
           "containers": "./src/containers",
           "styles": "./src/styles",
           "interfaces": "./src/interfaces",
-          "dummy": "./src/dummy"
+          "dummy": "./src/dummy",
+          "apis": "./src/apis"
         }
       }
     ],
