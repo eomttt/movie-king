@@ -4,9 +4,10 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development GQL_ENV=deny webpack-dev-server --mode development --open",
-    "start": "cross-env NODE_ENV=development GQL_ENV=allow webpack-dev-server --mode development --open",
-    "build": "cross-env NODE_ENV=production GQL_ENV=allow webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+    "start": "cross-env NODE_ENV=production webpack-dev-server --mode development --open",
+    "build": "cross-env NODE_ENV=development webpack --mode production",
+    "buildprod": "cross-env NODE_ENV=production webpack --mode production",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix"
   },
   "husky": {
@@ -19,6 +20,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "apollo-boost": "^0.4.7",
+    "axios": "^0.21.0",
     "cross-env": "^7.0.2",
     "emotion": "^10.0.27",
     "graphql": "^15.0.0",
@@ -26,6 +28,8 @@
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
+    "react-query": "^2.26.4",
+    "react-query-devtools": "^2.6.3",
     "react-router-dom": "^5.1.2",
     "react-use": "^15.3.4"
   },
@@ -44,6 +48,7 @@
     "babel-plugin-emotion": "^10.0.33",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "dotenv-webpack": "^6.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-import-resolver-babel-module": "^5.1.2",

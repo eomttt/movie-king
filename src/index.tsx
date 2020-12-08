@@ -1,22 +1,26 @@
-import ApolloClient from 'apollo-boost';
-import React from 'react';
-import { ApolloProvider } from 'react-apollo';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 import { AppHeightProvider } from 'contexts/AppHeight';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { QueryCache, ReactQueryCacheProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query-devtools';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
-});
+const queryCache = new QueryCache();
+
+// TODO: Use react-query instead of apollo-boost
+// const client = new ApolloClient({
+//   uri: 'http://localhost:4000/graphql',
+// });
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
+  <ReactQueryCacheProvider queryCache={queryCache}>
     <AppHeightProvider>
       <BrowserRouter>
         <App />
+        <ReactQueryDevtools initialIsOpen />
       </BrowserRouter>
     </AppHeightProvider>
-  </ApolloProvider>,
+  </ReactQueryCacheProvider>,
   document.getElementById('root'),
 );
