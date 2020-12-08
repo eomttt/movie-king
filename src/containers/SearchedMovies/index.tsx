@@ -31,14 +31,14 @@ const SearchedMoviesContainer = () => {
         },
         (error) => {
           if (error.code === 1) {
-            alert('위치 정보를 가져 올 수 있도록 허용해주세요.');
-            return;
+            // alert('위치 정보를 가져 올 수 있도록 허용해주세요.');
+
           }
-          alert(error.message);
+          // alert(error.message);
         },
       );
     } else {
-      alert('위치 정보를 지원하지 않습니다.');
+      // alert('위치 정보를 지원하지 않습니다.');
     }
   }, []);
 
@@ -124,7 +124,7 @@ const SearchedMoviesContainer = () => {
 
   useEffect(() => {
     if (nearByTheaters) {
-      console.log('https:// 된 기념 확인차 로그. Near by theaters', nearByTheaters);
+      // console.log('https:// 된 기념 확인차 로그. Near by theaters', nearByTheaters);
       setMovies(Array(nearByTheaters.length).fill(null));
     }
   }, [nearByTheaters]);
