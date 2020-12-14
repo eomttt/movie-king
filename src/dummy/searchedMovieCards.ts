@@ -53,7 +53,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/technics',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Kabul'
+    location: 'Kabul',
   },
   {
     id: '7',
@@ -61,7 +61,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/animals',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Mariehamn'
+    location: 'Mariehamn',
   },
   {
     id: '8',
@@ -69,7 +69,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/fashion',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Tirana'
+    location: 'Tirana',
   },
   {
     id: '9',
@@ -77,7 +77,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nightlife',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Algiers'
+    location: 'Algiers',
   },
   {
     id: '10',
@@ -85,7 +85,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/sports',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Pago Pago'
+    location: 'Pago Pago',
   },
   {
     id: '11',
@@ -93,7 +93,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Andorra la Vella'
+    location: 'Andorra la Vella',
   },
   {
     id: '12',
@@ -101,7 +101,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/food',
     rating: '5',
     type: MovieType.CGV,
-    location: 'Luanda'
+    location: 'Luanda',
   },
   {
     id: '13',
@@ -109,7 +109,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nightlife',
     rating: '2',
     type: MovieType.MEGABOX,
-    location: 'The Valley'
+    location: 'The Valley',
   },
   {
     id: '14',
@@ -117,7 +117,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Saint Johns'
+    location: 'Saint Johns',
   },
   {
     id: '15',
@@ -125,7 +125,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/business',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Buenos Aires'
+    location: 'Buenos Aires',
   },
   {
     id: '16',
@@ -133,7 +133,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Yerevan'
+    location: 'Yerevan',
   },
   {
     id: '17',
@@ -141,7 +141,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nightlife',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Oranjestad'
+    location: 'Oranjestad',
   },
   {
     id: '18',
@@ -149,7 +149,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/technics',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Canberra'
+    location: 'Canberra',
   },
   {
     id: '19',
@@ -157,7 +157,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/animals',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Vienna'
+    location: 'Vienna',
   },
   {
     id: '20',
@@ -165,7 +165,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/fashion',
     rating: '4',
     type: MovieType.CGV,
-    location: 'Baku'
+    location: 'Baku',
   },
   {
     id: '21',
@@ -173,7 +173,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '2',
     type: MovieType.CGV,
-    location: 'Nassau'
+    location: 'Nassau',
   },
   {
     id: '22',
@@ -181,7 +181,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/people',
     rating: '4',
     type: MovieType.CGV,
-    location: 'Manama'
+    location: 'Manama',
   },
   {
     id: '23',
@@ -189,7 +189,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/people',
     rating: '5',
     type: MovieType.CGV,
-    location: 'Dhaka'
+    location: 'Dhaka',
   },
   {
     id: '24',
@@ -197,7 +197,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/food',
     rating: '2',
     type: MovieType.CGV,
-    location: 'Bridgetown'
+    location: 'Bridgetown',
   },
   {
     id: '25',
@@ -205,7 +205,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/business',
     rating: '0',
     type: MovieType.CGV,
-    location: 'Minsk'
+    location: 'Minsk',
   },
   {
     id: '26',
@@ -213,7 +213,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/technics',
     rating: '2',
     type: MovieType.CGV,
-    location: 'Brussels'
+    location: 'Brussels',
   },
   {
     id: '27',
@@ -221,7 +221,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/animals',
     rating: '3',
     type: MovieType.CGV,
-    location: 'Belmopan'
+    location: 'Belmopan',
   },
   {
     id: '28',
@@ -229,7 +229,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/fashion',
     rating: '2',
     type: MovieType.CGV,
-    location: 'Porto-Novo'
+    location: 'Porto-Novo',
   },
   {
     id: '29',
@@ -237,7 +237,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '0',
     type: MovieType.CGV,
-    location: 'Hamilton'
+    location: 'Hamilton',
   },
   {
     id: '30',
@@ -245,7 +245,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/fashion',
     rating: '5',
     type: MovieType.MEGABOX,
-    location: 'Thimphu'
+    location: 'Thimphu',
   },
   {
     id: '31',
@@ -253,7 +253,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/people',
     rating: '4',
     type: MovieType.MEGABOX,
-    location: 'Sucre'
+    location: 'Sucre',
   },
   {
     id: '32',
@@ -261,7 +261,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '1',
     type: MovieType.CGV,
-    location: 'Kralendijk'
+    location: 'Kralendijk',
   },
   {
     id: '33',
@@ -269,7 +269,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/business',
     rating: '2',
     type: MovieType.MEGABOX,
-    location: 'Sarajevo'
+    location: 'Sarajevo',
   },
   {
     id: '34',
@@ -277,7 +277,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '2',
     type: MovieType.MEGABOX,
-    location: 'Gaborone'
+    location: 'Gaborone',
   },
   {
     id: '35',
@@ -285,7 +285,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '3',
     type: MovieType.MEGABOX,
-    location: 'Brasília'
+    location: 'Brasília',
   },
   {
     id: '36',
@@ -293,7 +293,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/food',
     rating: '2',
     type: MovieType.MEGABOX,
-    location: 'Diego Garcia'
+    location: 'Diego Garcia',
   },
   {
     id: '37',
@@ -301,7 +301,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '0',
     type: MovieType.MEGABOX,
-    location: 'Road Town'
+    location: 'Road Town',
   },
   {
     id: '38',
@@ -309,7 +309,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '3',
     type: MovieType.MEGABOX,
-    location: 'Charlotte Amalie'
+    location: 'Charlotte Amalie',
   },
   {
     id: '39',
@@ -317,7 +317,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nightlife',
     rating: '1',
     type: MovieType.MEGABOX,
-    location: 'Bandar Seri Begawan'
+    location: 'Bandar Seri Begawan',
   },
   {
     id: '40',
@@ -325,7 +325,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nightlife',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Sofia'
+    location: 'Sofia',
   },
   {
     id: '41',
@@ -333,7 +333,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/people',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Ouagadougou'
+    location: 'Ouagadougou',
   },
   {
     id: '42',
@@ -341,7 +341,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/animals',
     rating: '2',
     type: MovieType.CGV,
-    location: 'Bujumbura'
+    location: 'Bujumbura',
   },
   {
     id: '43',
@@ -349,7 +349,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '3',
     type: MovieType.MEGABOX,
-    location: 'Phnom Penh'
+    location: 'Phnom Penh',
   },
   {
     id: '44',
@@ -357,7 +357,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Yaoundé'
+    location: 'Yaoundé',
   },
   {
     id: '45',
@@ -365,7 +365,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/people',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Ottawa'
+    location: 'Ottawa',
   },
   {
     id: '46',
@@ -373,7 +373,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/fashion',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Praia'
+    location: 'Praia',
   },
   {
     id: '47',
@@ -381,7 +381,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/sports',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'George Town'
+    location: 'George Town',
   },
   {
     id: '48',
@@ -389,7 +389,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/technics',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Bangui'
+    location: 'Bangui',
   },
   {
     id: '49',
@@ -397,7 +397,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'N Djamena'
+    location: 'N Djamena',
   },
   {
     id: '50',
@@ -405,7 +405,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Santiago'
+    location: 'Santiago',
   },
   {
     id: '51',
@@ -413,7 +413,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/sports',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Beijing'
+    location: 'Beijing',
   },
   {
     id: '52',
@@ -421,7 +421,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '3',
     type: MovieType.CGV,
-    location: 'Flying Fish Cove'
+    location: 'Flying Fish Cove',
   },
   {
     id: '53',
@@ -429,7 +429,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '2',
     type: MovieType.MEGABOX,
-    location: 'West Island'
+    location: 'West Island',
   },
   {
     id: '54',
@@ -437,7 +437,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/business',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Bogotá'
+    location: 'Bogotá',
   },
   {
     id: '55',
@@ -445,7 +445,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/technics',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Moroni'
+    location: 'Moroni',
   },
   {
     id: '56',
@@ -453,7 +453,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/food',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Brazzaville'
+    location: 'Brazzaville',
   },
   {
     id: '57',
@@ -461,7 +461,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Kinshasa'
+    location: 'Kinshasa',
   },
   {
     id: '58',
@@ -469,7 +469,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Avarua'
+    location: 'Avarua',
   },
   {
     id: '59',
@@ -477,7 +477,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'San José'
+    location: 'San José',
   },
   {
     id: '60',
@@ -485,7 +485,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/fashion',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Zagreb'
+    location: 'Zagreb',
   },
   {
     id: '61',
@@ -493,7 +493,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Havana'
+    location: 'Havana',
   },
   {
     id: '62',
@@ -501,7 +501,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '0',
     type: MovieType.CGV,
-    location: 'Willemstad'
+    location: 'Willemstad',
   },
   {
     id: '63',
@@ -509,7 +509,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '2',
     type: MovieType.MEGABOX,
-    location: 'Nicosia'
+    location: 'Nicosia',
   },
   {
     id: '64',
@@ -517,7 +517,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/food',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Prague'
+    location: 'Prague',
   },
   {
     id: '65',
@@ -525,7 +525,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Copenhagen'
+    location: 'Copenhagen',
   },
   {
     id: '66',
@@ -533,7 +533,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/food',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Djibouti'
+    location: 'Djibouti',
   },
   {
     id: '67',
@@ -541,7 +541,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/abstract',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Roseau'
+    location: 'Roseau',
   },
   {
     id: '68',
@@ -549,7 +549,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/animals',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Santo Domingo'
+    location: 'Santo Domingo',
   },
   {
     id: '69',
@@ -557,7 +557,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Quito'
+    location: 'Quito',
   },
   {
     id: '70',
@@ -565,7 +565,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Cairo'
+    location: 'Cairo',
   },
   {
     id: '71',
@@ -573,7 +573,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/technics',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'San Salvador'
+    location: 'San Salvador',
   },
   {
     id: '72',
@@ -581,7 +581,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '1',
     type: MovieType.CGV,
-    location: 'Malabo'
+    location: 'Malabo',
   },
   {
     id: '73',
@@ -589,7 +589,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/abstract',
     rating: '1',
     type: MovieType.MEGABOX,
-    location: 'Asmara'
+    location: 'Asmara',
   },
   {
     id: '74',
@@ -597,7 +597,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nightlife',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Tallinn'
+    location: 'Tallinn',
   },
   {
     id: '75',
@@ -605,7 +605,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/people',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Addis Ababa'
+    location: 'Addis Ababa',
   },
   {
     id: '76',
@@ -613,7 +613,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/food',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Stanley'
+    location: 'Stanley',
   },
   {
     id: '77',
@@ -621,7 +621,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/technics',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Tórshavn'
+    location: 'Tórshavn',
   },
   {
     id: '78',
@@ -629,7 +629,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Suva'
+    location: 'Suva',
   },
   {
     id: '79',
@@ -637,7 +637,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/abstract',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Helsinki'
+    location: 'Helsinki',
   },
   {
     id: '80',
@@ -645,7 +645,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/fashion',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Paris'
+    location: 'Paris',
   },
   {
     id: '81',
@@ -653,7 +653,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Cayenne'
+    location: 'Cayenne',
   },
   {
     id: '82',
@@ -661,7 +661,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '5',
     type: MovieType.CGV,
-    location: 'Papeetē'
+    location: 'Papeetē',
   },
   {
     id: '83',
@@ -669,7 +669,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/sports',
     rating: '2',
     type: MovieType.MEGABOX,
-    location: 'Port-aux-Français'
+    location: 'Port-aux-Français',
   },
   {
     id: '84',
@@ -677,7 +677,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Libreville'
+    location: 'Libreville',
   },
   {
     id: '85',
@@ -685,7 +685,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Banjul'
+    location: 'Banjul',
   },
   {
     id: '86',
@@ -693,7 +693,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Tbilisi'
+    location: 'Tbilisi',
   },
   {
     id: '87',
@@ -701,7 +701,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/people',
     rating: '2',
     type: MovieType.LOTTE,
-    location: 'Berlin'
+    location: 'Berlin',
   },
   {
     id: '88',
@@ -709,7 +709,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Accra'
+    location: 'Accra',
   },
   {
     id: '89',
@@ -717,7 +717,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nightlife',
     rating: '0',
     type: MovieType.LOTTE,
-    location: 'Gibraltar'
+    location: 'Gibraltar',
   },
   {
     id: '90',
@@ -725,7 +725,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Athens'
+    location: 'Athens',
   },
   {
     id: '91',
@@ -733,7 +733,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/animals',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Nuuk'
+    location: 'Nuuk',
   },
   {
     id: '92',
@@ -741,7 +741,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/abstract',
     rating: '2',
     type: MovieType.CGV,
-    location: 'St. Georges'
+    location: 'St. Georges',
   },
   {
     id: '93',
@@ -749,7 +749,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '1',
     type: MovieType.MEGABOX,
-    location: 'Basse-Terre'
+    location: 'Basse-Terre',
   },
   {
     id: '94',
@@ -757,7 +757,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/sports',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Hagåtña'
+    location: 'Hagåtña',
   },
   {
     id: '95',
@@ -765,7 +765,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Guatemala City'
+    location: 'Guatemala City',
   },
   {
     id: '96',
@@ -773,7 +773,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'St. Peter Port'
+    location: 'St. Peter Port',
   },
   {
     id: '97',
@@ -781,7 +781,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/cats',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Conakry'
+    location: 'Conakry',
   },
   {
     id: '98',
@@ -789,7 +789,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/transport',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Bissau'
+    location: 'Bissau',
   },
   {
     id: '99',
@@ -797,7 +797,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/people',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Georgetown'
+    location: 'Georgetown',
   },
   {
     id: '100',
@@ -805,7 +805,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/technics',
     rating: '4',
     type: MovieType.LOTTE,
-    location: 'Port-au-Prince'
+    location: 'Port-au-Prince',
   },
   {
     id: '101',
@@ -813,7 +813,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/city',
     rating: '5',
     type: MovieType.LOTTE,
-    location: 'Rome'
+    location: 'Rome',
   },
   {
     id: '102',
@@ -821,7 +821,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nature',
     rating: '2',
     type: MovieType.CGV,
-    location: 'Tegucigalpa'
+    location: 'Tegucigalpa',
   },
   {
     id: '103',
@@ -829,7 +829,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/business',
     rating: '1',
     type: MovieType.MEGABOX,
-    location: 'City of Victoria'
+    location: 'City of Victoria',
   },
   {
     id: '104',
@@ -837,7 +837,7 @@ const datam = [
     image: 'http://placeimg.com/640/480/nightlife',
     rating: '3',
     type: MovieType.LOTTE,
-    location: 'Budapest'
+    location: 'Budapest',
   },
   {
     id: '105',
@@ -845,8 +845,8 @@ const datam = [
     image: 'http://placeimg.com/640/480/business',
     rating: '1',
     type: MovieType.LOTTE,
-    location: 'Reykjavík'
-  }
+    location: 'Reykjavík',
+  },
 ];
 
 export default datam;

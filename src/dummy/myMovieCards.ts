@@ -51,13 +51,13 @@ const datam = [
     fare: 48000,
   },
   {
-		id: '5',
-		title: 'Ligula PC',
-		startDate: '10/29',
-		startTime: '02:57',
-		runningTime: 114,
-		location: 'HH',
-		audiences: [
+    id: '5',
+    title: 'Ligula PC',
+    startDate: '10/29',
+    startTime: '02:57',
+    runningTime: 114,
+    location: 'HH',
+    audiences: [
       {
         seat: 'I13',
       },
@@ -65,16 +65,16 @@ const datam = [
         seat: 'I14',
       },
     ],
-		fare: 21000
-	},
-	{
-		id: '6',
-		title: 'Non Sapien LLC',
-		startDate: '06/25',
-		startTime: '21:47',
-		runningTime: 134,
-		location: 'Luxemburg',
-		audiences: [
+    fare: 21000,
+  },
+  {
+    id: '6',
+    title: 'Non Sapien LLC',
+    startDate: '06/25',
+    startTime: '21:47',
+    runningTime: 134,
+    location: 'Luxemburg',
+    audiences: [
       {
         seat: 'H08',
       },
@@ -82,30 +82,30 @@ const datam = [
         seat: 'H09',
       },
     ],
-		fare: 17500
+    fare: 17500,
   },
   {
-		id: '7',
-		title: 'Scelerisque Scelerisque Dui LLP',
-		startDate: '12/02',
-		startTime: '18:20',
-		runningTime: 101,
-		location: 'SI',
-		audiences: [
+    id: '7',
+    title: 'Scelerisque Scelerisque Dui LLP',
+    startDate: '12/02',
+    startTime: '18:20',
+    runningTime: 101,
+    location: 'SI',
+    audiences: [
       {
         seat: 'L10',
       },
     ],
-		fare: 22000
-	},
-	{
-		id: '8',
-		title: 'Aliquet Industries',
-		startDate: '08/14',
-		startTime: '01:04',
-		runningTime: 104,
-		location: 'CAJ',
-		audiences: [
+    fare: 22000,
+  },
+  {
+    id: '8',
+    title: 'Aliquet Industries',
+    startDate: '08/14',
+    startTime: '01:04',
+    runningTime: 104,
+    location: 'CAJ',
+    audiences: [
       {
         seat: 'J11',
       },
@@ -113,8 +113,8 @@ const datam = [
         seat: 'J12',
       },
     ],
-		fare: 14000
-	},
+    fare: 14000,
+  },
 ];
 
 export default datam;
