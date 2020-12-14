@@ -47,6 +47,806 @@ const datam = [
 
     location: '신논현',
   },
+  {
+    id: '6',
+    title: 'Ralph Lyons',
+    image: 'http://placeimg.com/640/480/technics',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Kabul'
+  },
+  {
+    id: '7',
+    title: 'Quentin Morgan',
+    image: 'http://placeimg.com/640/480/animals',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Mariehamn'
+  },
+  {
+    id: '8',
+    title: 'Dustin Gonzalez',
+    image: 'http://placeimg.com/640/480/fashion',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Tirana'
+  },
+  {
+    id: '9',
+    title: 'Stewart Berg',
+    image: 'http://placeimg.com/640/480/nightlife',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Algiers'
+  },
+  {
+    id: '10',
+    title: 'Timothy Sanders',
+    image: 'http://placeimg.com/640/480/sports',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Pago Pago'
+  },
+  {
+    id: '11',
+    title: 'Holmes Bender',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Andorra la Vella'
+  },
+  {
+    id: '12',
+    title: 'Caldwell Coffey',
+    image: 'http://placeimg.com/640/480/food',
+    rating: '5',
+    type: MovieType.CGV,
+    location: 'Luanda'
+  },
+  {
+    id: '13',
+    title: 'Colton Curry',
+    image: 'http://placeimg.com/640/480/nightlife',
+    rating: '2',
+    type: MovieType.MEGABOX,
+    location: 'The Valley'
+  },
+  {
+    id: '14',
+    title: 'Avram Lara',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Saint Johns'
+  },
+  {
+    id: '15',
+    title: 'Craig Quinn',
+    image: 'http://placeimg.com/640/480/business',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Buenos Aires'
+  },
+  {
+    id: '16',
+    title: 'Brent Carroll',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Yerevan'
+  },
+  {
+    id: '17',
+    title: 'Nero Knapp',
+    image: 'http://placeimg.com/640/480/nightlife',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Oranjestad'
+  },
+  {
+    id: '18',
+    title: 'Odysseus Shepard',
+    image: 'http://placeimg.com/640/480/technics',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Canberra'
+  },
+  {
+    id: '19',
+    title: 'Arden Vazquez',
+    image: 'http://placeimg.com/640/480/animals',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Vienna'
+  },
+  {
+    id: '20',
+    title: 'Asher Buchanan',
+    image: 'http://placeimg.com/640/480/fashion',
+    rating: '4',
+    type: MovieType.CGV,
+    location: 'Baku'
+  },
+  {
+    id: '21',
+    title: 'Avram Hooper',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '2',
+    type: MovieType.CGV,
+    location: 'Nassau'
+  },
+  {
+    id: '22',
+    title: 'Kamal Vinson',
+    image: 'http://placeimg.com/640/480/people',
+    rating: '4',
+    type: MovieType.CGV,
+    location: 'Manama'
+  },
+  {
+    id: '23',
+    title: 'Aquila Gates',
+    image: 'http://placeimg.com/640/480/people',
+    rating: '5',
+    type: MovieType.CGV,
+    location: 'Dhaka'
+  },
+  {
+    id: '24',
+    title: 'Jonah Page',
+    image: 'http://placeimg.com/640/480/food',
+    rating: '2',
+    type: MovieType.CGV,
+    location: 'Bridgetown'
+  },
+  {
+    id: '25',
+    title: 'Basil Hale',
+    image: 'http://placeimg.com/640/480/business',
+    rating: '0',
+    type: MovieType.CGV,
+    location: 'Minsk'
+  },
+  {
+    id: '26',
+    title: 'Patrick Crawford',
+    image: 'http://placeimg.com/640/480/technics',
+    rating: '2',
+    type: MovieType.CGV,
+    location: 'Brussels'
+  },
+  {
+    id: '27',
+    title: 'Lee Whitaker',
+    image: 'http://placeimg.com/640/480/animals',
+    rating: '3',
+    type: MovieType.CGV,
+    location: 'Belmopan'
+  },
+  {
+    id: '28',
+    title: 'Merrill Crawford',
+    image: 'http://placeimg.com/640/480/fashion',
+    rating: '2',
+    type: MovieType.CGV,
+    location: 'Porto-Novo'
+  },
+  {
+    id: '29',
+    title: 'Quinn Odonnell',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '0',
+    type: MovieType.CGV,
+    location: 'Hamilton'
+  },
+  {
+    id: '30',
+    title: 'Abdul Tucker',
+    image: 'http://placeimg.com/640/480/fashion',
+    rating: '5',
+    type: MovieType.MEGABOX,
+    location: 'Thimphu'
+  },
+  {
+    id: '31',
+    title: 'Jelani Ramos',
+    image: 'http://placeimg.com/640/480/people',
+    rating: '4',
+    type: MovieType.MEGABOX,
+    location: 'Sucre'
+  },
+  {
+    id: '32',
+    title: 'Ignatius Moses',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '1',
+    type: MovieType.CGV,
+    location: 'Kralendijk'
+  },
+  {
+    id: '33',
+    title: 'Dale Mcfarland',
+    image: 'http://placeimg.com/640/480/business',
+    rating: '2',
+    type: MovieType.MEGABOX,
+    location: 'Sarajevo'
+  },
+  {
+    id: '34',
+    title: 'Cameron Alford',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '2',
+    type: MovieType.MEGABOX,
+    location: 'Gaborone'
+  },
+  {
+    id: '35',
+    title: 'Colorado Randall',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '3',
+    type: MovieType.MEGABOX,
+    location: 'Brasília'
+  },
+  {
+    id: '36',
+    title: 'Amos Wade',
+    image: 'http://placeimg.com/640/480/food',
+    rating: '2',
+    type: MovieType.MEGABOX,
+    location: 'Diego Garcia'
+  },
+  {
+    id: '37',
+    title: 'Melvin Frederick',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '0',
+    type: MovieType.MEGABOX,
+    location: 'Road Town'
+  },
+  {
+    id: '38',
+    title: 'Axel Sweeney',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '3',
+    type: MovieType.MEGABOX,
+    location: 'Charlotte Amalie'
+  },
+  {
+    id: '39',
+    title: 'Laith Witt',
+    image: 'http://placeimg.com/640/480/nightlife',
+    rating: '1',
+    type: MovieType.MEGABOX,
+    location: 'Bandar Seri Begawan'
+  },
+  {
+    id: '40',
+    title: 'Daniel Carey',
+    image: 'http://placeimg.com/640/480/nightlife',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Sofia'
+  },
+  {
+    id: '41',
+    title: 'Brett Vance',
+    image: 'http://placeimg.com/640/480/people',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Ouagadougou'
+  },
+  {
+    id: '42',
+    title: 'Carter Olsen',
+    image: 'http://placeimg.com/640/480/animals',
+    rating: '2',
+    type: MovieType.CGV,
+    location: 'Bujumbura'
+  },
+  {
+    id: '43',
+    title: 'Vernon Fowler',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '3',
+    type: MovieType.MEGABOX,
+    location: 'Phnom Penh'
+  },
+  {
+    id: '44',
+    title: 'Elton Hardy',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Yaoundé'
+  },
+  {
+    id: '45',
+    title: 'Aristotle Ward',
+    image: 'http://placeimg.com/640/480/people',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Ottawa'
+  },
+  {
+    id: '46',
+    title: 'Abdul Murphy',
+    image: 'http://placeimg.com/640/480/fashion',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Praia'
+  },
+  {
+    id: '47',
+    title: 'Ryder Anthony',
+    image: 'http://placeimg.com/640/480/sports',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'George Town'
+  },
+  {
+    id: '48',
+    title: 'Malcolm Reeves',
+    image: 'http://placeimg.com/640/480/technics',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Bangui'
+  },
+  {
+    id: '49',
+    title: 'Simon Whitley',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'N Djamena'
+  },
+  {
+    id: '50',
+    title: 'Leo Miller',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Santiago'
+  },
+  {
+    id: '51',
+    title: 'Hilel Nieves',
+    image: 'http://placeimg.com/640/480/sports',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Beijing'
+  },
+  {
+    id: '52',
+    title: 'Kaseem Battle',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '3',
+    type: MovieType.CGV,
+    location: 'Flying Fish Cove'
+  },
+  {
+    id: '53',
+    title: 'Neil Woodward',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '2',
+    type: MovieType.MEGABOX,
+    location: 'West Island'
+  },
+  {
+    id: '54',
+    title: 'Rahim Kinney',
+    image: 'http://placeimg.com/640/480/business',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Bogotá'
+  },
+  {
+    id: '55',
+    title: 'Melvin Alvarado',
+    image: 'http://placeimg.com/640/480/technics',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Moroni'
+  },
+  {
+    id: '56',
+    title: 'Amos Stanley',
+    image: 'http://placeimg.com/640/480/food',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Brazzaville'
+  },
+  {
+    id: '57',
+    title: 'Dolan Reyes',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Kinshasa'
+  },
+  {
+    id: '58',
+    title: 'Jack Mayer',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Avarua'
+  },
+  {
+    id: '59',
+    title: 'Knox Gilliam',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'San José'
+  },
+  {
+    id: '60',
+    title: 'Jameson Monroe',
+    image: 'http://placeimg.com/640/480/fashion',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Zagreb'
+  },
+  {
+    id: '61',
+    title: 'Hasad Sparks',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Havana'
+  },
+  {
+    id: '62',
+    title: 'Zahir Dixon',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '0',
+    type: MovieType.CGV,
+    location: 'Willemstad'
+  },
+  {
+    id: '63',
+    title: 'Gavin Rocha',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '2',
+    type: MovieType.MEGABOX,
+    location: 'Nicosia'
+  },
+  {
+    id: '64',
+    title: 'Ryder Bishop',
+    image: 'http://placeimg.com/640/480/food',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Prague'
+  },
+  {
+    id: '65',
+    title: 'Edward Chang',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Copenhagen'
+  },
+  {
+    id: '66',
+    title: 'George Hall',
+    image: 'http://placeimg.com/640/480/food',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Djibouti'
+  },
+  {
+    id: '67',
+    title: 'Bruce Pitts',
+    image: 'http://placeimg.com/640/480/abstract',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Roseau'
+  },
+  {
+    id: '68',
+    title: 'Jonas Hutchinson',
+    image: 'http://placeimg.com/640/480/animals',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Santo Domingo'
+  },
+  {
+    id: '69',
+    title: 'Preston Maynard',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Quito'
+  },
+  {
+    id: '70',
+    title: 'Otto Wheeler',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Cairo'
+  },
+  {
+    id: '71',
+    title: 'Kareem Weaver',
+    image: 'http://placeimg.com/640/480/technics',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'San Salvador'
+  },
+  {
+    id: '72',
+    title: 'Chaney Howard',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '1',
+    type: MovieType.CGV,
+    location: 'Malabo'
+  },
+  {
+    id: '73',
+    title: 'Keefe Perkins',
+    image: 'http://placeimg.com/640/480/abstract',
+    rating: '1',
+    type: MovieType.MEGABOX,
+    location: 'Asmara'
+  },
+  {
+    id: '74',
+    title: 'Erich Tate',
+    image: 'http://placeimg.com/640/480/nightlife',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Tallinn'
+  },
+  {
+    id: '75',
+    title: 'Raphael Pruitt',
+    image: 'http://placeimg.com/640/480/people',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Addis Ababa'
+  },
+  {
+    id: '76',
+    title: 'Amery Bates',
+    image: 'http://placeimg.com/640/480/food',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Stanley'
+  },
+  {
+    id: '77',
+    title: 'Charles Sykes',
+    image: 'http://placeimg.com/640/480/technics',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Tórshavn'
+  },
+  {
+    id: '78',
+    title: 'Lionel Fuller',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Suva'
+  },
+  {
+    id: '79',
+    title: 'Drew Santos',
+    image: 'http://placeimg.com/640/480/abstract',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Helsinki'
+  },
+  {
+    id: '80',
+    title: 'Forrest Colon',
+    image: 'http://placeimg.com/640/480/fashion',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Paris'
+  },
+  {
+    id: '81',
+    title: 'Hamish Zimmerman',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Cayenne'
+  },
+  {
+    id: '82',
+    title: 'Channing Watson',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '5',
+    type: MovieType.CGV,
+    location: 'Papeetē'
+  },
+  {
+    id: '83',
+    title: 'Merritt Joyce',
+    image: 'http://placeimg.com/640/480/sports',
+    rating: '2',
+    type: MovieType.MEGABOX,
+    location: 'Port-aux-Français'
+  },
+  {
+    id: '84',
+    title: 'Omar Murphy',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Libreville'
+  },
+  {
+    id: '85',
+    title: 'Dieter Barnett',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Banjul'
+  },
+  {
+    id: '86',
+    title: 'Logan Rodriguez',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Tbilisi'
+  },
+  {
+    id: '87',
+    title: 'Xanthus Torres',
+    image: 'http://placeimg.com/640/480/people',
+    rating: '2',
+    type: MovieType.LOTTE,
+    location: 'Berlin'
+  },
+  {
+    id: '88',
+    title: 'Levi Beasley',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Accra'
+  },
+  {
+    id: '89',
+    title: 'Alan Briggs',
+    image: 'http://placeimg.com/640/480/nightlife',
+    rating: '0',
+    type: MovieType.LOTTE,
+    location: 'Gibraltar'
+  },
+  {
+    id: '90',
+    title: 'Zachery Lowe',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Athens'
+  },
+  {
+    id: '91',
+    title: 'Arthur Cotton',
+    image: 'http://placeimg.com/640/480/animals',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Nuuk'
+  },
+  {
+    id: '92',
+    title: 'Tarik Shelton',
+    image: 'http://placeimg.com/640/480/abstract',
+    rating: '2',
+    type: MovieType.CGV,
+    location: 'St. Georges'
+  },
+  {
+    id: '93',
+    title: 'Timon Tyson',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '1',
+    type: MovieType.MEGABOX,
+    location: 'Basse-Terre'
+  },
+  {
+    id: '94',
+    title: 'Moses Schwartz',
+    image: 'http://placeimg.com/640/480/sports',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Hagåtña'
+  },
+  {
+    id: '95',
+    title: 'Demetrius Perkins',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Guatemala City'
+  },
+  {
+    id: '96',
+    title: 'Reese Sweeney',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'St. Peter Port'
+  },
+  {
+    id: '97',
+    title: 'Malcolm Gray',
+    image: 'http://placeimg.com/640/480/cats',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Conakry'
+  },
+  {
+    id: '98',
+    title: 'Curran Frost',
+    image: 'http://placeimg.com/640/480/transport',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Bissau'
+  },
+  {
+    id: '99',
+    title: 'Brennan Harrison',
+    image: 'http://placeimg.com/640/480/people',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Georgetown'
+  },
+  {
+    id: '100',
+    title: 'Deacon Vega',
+    image: 'http://placeimg.com/640/480/technics',
+    rating: '4',
+    type: MovieType.LOTTE,
+    location: 'Port-au-Prince'
+  },
+  {
+    id: '101',
+    title: 'Quentin Anthony',
+    image: 'http://placeimg.com/640/480/city',
+    rating: '5',
+    type: MovieType.LOTTE,
+    location: 'Rome'
+  },
+  {
+    id: '102',
+    title: 'Harper Dean',
+    image: 'http://placeimg.com/640/480/nature',
+    rating: '2',
+    type: MovieType.CGV,
+    location: 'Tegucigalpa'
+  },
+  {
+    id: '103',
+    title: 'Nissim Graham',
+    image: 'http://placeimg.com/640/480/business',
+    rating: '1',
+    type: MovieType.MEGABOX,
+    location: 'City of Victoria'
+  },
+  {
+    id: '104',
+    title: 'Timon Whitehead',
+    image: 'http://placeimg.com/640/480/nightlife',
+    rating: '3',
+    type: MovieType.LOTTE,
+    location: 'Budapest'
+  },
+  {
+    id: '105',
+    title: 'Kevin Morrison',
+    image: 'http://placeimg.com/640/480/business',
+    rating: '1',
+    type: MovieType.LOTTE,
+    location: 'Reykjavík'
+  }
 ];
 
 export default datam;
