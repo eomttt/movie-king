@@ -50,6 +50,6 @@
 > $ vi tsconfig.json
 
 ## Installation & Execute
-> $ yarn install
+> $ yarn install --frozen-lockfile
 
 > $ yarn run dev
