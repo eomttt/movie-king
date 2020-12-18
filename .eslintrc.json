@@ -49,7 +49,7 @@
     "react/prop-types": "off",
     "no-unused-vars": "off",
     "arrow-parens": "off",
-    "no-console": "off",
+    // "no-console": "off",
     "no-alert":"off",
     "react/require-default-props": "off"
   }
