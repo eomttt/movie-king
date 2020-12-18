@@ -1,29 +1,35 @@
+import { getBoxOffice } from 'apis/getBoxOffice';
 import MainMovies from 'components/card/MainMovies';
 import { Error } from 'components/Error';
 import { Loading } from 'components/Loading';
 import dummy from 'dummy/movieCards';
 import { IMovieCard } from 'interfaces/card';
 import React, { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 
 const MainMoviesContainer = () => {
-  // dummy data
-  const { loading, error, data } = {
-    loading: false,
-    error: null,
-    data: dummy,
-  };
-  // const { loading, error, data } = useQuery(GET_BOXOFFICE_QUERY);
+  let isLoading = false;
+  let isError = false;
+  let data = dummy.boxOffice;
+
+  console.log('CHECK', process.env.GQL_DEV);
+  if (process.env.GQL_DEV === 'production') {
+    const res = useQuery('boxoffice', getBoxOffice);
+    isLoading = res.isLoading;
+    isError = res.isError;
+    data = res.data;
+  }
+
   const [movies, setMovies] = useState<IMovieCard[]>([]);
 
   useEffect(() => {
     if (data) {
-      const { boxOffice } = data;
-      setMovies(boxOffice);
+      setMovies(data);
     }
   }, [data]);
 
-  if (loading) return <Loading />;
-  if (error) return <Error errorContent={error} />;
+  if (isLoading) return <Loading />;
+  if (isError) return <Error />;
 
   return <MainMovies movies={movies} />;
 };
