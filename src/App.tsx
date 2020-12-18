@@ -12,7 +12,7 @@ const App = () => (
       styles={css`
         body {
           background-color: ${BackgroundColor} !important;
-          margin: 0 !important'
+          margin: 0 !important
         }
       `}
     />
