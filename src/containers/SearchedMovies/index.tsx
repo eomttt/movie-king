@@ -32,7 +32,6 @@ const SearchedMoviesContainer = () => {
         (error) => {
           if (error.code === 1) {
             alert('위치 정보를 가져 올 수 있도록 허용해주세요.');
-            return;
           }
           alert(error.message);
         },

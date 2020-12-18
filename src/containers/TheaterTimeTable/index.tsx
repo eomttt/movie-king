@@ -10,7 +10,7 @@ import { ITimeTableData } from 'interfaces/timeTable';
 
 interface TheaterTimeTableProps {
   theaterInfo: TheaterInfo;
-  onSetMovies?: (movieCard: ISearchedMovieCard[]) => void;
+  onSetMovies: (movieCard: ISearchedMovieCard[]) => void;
 }
 
 const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.memo(({
@@ -23,10 +23,9 @@ const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.m
     error: null,
     data: timeTableDummy,
   };
-  // const { loading, error, data } = useQuery<ITimeTableData>(GET_TIMETABLE_QUERY, {
-  //   variables: { type, link },
-  // });
-
+    // const { loading, error, data } = useQuery<ITimeTableData>(GET_TIMETABLE_QUERY, {
+    //   variables: { type, link },
+    // });
   const movies: ISearchedMovieCard[] = data?.timeTable.flatMap((table, index) => {
     const { title: tableTitle, timeInfo } = table;
     return timeInfo.map(
