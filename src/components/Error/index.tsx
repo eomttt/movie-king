@@ -6,7 +6,7 @@ interface ErrorProps {
   errorContent?: string;
 }
 
-export const Error: React.FunctionComponent<ErrorProps> = ({
+export const Error = ({
   errorContent,
 }: ErrorProps) => {
   const { appHeight } = useContext(AppHeightContext);
