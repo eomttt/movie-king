@@ -1,10 +1,9 @@
 import { MovieType } from 'constants/movie';
 
-export interface IMovieCard {
-  id: string;
+export interface BoxOfficeCard {
+  id: number;
   title: string;
   image: string;
-  rating: string;
 }
 
 export interface ISearchedMovieCard {
