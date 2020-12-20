@@ -1,7 +1,7 @@
-import { MovieType } from 'constants/movie';
+import { TheaterType } from 'constants/theater';
 
 export interface TheaterInfo {
-  type: MovieType;
+  type: TheaterType;
   title?: string;
   link: string;
   location?: {

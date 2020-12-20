@@ -1,15 +1,15 @@
 import SearchedMovie from 'components/card/SearchedMovie';
-import { ISearchedMovieCard } from 'interfaces/card';
+import { SearchedMovieCard } from 'interfaces/card';
 import React from 'react';
 import * as Styles from './styles';
 
 interface IProps {
-  movies: ISearchedMovieCard[];
+  movies: SearchedMovieCard[];
 }
 
 const SearchedMovies: React.FunctionComponent<IProps> = ({ movies }) => (
   <Styles.Container>
-    {movies.map((movie: ISearchedMovieCard, index: number) => (
+    {movies.map((movie: SearchedMovieCard, index: number) => (
       <Styles.Content key={movie.id} index={index}>
         <SearchedMovie
           id={movie.id}

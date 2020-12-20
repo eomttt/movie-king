@@ -1,16 +1,11 @@
-import SearchedMovies from 'components/card/SearchedMovies';
-import timeTableDummy from 'dummy/timetable';
-import { useQuery } from 'react-apollo';
-import { ISearchedMovieCard } from 'interfaces/card';
+import { useTheaterTimeTable } from 'hooks/useTheaterTimeTable';
+import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
 import React, { useEffect } from 'react';
-import { GET_TIMETABLE_QUERY } from 'query/TimeTable';
-import { Loading } from 'components/Loading';
-import { ITimeTableData } from 'interfaces/timeTable';
 
 interface TheaterTimeTableProps {
   theaterInfo: TheaterInfo;
-  onSetMovies: (movieCard: ISearchedMovieCard[]) => void;
+  onSetMovies: (movieCard: SearchedMovieCard[]) => void;
 }
 
 const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.memo(({
@@ -18,18 +13,12 @@ const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.m
   onSetMovies,
 }: TheaterTimeTableProps) => {
   const { title, type, link } = theaterInfo;
-  const { loading, error, data } = {
-    loading: false,
-    error: null,
-    data: timeTableDummy,
-  };
-    // const { loading, error, data } = useQuery<ITimeTableData>(GET_TIMETABLE_QUERY, {
-    //   variables: { type, link },
-    // });
-  const movies: ISearchedMovieCard[] = data?.timeTable.flatMap((table, index) => {
+  const { isLoading, isError, data } = useTheaterTimeTable(type, link);
+
+  const movies: SearchedMovieCard[] = data?.timeTable.flatMap((table, index) => {
     const { title: tableTitle, timeInfo } = table;
     return timeInfo.map(
-      (info, timeIndex): ISearchedMovieCard => ({
+      (info, timeIndex): SearchedMovieCard => ({
         id: `${index}-${timeIndex}`,
         type,
         location: title,
@@ -49,12 +38,12 @@ const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.m
     }
   }, [movies, onSetMovies]);
 
-  if (loading) {
+  if (isLoading) {
     return null;
   }
 
-  if (error) {
-    console.log('Error', error);
+  if (isError) {
+    console.error('Get time table error');
     return null;
   }
 

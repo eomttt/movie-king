@@ -1,4 +1,4 @@
-import { MovieType } from 'constants/movie';
+import { TheaterType } from 'constants/theater';
 
 export interface BoxOfficeCard {
   id: number;
@@ -6,9 +6,9 @@ export interface BoxOfficeCard {
   image: string;
 }
 
-export interface ISearchedMovieCard {
+export interface SearchedMovieCard {
   id: string;
-  type: MovieType;
+  type: TheaterType;
   location: string;
   image: string;
   title: string;

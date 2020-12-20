@@ -23,7 +23,8 @@
       "interfaces/*": ["interfaces/*"],
       "dummy/*": ["dummy/*"],
       "query/*": ["query/*"],
-      "apis/*": ["apis/*"]
+      "apis/*": ["apis/*"],
+      "hooks/*": ["hooks/*"]
     }
   },
   "exclude": [

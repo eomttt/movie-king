@@ -1,7 +1,7 @@
 import { Loading } from 'components/Loading';
-import { MovieType } from 'constants/movie';
+import { TheaterType } from 'constants/theater';
 import dummy from 'dummy/searchedMovieCards';
-import { ISearchedMovieCard } from 'interfaces/card';
+import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
 import { THEATERS as cgvTheaters } from 'lib/datum/theaters/cgv';
 import { THEATERS as lotteTheaters } from 'lib/datum/theaters/lotte';
@@ -15,8 +15,8 @@ const SearchedMoviesContainer = () => {
   // Default is seoul city hall
   const [nowPosition, setNowPosition] = useState(null);
   const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>([]);
-  const [movies, setMovies] = useState<ISearchedMovieCard[][]>([]);
-  const [flatMovieCards, setFlatMovieCards] = useState<ISearchedMovieCard[]>([]);
+  const [movies, setMovies] = useState<SearchedMovieCard[][]>([]);
+  const [flatMovieCards, setFlatMovieCards] = useState<SearchedMovieCard[]>([]);
 
   const getLocation = useCallback(() => {
     if (navigator.geolocation) {
@@ -52,7 +52,7 @@ const SearchedMoviesContainer = () => {
     [nowPosition],
   );
 
-  const handleSetMovies = useCallback((searchedMovieCards: ISearchedMovieCard[], index: number) => {
+  const handleSetMovies = useCallback((searchedMovieCards: SearchedMovieCard[], index: number) => {
     if (!movies[index]) {
       const movieItem = movies.map((item) => (item ? [...item] : null));
       movieItem[index] = [...searchedMovieCards];
@@ -76,7 +76,7 @@ const SearchedMoviesContainer = () => {
           if (arePointsNear(location)) {
             theaterList.push({
               ...theater,
-              type: MovieType.CGV,
+              type: TheaterType.CGV,
             });
           }
         }
@@ -90,7 +90,7 @@ const SearchedMoviesContainer = () => {
           if (arePointsNear(location)) {
             theaterList.push({
               ...theater,
-              type: MovieType.LOTTE,
+              type: TheaterType.LOTTE,
             });
           }
         }
@@ -104,7 +104,7 @@ const SearchedMoviesContainer = () => {
           if (arePointsNear(location)) {
             theaterList.push({
               ...theater,
-              type: MovieType.MEGABOX,
+              type: TheaterType.MEGABOX,
             });
           }
         }
@@ -145,7 +145,7 @@ const SearchedMoviesContainer = () => {
           key={`${nearByTheater.type}-${nearByTheater.title}`}
           theaterInfo={nearByTheater}
           onSetMovies={
-            (searchedMovieCards: ISearchedMovieCard[]) => handleSetMovies(searchedMovieCards, index)
+            (searchedMovieCards: SearchedMovieCard[]) => handleSetMovies(searchedMovieCards, index)
           }
         />
       ))

@@ -30,7 +30,8 @@
           "styles": "./src/styles",
           "interfaces": "./src/interfaces",
           "dummy": "./src/dummy",
-          "apis": "./src/apis"
+          "apis": "./src/apis",
+          "hooks": "./src/hooks"
         }
       }
     ],

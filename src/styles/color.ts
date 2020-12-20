@@ -1,4 +1,4 @@
-import { MovieType } from 'constants/movie';
+import { TheaterType } from 'constants/theater';
 
 export const FontColor = {
   DEFAULT: '#000000',
@@ -12,8 +12,8 @@ export const ButtonColor = {
 export const NavBarColor = '#272727';
 export const BackgroundColor = '#1f1f1f';
 
-export const MovieTypeColor = {
-  [MovieType.CGV]: '#ff8f00',
-  [MovieType.MEGABOX]: '#8964db',
-  [MovieType.LOTTE]: '#f1556c',
+export const TheaterTypeColor = {
+  [TheaterType.CGV]: '#ff8f00',
+  [TheaterType.MEGABOX]: '#8964db',
+  [TheaterType.LOTTE]: '#f1556c',
 };
