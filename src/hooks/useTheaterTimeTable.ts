@@ -20,6 +20,6 @@ export const useTheaterTimeTable = (theaterType: TheaterType, theaterLink: strin
   return useMemo(() => ({
     isLoading,
     isError,
-    data
+    data,
   }), [data, isLoading, isError]);
-}
+};

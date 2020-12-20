@@ -19,6 +19,6 @@ export const useBoxOffice = () => {
   return useMemo(() => ({
     isLoading,
     isError,
-    data
+    data,
   }), [data, isLoading, isError]);
-}
+};
