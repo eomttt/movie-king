@@ -4,11 +4,7 @@ import dummy from 'dummy/timetable';
 import { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
-const mock = () => ({
-  isLoading: false,
-  isError: false,
-  data: dummy,
-});
+const mock = () => (dummy);
 
 export const useTheaterTimeTable = (theaterType: TheaterType, theaterLink: string) => {
   const {

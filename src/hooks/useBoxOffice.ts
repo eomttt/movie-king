@@ -3,11 +3,7 @@ import dummy from 'dummy/movieCards';
 import { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
-const mock = () => ({
-  isLoading: false,
-  isError: false,
-  data: dummy.boxOffice,
-});
+const mock = () => (dummy.boxOffice);
 
 export const useBoxOffice = () => {
   const {
