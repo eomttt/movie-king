@@ -1,16 +1,16 @@
 import { TheaterType } from 'constants/theater';
 import { SearchedMovieCard } from 'interfaces/card';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { TheaterTypeColor } from 'styles/color';
 import * as Styles from './styles';
 
-const SearchedMovie: React.FunctionComponent<SearchedMovieCard> = ({
+const SearchedMovie = ({
   image,
   type,
   location,
   title,
   time,
-}) => {
+}: SearchedMovieCard) => {
   const theaterType = useMemo(() => {
     if (type === TheaterType.CGV) {
       return 'CGV';

@@ -1,13 +1,12 @@
 import { Loading } from 'components/Loading';
 import { TheaterType } from 'constants/theater';
-import dummy from 'dummy/searchedMovieCards';
+import TheaterTimeTable from 'containers/TheaterTimeTable';
 import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
 import { THEATERS as cgvTheaters } from 'lib/datum/theaters/cgv';
 import { THEATERS as lotteTheaters } from 'lib/datum/theaters/lotte';
 import { THEATERS as megaTheaters } from 'lib/datum/theaters/megaBox';
-import React, { useCallback, useEffect, useState } from 'react';
-import TheaterTimeTable from 'containers/TheaterTimeTable';
+import { useCallback, useEffect, useState } from 'react';
 
 const NEARBY_KM = 3;
 

@@ -1,7 +1,7 @@
 import { IMyMovieCard } from 'interfaces/card';
 import { getNumberWithComma } from 'lib/utils/common';
 import DateFormat from 'lib/utils/DateFormat';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import * as Styles from './styles';
 
 interface MyMovieProps {
@@ -14,16 +14,16 @@ const Button = () => (
   </Styles.ButtonContainer>
 );
 
-const MyMovie: React.FunctionComponent<MyMovieProps> = ({
+const MyMovie = ({
   movieCard,
-}) => {
+}: MyMovieProps) => {
   const {
     title, startDate, startTime, runningTime, location, audiences, fare,
   } = movieCard;
   const seatText = useMemo(() => audiences.map(audience => audience.seat).join(','), [audiences]);
   const [month, day] = useMemo(() => startDate.split(':'), [startDate]);
   const isToday = useMemo(() => DateFormat.isToday(Number(month), Number(day)), [month, day]);
-  const reservationDate = useMemo(() => (isToday ? `오늘 ${startTime}` : `${startDate} ${startTime}`), [startTime, startDate]);
+  const reservationDate = useMemo(() => (isToday ? `오늘 ${startTime}` : `${startDate} ${startTime}`), [isToday, startTime, startDate]);
 
   return (
     <Styles.Container>

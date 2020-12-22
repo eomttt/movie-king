@@ -51,6 +51,11 @@
     "arrow-parens": "off",
     "no-console": "off",
     "no-alert":"off",
-    "react/require-default-props": "off"
+    "no-use-before-define": "off",
+    "react/require-default-props": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

@@ -4,18 +4,19 @@ import dummy from 'dummy/timetable';
 import { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
-export const useTheaterTimeTable = (theaterType: TheaterType, theaterLink: string) => {
-  let isLoading = false;
-  let isError = false;
-  let data = dummy;
+const mock = () => ({
+  isLoading: false,
+  isError: false,
+  data: dummy,
+});
 
-  console.log('GQL_DEV', process.env.GQL_DEV);
-  if (process.env.GQL_DEV === 'production') {
-    const res = useQuery(['timetable', theaterType, theaterLink], () => getTheaterTimeTable(theaterType, theaterLink));
-    isLoading = res.isLoading;
-    isError = res.isError;
-    data = res.data;
-  }
+export const useTheaterTimeTable = (theaterType: TheaterType, theaterLink: string) => {
+  const {
+    isLoading, isError, data,
+  } = useQuery(
+    ['timetable', theaterType, theaterLink],
+    process.env.GQL_DEV === 'production' ? () => getTheaterTimeTable(theaterType, theaterLink) : mock,
+  );
 
   return useMemo(() => ({
     isLoading,

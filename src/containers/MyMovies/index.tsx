@@ -3,7 +3,7 @@ import { Error } from 'components/Error';
 import { Loading } from 'components/Loading';
 import dummy from 'dummy/myMovieCards';
 import { IMyMovieCard } from 'interfaces/card';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const MyMoviesContainer = () => {
   const { loading, error, data } = {

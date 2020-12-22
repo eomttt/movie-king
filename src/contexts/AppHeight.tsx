@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import {
+  createContext, FunctionComponent, ReactNode, useState,
+} from 'react';
 
 interface AppHeightProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export const AppHeightContext = React.createContext(null);
+export const AppHeightContext = createContext(null);
 
-export const AppHeightProvider: React.FunctionComponent<AppHeightProviderProps> = ({
+export const AppHeightProvider: FunctionComponent<AppHeightProviderProps> = ({
   children,
 }: AppHeightProviderProps) => {
   const [appHeight, setAppHeight] = useState(0);

@@ -1,7 +1,7 @@
 import Bottom from 'components/navBar/Bottom';
 import Top from 'components/navBar/Top';
 import { AppHeightContext } from 'contexts/AppHeight';
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import {
   bottomNavBarHeight,
   pagesPadding,
@@ -13,7 +13,7 @@ interface IProps {
   children: any;
 }
 
-const Layout: React.FunctionComponent<IProps> = ({ children }) => {
+const Layout = ({ children }: IProps) => {
   const { appHeight, setAppHeight } = useContext(AppHeightContext);
 
   useEffect(() => {

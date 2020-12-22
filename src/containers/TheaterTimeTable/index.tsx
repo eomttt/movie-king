@@ -1,14 +1,14 @@
 import { useTheaterTimeTable } from 'hooks/useTheaterTimeTable';
 import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
-import React, { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 
 interface TheaterTimeTableProps {
   theaterInfo: TheaterInfo;
   onSetMovies: (movieCard: SearchedMovieCard[]) => void;
 }
 
-const TheaterTimeTable: React.FunctionComponent<TheaterTimeTableProps> = React.memo(({
+const TheaterTimeTable = memo(({
   theaterInfo,
   onSetMovies,
 }: TheaterTimeTableProps) => {

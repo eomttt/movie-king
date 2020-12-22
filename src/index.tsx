@@ -1,5 +1,4 @@
 import { AppHeightProvider } from 'contexts/AppHeight';
-import React from 'react';
 import ReactDOM from 'react-dom';
 import { QueryCache, ReactQueryCacheProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query-devtools';
@@ -13,7 +12,7 @@ const queryCache = new QueryCache();
 //   uri: 'http://localhost:4000/graphql',
 // });
 
-console.log('TEST', process.env.GQL_DEV);
+console.log('ENV', process.env.GQL_DEV);
 
 ReactDOM.render(
   <ReactQueryCacheProvider queryCache={queryCache}>

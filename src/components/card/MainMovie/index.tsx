@@ -1,16 +1,15 @@
 import { BoxOfficeCard } from 'interfaces/card';
-import React from 'react';
 import * as Styles from './styles';
 
 interface IProps extends BoxOfficeCard {
   rank: number;
 }
 
-const MainMovie: React.FunctionComponent<IProps> = ({
+const MainMovie = ({
   rank,
   image,
   title,
-}) => (
+}: IProps) => (
   <Styles.Container>
     <Styles.Content>
       <Styles.Ranking>{rank}</Styles.Ranking>

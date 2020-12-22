@@ -2,7 +2,6 @@ import { css, Global } from '@emotion/core';
 import Main from 'pages/Main';
 import MyPage from 'pages/MyPage';
 import Search from 'pages/Search';
-import React from 'react';
 import { Route } from 'react-router-dom';
 import { BackgroundColor } from 'styles/color';
 

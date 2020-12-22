@@ -1,13 +1,12 @@
 import SearchedMovie from 'components/card/SearchedMovie';
 import { SearchedMovieCard } from 'interfaces/card';
-import React from 'react';
 import * as Styles from './styles';
 
 interface IProps {
   movies: SearchedMovieCard[];
 }
 
-const SearchedMovies: React.FunctionComponent<IProps> = ({ movies }) => (
+const SearchedMovies = ({ movies }: IProps) => (
   <Styles.Container>
     {movies.map((movie: SearchedMovieCard, index: number) => (
       <Styles.Content key={movie.id} index={index}>

@@ -1,5 +1,4 @@
 import { HOME, MY_PAGE, SEARCH } from 'constants/navBar';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import * as Styles from './styles';
 
