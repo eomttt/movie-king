@@ -1,3 +1,4 @@
+import SearchedMovies from 'components/card/SearchedMovies';
 import { Loading } from 'components/Loading';
 import { TheaterType } from 'constants/theater';
 import TheaterTimeTable from 'containers/TheaterTimeTable';
@@ -113,6 +114,7 @@ const SearchedMoviesContainer = () => {
   }, [arePointsNear, nowPosition]);
 
   useEffect(() => {
+    console.log('Set movies', movies);
     const isAllFull = movies.every((item) => item);
     if (movies.length === nearByTheaters.length && isAllFull) {
       setFlatMovieCards(movies.flatMap((item) => item));
@@ -125,6 +127,12 @@ const SearchedMoviesContainer = () => {
       setMovies(Array(nearByTheaters.length).fill(null));
     }
   }, [nearByTheaters]);
+
+  if (flatMovieCards.length > 0) {
+    return (
+      <SearchedMovies movies={flatMovieCards} />
+    );
+  }
 
   if (nearByTheaters) {
     return (
@@ -140,16 +148,6 @@ const SearchedMoviesContainer = () => {
             />
           ))
       }
-      </>
-    );
-  }
-
-  if (flatMovieCards.length > 0) {
-    return (
-      <>
-        {
-          flatMovieCards.map((faltMovieCard) => <div style={{ color: 'white' }} key={`faltMovieCard.id-${Math.random()}`}>{faltMovieCard.title}</div>)
-        }
       </>
     );
   }
