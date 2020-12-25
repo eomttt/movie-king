@@ -115,39 +115,42 @@ const SearchedMoviesContainer = () => {
   useEffect(() => {
     const isAllFull = movies.every((item) => item);
     if (movies.length === nearByTheaters.length && isAllFull) {
-      // console.log('Finish get movies', movies.flatMap((item) => item));
       setFlatMovieCards(movies.flatMap((item) => item));
     }
   }, [movies, nearByTheaters.length]);
 
   useEffect(() => {
     if (nearByTheaters) {
-      console.log('https:// 된 기념 확인차 로그. Near by theaters', nearByTheaters);
+      console.log('nearByTheaters', nearByTheaters);
       setMovies(Array(nearByTheaters.length).fill(null));
     }
   }, [nearByTheaters]);
 
-  if (flatMovieCards.length > 0) {
+  if (nearByTheaters) {
     return (
       <>
         {
-        flatMovieCards.map((faltMovieCard) => <div style={{ color: 'white' }} key={`faltMovieCard.id-${Math.random()}`}>{faltMovieCard.title}</div>)
+          nearByTheaters.map((nearByTheater, index) => (
+            <TheaterTimeTable
+              key={`${nearByTheater.type}-${nearByTheater.title}`}
+              theaterInfo={nearByTheater}
+              onSetMovies={(
+                searchedMovieCards: SearchedMovieCard[],
+              ) => handleSetMovies(searchedMovieCards, index)}
+            />
+          ))
       }
       </>
     );
   }
 
-  if (nearByTheaters) {
+  if (flatMovieCards.length > 0) {
     return (
-      nearByTheaters.map((nearByTheater, index) => (
-        <TheaterTimeTable
-          key={`${nearByTheater.type}-${nearByTheater.title}`}
-          theaterInfo={nearByTheater}
-          onSetMovies={
-            (searchedMovieCards: SearchedMovieCard[]) => handleSetMovies(searchedMovieCards, index)
-          }
-        />
-      ))
+      <>
+        {
+          flatMovieCards.map((faltMovieCard) => <div style={{ color: 'white' }} key={`faltMovieCard.id-${Math.random()}`}>{faltMovieCard.title}</div>)
+        }
+      </>
     );
   }
 

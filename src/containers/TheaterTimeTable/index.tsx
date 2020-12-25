@@ -1,7 +1,7 @@
 import { useTheaterTimeTable } from 'hooks/useTheaterTimeTable';
 import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
-import { memo, useEffect } from 'react';
+import { memo, useEffect, useMemo } from 'react';
 
 interface TheaterTimeTableProps {
   theaterInfo: TheaterInfo;
@@ -15,8 +15,8 @@ const TheaterTimeTable = memo(({
   const { title, type, link } = theaterInfo;
   const { isLoading, isError, data } = useTheaterTimeTable(type, link);
 
-  const movies: SearchedMovieCard[] = data?.timeTable.flatMap((table, index) => {
-    const { title: tableTitle, timeInfo } = table;
+  const movies: SearchedMovieCard[] = useMemo(() => data?.flatMap((table, index) => {
+    const { title: tableTitle, timeInfo, image } = table;
     return timeInfo.map(
       (info, timeIndex): SearchedMovieCard => ({
         id: `${index}-${timeIndex}`,
@@ -27,10 +27,10 @@ const TheaterTimeTable = memo(({
         // TODO:
         // Image도 어떻게 할지 생각을 해봐야겠다.
         // 지금 타임 테이블에 대해서는 이미지를 가지고 오지 않는데... 큰일이네
-        image: 'http://www.kobis.or.kr/common/mast/movie/2020/01/a880f5d250f04e6bacc786342972ddf4.jpg',
+        image,
       }),
     );
-  });
+  }), [data, title, type]);
 
   useEffect(() => {
     if (onSetMovies && movies) {

@@ -13,10 +13,10 @@ const Bottom = () => (
         <img src={SEARCH} alt="search" />
         <div>검색</div>
       </Link>
-      <Link to="/myPage">
+      {/* <Link to="/myPage">
         <img src={MY_PAGE} alt="myPage" />
         <div>마이페이지</div>
-      </Link>
+      </Link> */}
     </Styles.Content>
   </Styles.Container>
 );

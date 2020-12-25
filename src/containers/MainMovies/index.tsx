@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 
 const MainMoviesContainer = () => {
   const { isLoading, isError, data } = useBoxOffice();
-  console.log('CHECK', data);
   const [movies, setMovies] = useState<BoxOfficeCard[]>([]);
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { MovieApi } from 'apis/Api';
 import { TheaterType } from 'constants/theater';
-import { SearchedMovieCard } from 'interfaces/card';
+import { TimeTable } from 'interfaces/timeTable';
 
 interface Parameter {
   request: string;
@@ -8,9 +8,12 @@ interface Parameter {
   theaterLink: string;
 }
 
-export const getTheaterTimeTable = (theaterType: TheaterType, theaterLink: string) => {
+export const getTheaterTimeTable = (
+  theaterType: TheaterType,
+  theaterLink: string,
+): Promise<TimeTable[]> => {
   try {
-    return MovieApi.get<Parameter, SearchedMovieCard[]>({
+    return MovieApi.get<Parameter, TimeTable[]>({
       request: 'timetable',
       theater: theaterType,
       theaterLink: encodeURI(theaterLink),

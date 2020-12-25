@@ -5,7 +5,6 @@ export interface BoxOfficeCard {
   title: string;
   image: string;
 }
-
 export interface SearchedMovieCard {
   id: string;
   type: TheaterType;
