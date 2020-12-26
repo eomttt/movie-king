@@ -24,7 +24,7 @@ const SearchedMovie = ({
   return (
     <Styles.Container>
       <Styles.Content>
-        <img src={image} alt="Movie" onError={() => console.log("ERROR", title)} />
+        <img src={image} alt="Movie" onError={() => console.log('ERROR', title)} />
         <Styles.Menu>
           <Styles.MenuContent>
             <Styles.TheaterType color={TheaterTypeColor[type]}>
