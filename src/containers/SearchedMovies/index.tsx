@@ -137,6 +137,7 @@ const SearchedMoviesContainer = () => {
   if (nearByTheaters) {
     return (
       <>
+        <Loading />
         {
           nearByTheaters.map((nearByTheater, index) => (
             <TheaterTimeTable
