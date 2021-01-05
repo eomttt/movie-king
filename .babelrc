@@ -8,7 +8,12 @@
         }
       }
     ],
-   "@babel/preset-react",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
    "@babel/preset-typescript"
  ],
  "plugins": [
@@ -25,7 +30,8 @@
           "styles": "./src/styles",
           "interfaces": "./src/interfaces",
           "dummy": "./src/dummy",
-          "apis": "./src/apis"
+          "apis": "./src/apis",
+          "hooks": "./src/hooks"
         }
       }
     ],

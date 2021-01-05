@@ -1,5 +1,4 @@
 import { HOME, MY_PAGE, SEARCH } from 'constants/navBar';
-import React from 'react';
 import { Link } from 'react-router-dom';
 import * as Styles from './styles';
 
@@ -14,10 +13,10 @@ const Bottom = () => (
         <img src={SEARCH} alt="search" />
         <div>검색</div>
       </Link>
-      <Link to="/myPage">
+      {/* <Link to="/myPage">
         <img src={MY_PAGE} alt="myPage" />
         <div>마이페이지</div>
-      </Link>
+      </Link> */}
     </Styles.Content>
   </Styles.Container>
 );

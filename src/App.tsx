@@ -1,8 +1,7 @@
 import { css, Global } from '@emotion/core';
 import Main from 'pages/Main';
-import Search from 'pages/Search';
 import MyPage from 'pages/MyPage';
-import React from 'react';
+import Search from 'pages/Search';
 import { Route } from 'react-router-dom';
 import { BackgroundColor } from 'styles/color';
 
@@ -12,7 +11,7 @@ const App = () => (
       styles={css`
         body {
           background-color: ${BackgroundColor} !important;
-          margin: 0 !important;
+          margin: 0 !important
         }
       `}
     />

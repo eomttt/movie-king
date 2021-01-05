@@ -1,5 +1,4 @@
 import { LOGO_ICON } from 'constants/common';
-import React from 'react';
 import * as Styles from './styles';
 
 const Top = () => (

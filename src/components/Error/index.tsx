@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AppHeightContext } from 'contexts/AppHeight';
 import * as Styles from './styles';
 
@@ -6,7 +6,7 @@ interface ErrorProps {
   errorContent?: string;
 }
 
-export const Error: React.FunctionComponent<ErrorProps> = ({
+export const Error = ({
   errorContent,
 }: ErrorProps) => {
   const { appHeight } = useContext(AppHeightContext);

@@ -34,7 +34,7 @@ const MovieText = styled.div`
   text-shadow: 1px 1px 1px ${BackgroundColor};
 `;
 
-export const MovieType = styled(MovieText)`
+export const TheaterType = styled(MovieText)`
   color: ${(props) => props.color};
 `;
 

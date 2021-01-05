@@ -1,13 +1,13 @@
+import SearchedMovies from 'components/card/SearchedMovies';
 import { Loading } from 'components/Loading';
-import { MovieType } from 'constants/movie';
-import dummy from 'dummy/searchedMovieCards';
-import { ISearchedMovieCard } from 'interfaces/card';
+import { TheaterType } from 'constants/theater';
+import TheaterTimeTable from 'containers/TheaterTimeTable';
+import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
 import { THEATERS as cgvTheaters } from 'lib/datum/theaters/cgv';
 import { THEATERS as lotteTheaters } from 'lib/datum/theaters/lotte';
 import { THEATERS as megaTheaters } from 'lib/datum/theaters/megaBox';
-import React, { useCallback, useEffect, useState } from 'react';
-import TheaterTimeTable from 'containers/TheaterTimeTable';
+import { useCallback, useEffect, useState } from 'react';
 
 const NEARBY_KM = 3;
 
@@ -15,8 +15,8 @@ const SearchedMoviesContainer = () => {
   // Default is seoul city hall
   const [nowPosition, setNowPosition] = useState(null);
   const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>([]);
-  const [movies, setMovies] = useState<ISearchedMovieCard[][]>([]);
-  const [flatMovieCards, setFlatMovieCards] = useState<ISearchedMovieCard[]>([]);
+  const [movies, setMovies] = useState<SearchedMovieCard[][]>([]);
+  const [flatMovieCards, setFlatMovieCards] = useState<SearchedMovieCard[]>([]);
 
   const getLocation = useCallback(() => {
     if (navigator.geolocation) {
@@ -32,7 +32,6 @@ const SearchedMoviesContainer = () => {
         (error) => {
           if (error.code === 1) {
             alert('위치 정보를 가져 올 수 있도록 허용해주세요.');
-            return;
           }
           alert(error.message);
         },
@@ -53,7 +52,7 @@ const SearchedMoviesContainer = () => {
     [nowPosition],
   );
 
-  const handleSetMovies = useCallback((searchedMovieCards: ISearchedMovieCard[], index: number) => {
+  const handleSetMovies = useCallback((searchedMovieCards: SearchedMovieCard[], index: number) => {
     if (!movies[index]) {
       const movieItem = movies.map((item) => (item ? [...item] : null));
       movieItem[index] = [...searchedMovieCards];
@@ -77,7 +76,7 @@ const SearchedMoviesContainer = () => {
           if (arePointsNear(location)) {
             theaterList.push({
               ...theater,
-              type: MovieType.CGV,
+              type: TheaterType.CGV,
             });
           }
         }
@@ -91,7 +90,7 @@ const SearchedMoviesContainer = () => {
           if (arePointsNear(location)) {
             theaterList.push({
               ...theater,
-              type: MovieType.LOTTE,
+              type: TheaterType.LOTTE,
             });
           }
         }
@@ -105,7 +104,7 @@ const SearchedMoviesContainer = () => {
           if (arePointsNear(location)) {
             theaterList.push({
               ...theater,
-              type: MovieType.MEGABOX,
+              type: TheaterType.MEGABOX,
             });
           }
         }
@@ -115,41 +114,42 @@ const SearchedMoviesContainer = () => {
   }, [arePointsNear, nowPosition]);
 
   useEffect(() => {
+    console.log('Set movies', movies);
     const isAllFull = movies.every((item) => item);
     if (movies.length === nearByTheaters.length && isAllFull) {
-      // console.log('Finish get movies', movies.flatMap((item) => item));
       setFlatMovieCards(movies.flatMap((item) => item));
     }
   }, [movies, nearByTheaters.length]);
 
   useEffect(() => {
     if (nearByTheaters) {
-      console.log('https:// 된 기념 확인차 로그. Near by theaters', nearByTheaters);
+      console.log('nearByTheaters', nearByTheaters);
       setMovies(Array(nearByTheaters.length).fill(null));
     }
   }, [nearByTheaters]);
 
   if (flatMovieCards.length > 0) {
     return (
-      <>
-        {
-        flatMovieCards.map((faltMovieCard) => <div style={{ color: 'white' }} key={`faltMovieCard.id-${Math.random()}`}>{faltMovieCard.title}</div>)
-      }
-      </>
+      <SearchedMovies movies={flatMovieCards} />
     );
   }
 
   if (nearByTheaters) {
     return (
-      nearByTheaters.map((nearByTheater, index) => (
-        <TheaterTimeTable
-          key={`${nearByTheater.type}-${nearByTheater.title}`}
-          theaterInfo={nearByTheater}
-          onSetMovies={
-            (searchedMovieCards: ISearchedMovieCard[]) => handleSetMovies(searchedMovieCards, index)
-          }
-        />
-      ))
+      <>
+        <Loading />
+        {
+          nearByTheaters.map((nearByTheater, index) => (
+            <TheaterTimeTable
+              key={`${nearByTheater.type}-${nearByTheater.title}`}
+              theaterInfo={nearByTheater}
+              onSetMovies={(
+                searchedMovieCards: SearchedMovieCard[],
+              ) => handleSetMovies(searchedMovieCards, index)}
+            />
+          ))
+      }
+      </>
     );
   }
 

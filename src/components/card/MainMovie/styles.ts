@@ -42,8 +42,10 @@ export const MenuContent = styled.div`
 
 export const Title = styled.div`
   color: white;
-  font-size: 18px;
-  margin: 15px auto 3px 20px;
+  font-size: 24px;
+  font-weight: 'bold';
+  margin: auto auto auto 20px;
+  text-shadow: 1px 1px 2px gray;
 `;
 
 export const Rating = styled.div`

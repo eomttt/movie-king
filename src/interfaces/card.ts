@@ -1,15 +1,13 @@
-import { MovieType } from 'constants/movie';
+import { TheaterType } from 'constants/theater';
 
-export interface IMovieCard {
-  id: string;
+export interface BoxOfficeCard {
+  id: number;
   title: string;
   image: string;
-  rating: string;
 }
-
-export interface ISearchedMovieCard {
+export interface SearchedMovieCard {
   id: string;
-  type: MovieType;
+  type: TheaterType;
   location: string;
   image: string;
   title: string;

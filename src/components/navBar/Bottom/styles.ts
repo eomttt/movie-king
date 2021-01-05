@@ -21,7 +21,7 @@ export const Content = styled.div`
   height: 100%;
   display: flex;
   & a {
-    width: 33%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     & img {

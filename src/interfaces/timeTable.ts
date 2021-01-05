@@ -1,12 +1,11 @@
-export interface ITimeTableData {
-  timeTable: ITimeTable[];
-}
-
-export interface ITimeTable {
+export interface TimeTable {
+  image?: string;
   title: string;
-  timeInfo: ITimeInfo[];
+  timeInfo: TimeTableInfo[];
 }
 
-export interface ITimeInfo {
+interface TimeTableInfo {
   time: string;
+  seats?: string;
+  wholeSeats?: string;
 }

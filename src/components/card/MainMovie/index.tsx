@@ -1,17 +1,15 @@
-import { IMovieCard } from 'interfaces/card';
-import React from 'react';
+import { BoxOfficeCard } from 'interfaces/card';
 import * as Styles from './styles';
 
-interface IProps extends IMovieCard {
+interface IProps extends BoxOfficeCard {
   rank: number;
 }
 
-const MainMovie: React.FunctionComponent<IProps> = ({
+const MainMovie = ({
   rank,
   image,
   title,
-  rating,
-}) => (
+}: IProps) => (
   <Styles.Container>
     <Styles.Content>
       <Styles.Ranking>{rank}</Styles.Ranking>
@@ -19,7 +17,6 @@ const MainMovie: React.FunctionComponent<IProps> = ({
       <Styles.Menu>
         <Styles.MenuContent>
           <Styles.Title>{title}</Styles.Title>
-          <Styles.Rating>{`* ${rating}`}</Styles.Rating>
           <Styles.ButtonContainer>
             <div>예매하기</div>
           </Styles.ButtonContainer>

@@ -1,4 +1,4 @@
-import { IMovieCard } from 'interfaces/card';
+import { BoxOfficeCard } from 'interfaces/card';
 import { MovieApi } from 'apis/Api';
 
 interface Parameter {
@@ -6,9 +6,9 @@ interface Parameter {
   theater: string;
 }
 
-export const getBoxOffice = () => {
+export const getBoxOffice = (): Promise<BoxOfficeCard[]> => {
   try {
-    return MovieApi.get<Parameter, IMovieCard[]>({
+    return MovieApi.get<Parameter, BoxOfficeCard[]>({
       request: 'box-office',
       theater: 'cgv',
     });

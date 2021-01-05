@@ -1,4 +1,6 @@
-const datam = {
+import { TimeTable } from 'interfaces/timeTable';
+
+const datam: { timeTable: TimeTable[] } = {
   timeTable: [
     {
       title: '에이비',
