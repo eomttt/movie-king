@@ -24,9 +24,6 @@ const TheaterTimeTable = memo(({
         location: title,
         title: tableTitle,
         time: info.time,
-        // TODO:
-        // Image도 어떻게 할지 생각을 해봐야겠다.
-        // 지금 타임 테이블에 대해서는 이미지를 가지고 오지 않는데... 큰일이네
         image,
       }),
     );
@@ -44,6 +41,7 @@ const TheaterTimeTable = memo(({
 
   if (isError) {
     console.error('Get time table error');
+    onSetMovies([]);
     return null;
   }
 
