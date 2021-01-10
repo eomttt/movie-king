@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   position: relative;
   & img {
-    width: 100%;
+    width: 40%;
     display: block;
   }
 `;

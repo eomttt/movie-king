@@ -1,5 +1,5 @@
 import { getBoxOffice } from 'apis/getBoxOffice';
-import dummy from 'dummy/movieCards';
+import dummy from 'dummy/boxoffice';
 import { useMemo } from 'react';
 import { useQuery } from 'react-query';
 

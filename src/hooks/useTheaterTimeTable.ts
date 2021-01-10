@@ -1,6 +1,6 @@
 import { getTheaterTimeTable } from 'apis/getTheaterTimeTable';
 import { TheaterType } from 'constants/theater';
-import dummy from 'dummy/timetable';
+import dummy from 'dummy/theaterTimeTable';
 import { useMemo } from 'react';
 import { useQuery } from 'react-query';
 

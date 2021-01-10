@@ -9,7 +9,7 @@ interface IProps {
 const SearchedMovies = ({ movies }: IProps) => (
   <Styles.Container>
     {movies.map((movie: SearchedMovieCard, index: number) => (
-      <Styles.Content key={movie.id} index={index}>
+      <Styles.Content key={movie.id}>
         <SearchedMovie
           id={movie.id}
           time={movie.time}
