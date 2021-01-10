@@ -11,7 +11,7 @@ class Api {
       baseURL: url,
       responseType: 'json',
     });
-    this.request.defaults.headers.common['x-api-key'] = process.env.API_KEY;
+    this.request.defaults.headers.common['x-api-key'] = 'pOP8I9qLeQ6ZCzd3W7tYx5fEcaWqxjb77ZxF4YxD';
   }
 
   private handleResponse = <R>(response: AxiosResponse<R>): R | null => {

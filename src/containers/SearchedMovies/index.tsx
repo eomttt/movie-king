@@ -22,6 +22,7 @@ const SearchedMoviesContainer = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
+          console.log('Location', position);
           const { coords } = position;
           const { latitude, longitude } = coords;
           setNowPosition({
@@ -62,8 +63,7 @@ const SearchedMoviesContainer = () => {
 
   useEffect(() => {
     getLocation();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [getLocation]);
 
   useEffect(() => {
     if (nowPosition) {
