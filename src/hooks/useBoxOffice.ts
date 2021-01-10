@@ -8,7 +8,7 @@ const mock = () => dummy.boxOffice;
 export const useBoxOffice = () => {
   const {
     isLoading, isError, data,
-  } = useQuery('boxoffice', process.env.GQL_DEV === 'production' ? getBoxOffice : mock);
+  } = useQuery('boxoffice', process.env.NODE_ENV === 'production' ? getBoxOffice : mock);
 
   return useMemo(() => ({
     isLoading,
