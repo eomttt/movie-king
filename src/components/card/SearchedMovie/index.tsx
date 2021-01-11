@@ -1,6 +1,9 @@
 import { TheaterType } from 'constants/theater';
 import { SearchedMovieCard } from 'interfaces/card';
-import { useMemo } from 'react';
+import {
+  useEffect, useMemo, useRef, useState,
+} from 'react';
+import { createPortal } from 'react-dom';
 import { TheaterTypeColor } from 'styles/color';
 import * as Styles from './styles';
 
@@ -11,6 +14,7 @@ const SearchedMovie = ({
   title,
   time,
 }: SearchedMovieCard) => {
+  const iframeRef = useRef();
   const theaterType = useMemo(() => {
     if (type === TheaterType.CGV) {
       return 'CGV';
@@ -24,6 +28,8 @@ const SearchedMovie = ({
   return (
     <Styles.Container>
       <Styles.Content>
+        {/* <div dangerouslySetInnerHTML={{ __html: image }} /> */}
+        {/* <iframe src={image} title="image" ref={iframeRef} id="iframe" /> */}
         <img src={image} alt="Movie" onError={() => console.log('ERROR', title)} />
         <Styles.Menu>
           <Styles.MenuContent>
