@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not tablet Render correctly normal 1`] = `
+<div>
+  <div
+    class="css-1ctkiov-Top_Container e7nygkw0"
+  >
+    <div
+      class="css-inu4ig-Top_Content e7nygkw1"
+    >
+      <img
+        alt="Logo"
+        src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15680246797940.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
