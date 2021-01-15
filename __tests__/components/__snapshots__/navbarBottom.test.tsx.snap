@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not tablet Bottom Render correctly normal 1`] = `
+<div>
+  <div
+    class="css-nafq63-Bottom_Container eq4lxkk0"
+  >
+    <div
+      class="css-6iq7pm-Bottom_Content eq4lxkk1"
+    >
+      <img
+        alt="home"
+        src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15674930838942.svg"
+      />
+      <div>
+        홈
+      </div>
+      <img
+        alt="search"
+        src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15674928069478.svg"
+      />
+      <div>
+        검색
+      </div>
+    </div>
+  </div>
+</div>
+`;
