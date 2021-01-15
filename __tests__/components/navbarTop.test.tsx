@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import Top from 'components/navBar/Top';
 
-describe('Not tablet', () => {
+describe('Navbar top test', () => {
   it('Render correctly normal', () => {
     const top = render(
       <Top />,
