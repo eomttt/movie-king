@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Not tablet Render correctly normal 1`] = `
+exports[`Navbar top test Render correctly normal 1`] = `
 <div>
   <div
     class="css-1ctkiov-Top_Container e7nygkw0"

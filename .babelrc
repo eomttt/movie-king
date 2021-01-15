@@ -31,7 +31,8 @@
           "interfaces": "./src/interfaces",
           "dummy": "./src/dummy",
           "apis": "./src/apis",
-          "hooks": "./src/hooks"
+          "hooks": "./src/hooks",
+          "lib": "./src/lib"
         }
       }
     ],

@@ -24,7 +24,8 @@
       "dummy/*": ["dummy/*"],
       "query/*": ["query/*"],
       "apis/*": ["apis/*"],
-      "hooks/*": ["hooks/*"]
+      "hooks/*": ["hooks/*"],
+      "lib/*": ["lib/*"]
     }
   },
   "exclude": [
