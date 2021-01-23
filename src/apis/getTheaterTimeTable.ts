@@ -16,7 +16,7 @@ export const getTheaterTimeTable = (
     return MovieApi.get<Parameter, TimeTable[]>({
       request: 'timetable',
       theater: theaterType,
-      theaterLink: encodeURI(theaterLink),
+      theaterLink,
     });
   } catch (error) {
     return error;

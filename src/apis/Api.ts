@@ -5,13 +5,16 @@ const BASE_URL = 'https://45w5vsjd0b.execute-api.ap-northeast-2.amazonaws.com/v1
 class Api {
   private request: AxiosInstance;
 
-  constructor(url: string) {
+  constructor(url: string, headers?: any) {
     // axios.defaults.headers.common['x-api-key'] = key;
     this.request = axios.create({
       baseURL: url,
       responseType: 'json',
     });
-    this.request.defaults.headers.common['x-api-key'] = process.env.API_KEY;
+
+    if (headers) {
+      this.request.defaults.headers = { ...headers };
+    }
   }
 
   private handleResponse = <R>(response: AxiosResponse<R>): R | null => {
@@ -40,4 +43,6 @@ class Api {
   }
 }
 
-export const MovieApi = new Api(BASE_URL);
+export const MovieApi = new Api(BASE_URL, {
+  'x-api-key': 'pOP8I9qLeQ6ZCzd3W7tYx5fEcaWqxjb77ZxF4YxD',
+});

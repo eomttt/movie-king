@@ -1,3 +1,4 @@
+import { TheaterType } from 'constants/theater';
 import { useTheaterTimeTable } from 'hooks/useTheaterTimeTable';
 import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
@@ -13,7 +14,9 @@ const TheaterTimeTable = memo(({
   onSetMovies,
 }: TheaterTimeTableProps) => {
   const { title, type, link } = theaterInfo;
-  const { isLoading, isError, data } = useTheaterTimeTable(type, link);
+  const { isLoading, isError, data } = useTheaterTimeTable(
+    type, type === TheaterType.LOTTE ? title : link,
+  );
 
   const movies: SearchedMovieCard[] = useMemo(() => data?.flatMap((table, index) => {
     const { title: tableTitle, timeInfo, image } = table;

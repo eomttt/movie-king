@@ -1,6 +1,6 @@
 import { TheaterType } from 'constants/theater';
 import { SearchedMovieCard } from 'interfaces/card';
-import { useMemo } from 'react';
+import { useMemo, useRef } from 'react';
 import { TheaterTypeColor } from 'styles/color';
 import * as Styles from './styles';
 

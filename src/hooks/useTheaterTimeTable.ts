@@ -1,6 +1,6 @@
 import { getTheaterTimeTable } from 'apis/getTheaterTimeTable';
 import { TheaterType } from 'constants/theater';
-import dummy from 'dummy/timetable';
+import dummy from 'dummy/theaterTimeTable';
 import { useMemo } from 'react';
 import { useQuery } from 'react-query';
 
@@ -11,7 +11,7 @@ export const useTheaterTimeTable = (theaterType: TheaterType, theaterLink: strin
     isLoading, isError, data,
   } = useQuery(
     ['timetable', theaterType, theaterLink],
-    process.env.GQL_DEV === 'production' ? () => getTheaterTimeTable(theaterType, theaterLink) : mock,
+    process.env.NODE_ENV === 'production' ? () => getTheaterTimeTable(theaterType, theaterLink) : mock,
   );
 
   return useMemo(() => ({
