@@ -3,15 +3,21 @@ const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
-const isDev = process.env.WEBPACK_ENV === 'development' || process.env.WEBPACK_ENV === 'staging';
-// eslint-disable-next-line no-nested-ternary
-const dotenvPath = process.env.WEBPACK_ENV === 'development' ? '.env.dev' : process.env.WEBPACK_ENV === 'staging' ? '.env' : '.env.prod';
+const isDev = process.env.WEBPACK_ENV === 'development';
+const isStaging = process.env.WEBPACK_ENV === 'staging';
 
-console.log(process.env.WEBPACK_ENV);
+// eslint-disable-next-line no-nested-ternary
+const dotenvPath = isDev
+  ? '.env.dev'
+  : isStaging
+    ? '.env'
+    : '.env.prod';
+
+console.log(process.env.WEBPACK_ENV, dotenvPath);
 
 const config = {
-  mode: process.env.WEBPACK_ENV === 'development' ? 'development' : 'production',
-  devtool: isDev ? 'eval' : 'cheap-module-source-map',
+  mode: (isDev || isStaging) ? 'development' : 'production',
+  devtool: (isDev || isStaging) ? 'eval' : 'cheap-module-source-map',
   entry: {
     app: './src/index.tsx',
   },
