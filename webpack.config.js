@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 const config = {
   mode: process.env.NODE_ENV,
-  devtool: isDev ? 'eval' : 'source-map',
+  devtool: isDev ? 'inline-source-map' : 'cheap-module-source-map',
   entry: {
     app: './src/index.tsx',
   },
@@ -58,6 +58,11 @@ const config = {
     historyApiFallback: true,
     compress: true,
     port: 9000,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
 };
 

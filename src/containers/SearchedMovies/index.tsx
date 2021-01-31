@@ -20,6 +20,7 @@ const SearchedMoviesContainer = () => {
 
   const getLocation = useCallback(() => {
     if (navigator.geolocation) {
+      console.log('Get location');
       navigator.geolocation.getCurrentPosition(
         (position) => {
           console.log('Location', position);
