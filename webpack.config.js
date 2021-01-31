@@ -3,11 +3,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = process.env.WEBPACK_ENV === 'development';
+
+console.log(process.env.WEBPACK_ENV);
 
 const config = {
-  mode: process.env.NODE_ENV,
-  devtool: isDev ? 'inline-source-map' : 'cheap-module-source-map',
+  mode: process.env.WEBPACK_ENV,
+  devtool: isDev ? 'eval' : 'cheap-module-source-map',
   entry: {
     app: './src/index.tsx',
   },
