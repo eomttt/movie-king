@@ -1,9 +1,9 @@
 import Layout from 'components/Layout';
-import SearchedMoviesContainer from 'containers/SearchedMovies';
+import { SearchedMovies } from 'components/SearchedMovies';
 
 const Search = () => (
   <Layout>
-    <SearchedMoviesContainer />
+    <SearchedMovies />
   </Layout>
 );
 

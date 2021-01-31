@@ -7,12 +7,7 @@ import App from './App';
 
 const queryCache = new QueryCache();
 
-// TODO: Use react-query instead of apollo-boost
-// const client = new ApolloClient({
-//   uri: 'http://localhost:4000/graphql',
-// });
-
-console.log('ENV', process.env.NODE_ENV, process.env.TEST_ENV);
+console.log('ENV', process.env.NODE_ENV, process.env.API_ENV);
 
 ReactDOM.render(
   <ReactQueryCacheProvider queryCache={queryCache}>

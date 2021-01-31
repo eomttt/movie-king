@@ -1,9 +1,9 @@
 import Layout from 'components/Layout';
-import MainMoviesContainer from 'containers/MainMovies';
+import { MainMovies } from 'components/MainMovies';
 
 const Main = () => (
   <Layout>
-    <MainMoviesContainer />
+    <MainMovies />
   </Layout>
 );
 

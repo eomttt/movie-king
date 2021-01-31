@@ -3,12 +3,14 @@ const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
-const isDev = process.env.WEBPACK_ENV === 'development';
+const isDev = process.env.WEBPACK_ENV === 'development' || process.env.WEBPACK_ENV === 'staging';
+// eslint-disable-next-line no-nested-ternary
+const dotenvPath = process.env.WEBPACK_ENV === 'development' ? '.env.dev' : process.env.WEBPACK_ENV === 'staging' ? '.env' : '.env.prod';
 
 console.log(process.env.WEBPACK_ENV);
 
 const config = {
-  mode: process.env.WEBPACK_ENV,
+  mode: process.env.WEBPACK_ENV === 'development' ? 'development' : 'production',
   devtool: isDev ? 'eval' : 'cheap-module-source-map',
   entry: {
     app: './src/index.tsx',
@@ -48,7 +50,7 @@ const config = {
       sourceMap: true,
     }),
     new Dotenv({
-      path: isDev ? '.env.dev' : '.env',
+      path: dotenvPath,
     }),
   ],
   output: {

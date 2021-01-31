@@ -9,7 +9,7 @@ interface TheaterTimeTableProps {
   onSetMovies: (movieCard: SearchedMovieCard[]) => void;
 }
 
-const TheaterTimeTable = memo(({
+export const TheaterTimeTable = memo(({
   theaterInfo,
   onSetMovies,
 }: TheaterTimeTableProps) => {
@@ -50,5 +50,3 @@ const TheaterTimeTable = memo(({
 
   return <></>;
 });
-
-export default TheaterTimeTable;

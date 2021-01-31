@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env WEBPACK_ENV=development webpack-dev-server --open",
-    "start": "cross-env WEBPACK_ENV=production webpack-dev-server --open",
+    "start": "cross-env WEBPACK_ENV=staging webpack-dev-server --open",
     "build": "cross-env WEBPACK_ENV=production webpack",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "test": "jest --coverage"

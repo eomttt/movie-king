@@ -4,7 +4,7 @@ import { useMemo, useRef } from 'react';
 import { TheaterTypeColor } from 'styles/color';
 import * as Styles from './styles';
 
-const SearchedMovie = ({
+export const SearchedMovie = ({
   image,
   type,
   location,
@@ -39,5 +39,3 @@ const SearchedMovie = ({
     </Styles.Container>
   );
 };
-
-export default SearchedMovie;

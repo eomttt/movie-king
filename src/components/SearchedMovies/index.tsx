@@ -1,17 +1,18 @@
-import SearchedMovies from 'components/card/SearchedMovies';
+import { SearchedMovie } from 'components/card/SearchedMovie';
 import { Loading } from 'components/Loading';
 import { TheaterType } from 'constants/theater';
-import TheaterTimeTable from 'containers/TheaterTimeTable';
+import { TheaterTimeTable } from 'components/TheaterTimeTable';
 import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
 import { THEATERS as cgvTheaters } from 'lib/datum/theaters/cgv';
 import { THEATERS as lotteTheaters } from 'lib/datum/theaters/lotte';
 import { THEATERS as megaTheaters } from 'lib/datum/theaters/megaBox';
 import { useCallback, useEffect, useState } from 'react';
+import * as Styles from './styles';
 
 const NEARBY_KM = 3;
 
-const SearchedMoviesContainer = () => {
+export const SearchedMovies = () => {
   // Default is seoul city hall
   const [nowPosition, setNowPosition] = useState(null);
   const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>([]);
@@ -131,7 +132,20 @@ const SearchedMoviesContainer = () => {
 
   if (flatMovieCards.length > 0) {
     return (
-      <SearchedMovies movies={flatMovieCards} />
+      <Styles.Container>
+        {flatMovieCards.map((movie: SearchedMovieCard, index: number) => (
+          <Styles.Content key={movie.id}>
+            <SearchedMovie
+              id={movie.id}
+              time={movie.time}
+              image={movie.image}
+              title={movie.title}
+              location={movie.location}
+              type={movie.type}
+            />
+          </Styles.Content>
+        ))}
+      </Styles.Container>
     );
   }
 
@@ -156,5 +170,3 @@ const SearchedMoviesContainer = () => {
 
   return <Loading />;
 };
-
-export default SearchedMoviesContainer;
