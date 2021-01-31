@@ -1,19 +1,24 @@
 import { SearchedMovie } from 'components/card/SearchedMovie';
 import { Loading } from 'components/Loading';
-import { TheaterType } from 'constants/theater';
+import { SortType } from 'components/SearchedMoviesToolbar';
 import { TheaterTimeTable } from 'components/TheaterTimeTable';
+import { TheaterType } from 'constants/theater';
 import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
 import { THEATERS as cgvTheaters } from 'lib/datum/theaters/cgv';
 import { THEATERS as lotteTheaters } from 'lib/datum/theaters/lotte';
 import { THEATERS as megaTheaters } from 'lib/datum/theaters/megaBox';
-import { useCallback, useEffect, useState } from 'react';
 import { getMinutes } from 'lib/utils/common';
+import { useCallback, useEffect, useState } from 'react';
 import * as Styles from './styles';
+
+interface SearchedMoviesProps {
+  sortType: SortType;
+}
 
 const NEARBY_KM = 3;
 
-export const SearchedMovies = () => {
+export const SearchedMovies = ({ sortType }: SearchedMoviesProps) => {
   // Default is seoul city hall
   const [nowPosition, setNowPosition] = useState(null);
   const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>([]);
@@ -21,7 +26,7 @@ export const SearchedMovies = () => {
   const [flatMovieCards, setFlatMovieCards] = useState<SearchedMovieCard[]>([]);
 
   const getLocation = useCallback(() => {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.API_ENV === 'production') {
       if (navigator.geolocation) {
         console.log('Get location');
         navigator.geolocation.getCurrentPosition(
@@ -63,7 +68,9 @@ export const SearchedMovies = () => {
     [nowPosition],
   );
 
-  const handleSetMovies = useCallback((searchedMovieCards: SearchedMovieCard[], index: number) => {
+  const handleSetMovies = useCallback((
+    searchedMovieCards: SearchedMovieCard[], index: number,
+  ) => {
     if (!movies[index]) {
       const movieItem = movies.map((item) => (item ? [...item] : null));
       movieItem[index] = [...searchedMovieCards];
@@ -127,11 +134,17 @@ export const SearchedMovies = () => {
     const isAllFull = movies.every((item) => item);
     if (movies.length === nearByTheaters.length && isAllFull) {
       const flatMovies = movies.flat();
-      const sortMovies = flatMovies.sort((a, b) => getMinutes(a.time) - getMinutes(b.time));
-      console.log('Flat movies', flatMovies);
-      setFlatMovieCards(sortMovies);
+      console.log('Flat movies', flatMovies, sortType);
+      if (sortType === SortType.Time) {
+        const sortMovies = flatMovies.sort(
+          (a, b) => getMinutes(a.time) - getMinutes(b.time),
+        );
+        setFlatMovieCards(sortMovies);
+      } else {
+        setFlatMovieCards(flatMovies);
+      }
     }
-  }, [movies, nearByTheaters.length]);
+  }, [movies, nearByTheaters.length, sortType]);
 
   useEffect(() => {
     if (nearByTheaters) {

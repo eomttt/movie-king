@@ -3,6 +3,7 @@ import { TheaterType } from 'constants/theater';
 export const FontColor = {
   DEFAULT: '#000000',
   POINT: '#ffffff',
+  POINT_BLUR: 'rgba(255, 255, 255, 0.3)',
 };
 
 export const ButtonColor = {

@@ -23,7 +23,9 @@ const MyMovie = ({
   const seatText = useMemo(() => audiences.map(audience => audience.seat).join(','), [audiences]);
   const [month, day] = useMemo(() => startDate.split(':'), [startDate]);
   const isToday = useMemo(() => DateFormat.isToday(Number(month), Number(day)), [month, day]);
-  const reservationDate = useMemo(() => (isToday ? `오늘 ${startTime}` : `${startDate} ${startTime}`), [isToday, startTime, startDate]);
+  const reservationDate = useMemo(() => (
+    isToday ? `오늘 ${startTime}` : `${startDate} ${startTime}`
+  ), [isToday, startTime, startDate]);
 
   return (
     <Styles.Container>
