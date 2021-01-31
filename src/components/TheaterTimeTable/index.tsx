@@ -32,7 +32,7 @@ export const TheaterTimeTable = memo(({
         image,
       }),
     );
-  }), [index, data , title, type]);
+  }), [index, data, title, type]);
 
   useEffect(() => {
     if (onSetMovies && movies) {
