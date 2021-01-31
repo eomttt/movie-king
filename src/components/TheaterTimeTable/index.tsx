@@ -5,11 +5,13 @@ import { TheaterInfo } from 'interfaces/theater';
 import { memo, useEffect, useMemo } from 'react';
 
 interface TheaterTimeTableProps {
+  index: number;
   theaterInfo: TheaterInfo;
   onSetMovies: (movieCard: SearchedMovieCard[]) => void;
 }
 
 export const TheaterTimeTable = memo(({
+  index,
   theaterInfo,
   onSetMovies,
 }: TheaterTimeTableProps) => {
@@ -18,11 +20,11 @@ export const TheaterTimeTable = memo(({
     type, type === TheaterType.LOTTE ? title : link,
   );
 
-  const movies: SearchedMovieCard[] = useMemo(() => data?.flatMap((table, index) => {
+  const movies: SearchedMovieCard[] = useMemo(() => data?.flatMap((table, flatMapIndex) => {
     const { title: tableTitle, timeInfo, image } = table;
     return timeInfo.map(
       (info, timeIndex): SearchedMovieCard => ({
-        id: `${index}-${timeIndex}`,
+        id: `${index}-${flatMapIndex}-${timeIndex}`,
         type,
         location: title,
         title: tableTitle,
@@ -30,7 +32,7 @@ export const TheaterTimeTable = memo(({
         image,
       }),
     );
-  }), [data, title, type]);
+  }), [index, data , title, type]);
 
   useEffect(() => {
     if (onSetMovies && movies) {

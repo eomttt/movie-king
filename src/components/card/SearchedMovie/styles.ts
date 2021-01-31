@@ -9,6 +9,8 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: row;
   & img {
     width: 40%;
     display: block;
@@ -16,16 +18,14 @@ export const Content = styled.div`
 `;
 
 export const Menu = styled.div`
-  position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0;
   display: flex;
-  flex-direction: column;
 `;
 
 export const MenuContent = styled.div`
-  margin: auto auto 7px 7px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 10px;
 `;
 
 const MovieText = styled.div`
@@ -34,16 +34,26 @@ const MovieText = styled.div`
   text-shadow: 1px 1px 1px ${BackgroundColor};
 `;
 
+export const TheaterInfo = styled.div`
+  display: flex;
+  margin-bottom: 10px;
+`;
+
 export const TheaterType = styled(MovieText)`
   color: ${(props) => props.color};
 `;
 
-export const MovieLocation = styled(MovieText)``;
+export const MovieLocation = styled(MovieText)`
+  margin-left: 10px;
+  font-size: 15px;
+`;
 
 export const MovieTitle = styled(MovieText)`
-  font-size: 13px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  word-break: break-all;
 `;
 
 export const MovieTime = styled(MovieText)`
-  font-size: 16px;
+  font-size: 18px;
 `;

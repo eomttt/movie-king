@@ -8,6 +8,7 @@ import { THEATERS as cgvTheaters } from 'lib/datum/theaters/cgv';
 import { THEATERS as lotteTheaters } from 'lib/datum/theaters/lotte';
 import { THEATERS as megaTheaters } from 'lib/datum/theaters/megaBox';
 import { useCallback, useEffect, useState } from 'react';
+import { getMinutes } from 'lib/utils/common';
 import * as Styles from './styles';
 
 const NEARBY_KM = 3;
@@ -20,27 +21,34 @@ export const SearchedMovies = () => {
   const [flatMovieCards, setFlatMovieCards] = useState<SearchedMovieCard[]>([]);
 
   const getLocation = useCallback(() => {
-    if (navigator.geolocation) {
-      console.log('Get location');
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          console.log('Location', position);
-          const { coords } = position;
-          const { latitude, longitude } = coords;
-          setNowPosition({
-            lat: latitude,
-            lng: longitude,
-          });
-        },
-        (error) => {
-          if (error.code === 1) {
-            alert('위치 정보를 가져 올 수 있도록 허용해주세요.');
-          }
-          alert(error.message);
-        },
-      );
+    if (process.env.NODE_ENV === 'production') {
+      if (navigator.geolocation) {
+        console.log('Get location');
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            console.log('Location', position);
+            const { coords } = position;
+            const { latitude, longitude } = coords;
+            setNowPosition({
+              lat: latitude,
+              lng: longitude,
+            });
+          },
+          (error) => {
+            if (error.code === 1) {
+              alert('위치 정보를 가져 올 수 있도록 허용해주세요.');
+            }
+            alert(error.message);
+          },
+        );
+      } else {
+        alert('위치 정보를 지원하지 않습니다.');
+      }
     } else {
-      alert('위치 정보를 지원하지 않습니다.');
+      setNowPosition({
+        lat: 37.4814945,
+        lng: 127.0048705,
+      });
     }
   }, []);
 
@@ -116,10 +124,12 @@ export const SearchedMovies = () => {
   }, [arePointsNear, nowPosition]);
 
   useEffect(() => {
-    console.log('Set movies', movies);
     const isAllFull = movies.every((item) => item);
     if (movies.length === nearByTheaters.length && isAllFull) {
-      setFlatMovieCards(movies.flatMap((item) => item));
+      const flatMovies = movies.flat();
+      const sortMovies = flatMovies.sort((a, b) => getMinutes(a.time) - getMinutes(b.time));
+      console.log('Flat movies', flatMovies);
+      setFlatMovieCards(sortMovies);
     }
   }, [movies, nearByTheaters.length]);
 
@@ -156,6 +166,7 @@ export const SearchedMovies = () => {
         {
           nearByTheaters.map((nearByTheater, index) => (
             <TheaterTimeTable
+              index={index}
               key={`${nearByTheater.type}-${nearByTheater.title}`}
               theaterInfo={nearByTheater}
               onSetMovies={(

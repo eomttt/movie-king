@@ -27,10 +27,12 @@ export const SearchedMovie = ({
         <img src={image} alt="Movie" onError={() => console.log('ERROR', title)} />
         <Styles.Menu>
           <Styles.MenuContent>
-            <Styles.TheaterType color={TheaterTypeColor[type]}>
-              {theaterType}
-            </Styles.TheaterType>
-            <Styles.MovieLocation>{location}</Styles.MovieLocation>
+            <Styles.TheaterInfo>
+              <Styles.TheaterType color={TheaterTypeColor[type]}>
+                {theaterType}
+              </Styles.TheaterType>
+              <Styles.MovieLocation>{location}</Styles.MovieLocation>
+            </Styles.TheaterInfo>
             <Styles.MovieTitle>{title}</Styles.MovieTitle>
             <Styles.MovieTime>{time}</Styles.MovieTime>
           </Styles.MenuContent>
