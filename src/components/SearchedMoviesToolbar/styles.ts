@@ -20,5 +20,6 @@ export const Menu = styled.div<MenuProps>`
   color: ${(props) => (props.isSelected
     ? FontColor.POINT
     : FontColor.POINT_BLUR)};
-  margin-left: ${(props) => (props.isRight ? '10px' : '0px')}
+  margin-left: ${(props) => (props.isRight ? '10px' : '0px')};
+  cursor: pointer;
 `;

@@ -7,7 +7,7 @@ import { memo, useEffect, useMemo } from 'react';
 interface TheaterTimeTableProps {
   index: number;
   theaterInfo: TheaterInfo;
-  onSetMovies: (movieCard: SearchedMovieCard[]) => void;
+  onSetMovies: (movieCard: SearchedMovieCard[], index?: number) => void;
 }
 
 export const TheaterTimeTable = memo(({
@@ -36,8 +36,9 @@ export const TheaterTimeTable = memo(({
 
   useEffect(() => {
     if (onSetMovies && movies) {
-      onSetMovies(movies);
+      onSetMovies(movies, index);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movies, onSetMovies]);
 
   if (isLoading) {
@@ -46,7 +47,7 @@ export const TheaterTimeTable = memo(({
 
   if (isError) {
     console.error('Get time table error');
-    onSetMovies([]);
+    onSetMovies([], undefined);
     return null;
   }
 

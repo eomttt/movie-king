@@ -7,13 +7,12 @@ const isDev = process.env.WEBPACK_ENV === 'development';
 const isStaging = process.env.WEBPACK_ENV === 'staging';
 
 // eslint-disable-next-line no-nested-ternary
-const dotenvPath = isDev
-  ? '.env.dev'
-  : isStaging
-    ? '.env'
-    : '.env.prod';
-
-console.log(process.env.WEBPACK_ENV, dotenvPath);
+let dotenvPath = '.env.prod';
+if (isDev) {
+  dotenvPath = '.env.dev';
+} else if (isStaging) {
+  dotenvPath = '.env';
+}
 
 const config = {
   mode: (isDev || isStaging) ? 'development' : 'production',
