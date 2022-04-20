@@ -8,16 +8,17 @@ import { useCallback, useEffect, useState } from 'react';
 
 const NEARBY_KM = 3;
 
-export const useNearbyTheaters = () => {
+export const useGetNearbyTheaters = () => {
   const position = useGetLocation();
-  const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>([]);
+  const [nearByTheaters, setNearByTheaters] = useState<TheaterInfo[]>();
 
   const arePointsNear = useCallback(
-    (checkPoint) => {
+    checkPoint => {
       const ky = 40000 / 360;
       const kx = Math.cos((Math.PI * position.lat) / 180.0) * ky;
       const dx = Math.abs(position.lng - checkPoint.lng) * kx;
       const dy = Math.abs(position.lat - checkPoint.lat) * ky;
+
       return Math.sqrt(dx * dx + dy * dy) <= NEARBY_KM;
     },
     [position],
@@ -25,51 +26,48 @@ export const useNearbyTheaters = () => {
 
   useEffect(() => {
     if (position) {
-      const theaterList = [];
-      // eslint-disable-next-line no-restricted-syntax
-      for (const theaters of cgvTheaters) {
-        // eslint-disable-next-line no-restricted-syntax
-        for (const theater of theaters) {
-          const { location } = theater;
-          if (arePointsNear(location)) {
+      let id = 1;
+      const theaterList: TheaterInfo[] = [];
+
+      cgvTheaters.forEach(theaters => {
+        theaters.forEach(theater => {
+          if (arePointsNear(theater.location)) {
             theaterList.push({
               ...theater,
+              id,
               type: TheaterType.CGV,
             });
+            id += 1;
           }
-        }
-      }
-
-      // eslint-disable-next-line no-restricted-syntax
-      for (const theaters of lotteTheaters) {
-        // eslint-disable-next-line no-restricted-syntax
-        for (const theater of theaters) {
-          const { location } = theater;
-          if (arePointsNear(location)) {
+        });
+      });
+      lotteTheaters.forEach(theaters => {
+        theaters.forEach(theater => {
+          if (arePointsNear(theater.location)) {
             theaterList.push({
               ...theater,
+              id,
               type: TheaterType.LOTTE,
             });
+            id += 1;
           }
-        }
-      }
-
-      // eslint-disable-next-line no-restricted-syntax
-      for (const theaters of megaTheaters) {
-        // eslint-disable-next-line no-restricted-syntax
-        for (const theater of theaters) {
-          const { location } = theater;
-          if (arePointsNear(location)) {
+        });
+      });
+      megaTheaters.forEach(theaters => {
+        theaters.forEach(theater => {
+          if (arePointsNear(theater.location)) {
             theaterList.push({
               ...theater,
+              id,
               type: TheaterType.MEGABOX,
             });
+            id += 1;
           }
-        }
-      }
+        });
+      });
+
       setNearByTheaters(theaterList);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [arePointsNear, position]);
 
   return nearByTheaters;

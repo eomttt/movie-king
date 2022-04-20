@@ -11,16 +11,8 @@ export const Container = styled.div<ContainerProps>`
   height: ${props => props.height}px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
 `;
-
-export const Icon = styled.div``;

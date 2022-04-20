@@ -8,7 +8,7 @@ export const useGetLocation = () => {
       if (navigator.geolocation) {
         console.log('Get location');
         navigator.geolocation.getCurrentPosition(
-          (position) => {
+          position => {
             console.log('Location', position);
             const { coords } = position;
             const { latitude, longitude } = coords;
@@ -17,7 +17,7 @@ export const useGetLocation = () => {
               lng: longitude,
             });
           },
-          (error) => {
+          error => {
             if (error.code === 1) {
               alert('위치 정보를 가져 올 수 있도록 허용해주세요.');
             }
@@ -28,7 +28,7 @@ export const useGetLocation = () => {
         alert('위치 정보를 지원하지 않습니다.');
       }
     } else {
-      // Defulat seoul city hall
+      // Default Seoul city hall
       setNowPosition({
         lat: 37.4814945,
         lng: 127.0048705,

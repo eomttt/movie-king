@@ -12,15 +12,22 @@ export const MainMovies = () => {
 
   useEffect(() => {
     if (data) {
-      setMovies(data.map((card, index) => ({
-        ...card,
-        id: index,
-      })));
+      setMovies(
+        data.map((card, index) => ({
+          ...card,
+          id: index,
+        })),
+      );
     }
   }, [data]);
 
-  if (isLoading) return <Loading />;
-  if (isError) return <Error />;
+  if (isLoading) {
+    return <Loading>잠시만 기다려주세요.무</Loading>;
+  }
+  if (isError) {
+    return <Error />;
+  }
+
   return (
     <Styles.Container>
       {movies.map((movie: BoxOfficeCard, index: number) => (

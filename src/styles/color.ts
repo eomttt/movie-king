@@ -7,6 +7,7 @@ export const FontColor = {
 };
 
 export const ButtonColor = {
+  CANCEL_GET_TIMETABLE: '#e5c05c',
   RESERVATION: '#e5c05c',
 };
 

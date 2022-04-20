@@ -6,17 +6,20 @@ import { useQuery } from 'react-query';
 
 const mock = () => dummy.timeTable;
 
-export const useTheaterTimeTable = (theaterType: TheaterType, theaterLink: string) => {
-  const {
-    isLoading, isError, data,
-  } = useQuery(
+export const useGetTheaterTimeTable = (theaterType: TheaterType, theaterLink: string) => {
+  const { isLoading, isError, data } = useQuery(
     ['timetable', theaterType, theaterLink],
-    process.env.API_ENV === 'production' ? () => getTheaterTimeTable(theaterType, theaterLink) : mock,
+    process.env.API_ENV === 'production'
+      ? () => getTheaterTimeTable(theaterType, theaterLink)
+      : mock,
   );
 
-  return useMemo(() => ({
-    isLoading,
-    isError,
-    data,
-  }), [data, isLoading, isError]);
+  return useMemo(
+    () => ({
+      isLoading,
+      isError,
+      data,
+    }),
+    [data, isLoading, isError],
+  );
 };
