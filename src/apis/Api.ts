@@ -1,7 +1,6 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 
-const BASE_URL =
-  'https://45w5vsjd0b.execute-api.ap-northeast-2.amazonaws.com/v1/movieCrawling';
+const BASE_URL = 'https://45w5vsjd0b.execute-api.ap-northeast-2.amazonaws.com/v1/movieCrawling';
 
 class Api {
   private request: AxiosInstance;
