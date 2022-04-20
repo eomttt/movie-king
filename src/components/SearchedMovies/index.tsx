@@ -2,6 +2,7 @@ import { SearchedMovie } from 'components/card/SearchedMovie';
 import { Loading } from 'components/Loading';
 import { SortType } from 'components/SearchedMoviesToolbar';
 import { TheaterTimeTable } from 'components/TheaterTimeTable';
+import { TheaterType } from 'constants/theater';
 import { useNearbyTheaters } from 'hooks/useNearbyTheaters';
 import { useSetFlatMovies } from 'hooks/useSetFlatMovies';
 import { SearchedMovieCard } from 'interfaces/card';
@@ -22,18 +23,20 @@ export const SearchedMovies = ({ sortType }: SearchedMoviesProps) => {
 
   useEffect(() => {
     if (sortType === SortType.Time) {
-      const sortMovies = flatMovieCards.sort(
-        (a, b) => getMinutes(a.time) - getMinutes(b.time),
+      setMovieList(
+        flatMovieCards.sort((a, b) => getMinutes(a.time) - getMinutes(b.time)),
       );
-      setMovieList(sortMovies);
       return;
     }
 
     if (sortType === SortType.Theater) {
-      // const sortMovies = flatMovieCards.sort(
-      //   (a, b) => getMinutes(a.time) - getMinutes(b.time),
-      // );
-      setMovieList(flatMovieCards);
+      const megaMovieCards = flatMovieCards
+        .filter(flatMovieCard => flatMovieCard.type === TheaterType.MEGABOX)
+        .sort((a, b) => getMinutes(a.time) - getMinutes(b.time));
+      const cvgMovieCards = flatMovieCards
+        .filter(flatMovieCard => flatMovieCard.type === TheaterType.CGV)
+        .sort((a, b) => getMinutes(a.time) - getMinutes(b.time));
+      setMovieList([...cvgMovieCards, ...megaMovieCards]);
     }
   }, [flatMovieCards, sortType]);
 
@@ -44,15 +47,16 @@ export const SearchedMovies = ({ sortType }: SearchedMoviesProps) => {
     }
   }, [nearByTheaters]);
 
-  const handleSetMovies = useCallback((
-    searchedMovieCards: SearchedMovieCard[], index?: number,
-  ) => {
-    if (!movies[index]) {
-      const movieItem = movies.map((item) => (item ? [...item] : null));
-      movieItem[index] = [...searchedMovieCards];
-      setMovies(movieItem);
-    }
-  }, [movies]);
+  const handleSetMovies = useCallback(
+    (searchedMovieCards: SearchedMovieCard[], index?: number) => {
+      if (!movies[index]) {
+        const movieItem = movies.map(item => (item ? [...item] : null));
+        movieItem[index] = [...searchedMovieCards];
+        setMovies(movieItem);
+      }
+    },
+    [movies],
+  );
 
   if (flatMovieCards.length > 0) {
     return (
@@ -77,16 +81,14 @@ export const SearchedMovies = ({ sortType }: SearchedMoviesProps) => {
     return (
       <>
         <Loading />
-        {
-          nearByTheaters.map((nearByTheater, index) => (
-            <TheaterTimeTable
-              index={index}
-              key={`${nearByTheater.type}-${nearByTheater.title}`}
-              theaterInfo={nearByTheater}
-              onSetMovies={handleSetMovies}
-            />
-          ))
-      }
+        {nearByTheaters.map((nearByTheater, index) => (
+          <TheaterTimeTable
+            index={index}
+            key={`${nearByTheater.type}-${nearByTheater.title}`}
+            theaterInfo={nearByTheater}
+            onSetMovies={handleSetMovies}
+          />
+        ))}
       </>
     );
   }

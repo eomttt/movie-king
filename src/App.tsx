@@ -10,7 +10,28 @@ const App = () => (
       styles={css`
         body {
           background-color: ${BackgroundColor} !important;
-          margin: 0 !important
+          margin: 0 !important;
+          font-family: 'Roboto', sans-serif;
+        }
+
+        button {
+          cursor: pointer;
+          color: inherit;
+          margin: 0;
+          padding: 0;
+          border: none;
+          background: none;
+          outline: none;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        * {
+          box-sizing: border-box;
         }
       `}
     />

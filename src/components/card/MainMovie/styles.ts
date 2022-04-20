@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { ButtonColor } from 'styles/color';
-import { defaultBorder } from 'styles/common';
+import { ButtonColor, FontColor } from 'styles/color';
+import { defaultBorder, getTextLineStyle } from 'styles/common';
 
 export const Container = styled.div`
   border-radius: ${defaultBorder};
@@ -17,7 +17,7 @@ export const Content = styled.div`
 
 export const Ranking = styled.div`
   font-size: 55px;
-  color: white;
+  color: ${FontColor.POINT};
   text-shadow: 1px 1px 1px gray;
   position: absolute;
   top: 10px;
@@ -36,36 +36,36 @@ export const MenuContent = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   position: relative;
 `;
 
-export const Title = styled.div`
-  color: white;
+export const Title = styled.p`
+  color: ${FontColor.POINT};
   font-size: 24px;
-  font-weight: 'bold';
+  font-weight: bold;
   margin: auto auto auto 20px;
   text-shadow: 1px 1px 2px gray;
+  margin-left: 10px;
+  ${getTextLineStyle(1)}
 `;
 
 export const Rating = styled.div`
-  color: white;
+  color: ${FontColor.POINT};
   opacity: 0.6;
   font-size: 14px;
   margin: 0 auto auto 20px;
 `;
 
-export const ButtonContainer = styled.div`
-  position: absolute;
+export const ButtonContainer = styled.button`
+  cursor: pointer;
   background-color: ${ButtonColor.RESERVATION};
   display: flex;
   width: 77px;
   height: 30px;
-  top: 50%;
-  transform: translateY(-50%);
   border-radius: ${defaultBorder};
-  right: 20px;
-  & div {
+  margin: 0 10px 0 5px;
+  & > p {
     width: 100%;
     text-align: center;
     margin-top: 7px;

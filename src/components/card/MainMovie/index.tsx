@@ -5,11 +5,7 @@ interface IProps extends BoxOfficeCard {
   rank: number;
 }
 
-const MainMovie = ({
-  rank,
-  image,
-  title,
-}: IProps) => (
+const MainMovie = ({ rank, image, title }: IProps) => (
   <Styles.Container>
     <Styles.Content>
       <Styles.Ranking>{rank}</Styles.Ranking>
@@ -17,9 +13,11 @@ const MainMovie = ({
       <Styles.Menu>
         <Styles.MenuContent>
           <Styles.Title>{title}</Styles.Title>
-          <Styles.ButtonContainer>
-            <div>예매하기</div>
-          </Styles.ButtonContainer>
+          <a href="http://www.cgv.co.kr/movies/" target="_blank" rel="noreferrer">
+            <Styles.ButtonContainer>
+              <p>예매하기</p>
+            </Styles.ButtonContainer>
+          </a>
         </Styles.MenuContent>
       </Styles.Menu>
     </Styles.Content>
