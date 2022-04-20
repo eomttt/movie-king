@@ -24,7 +24,7 @@ jobs:
         run: yarn install
 
       - name: Build                   # React Build
-        run: yarn run build
+        run: yarn run build-dev
 
       - name: Deploy                  # S3에 배포하기
         env:

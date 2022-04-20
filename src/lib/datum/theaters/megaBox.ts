@@ -11,7 +11,7 @@ export const THEATERS = [
     },
     {
       title: '강남대로(씨티)',
-      link: '/theater/time?brchNo=1359',
+      link: '/theater/time?brchNo=0023',
       location: {
         lat: 37.5003493,
         lng: 127.0270222,

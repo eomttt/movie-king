@@ -4,9 +4,10 @@
   "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
-    "start": "cross-env NODE_ENV=production webpack-dev-server --mode production --open",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env WEBPACK_ENV=development webpack-dev-server --open",
+    "dev-prod-api": "cross-env WEBPACK_ENV=staging webpack-dev-server --open",
+    "build-dev": "cross-env WEBPACK_ENV=development webpack",
+    "build-prod": "cross-env WEBPACK_ENV=production webpack",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "test": "jest --coverage"
   },
@@ -19,7 +20,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "apollo-boost": "^0.4.7",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "cross-env": "^7.0.2",
     "emotion": "^10.0.27",
     "graphql": "^15.0.0",

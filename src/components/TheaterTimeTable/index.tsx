@@ -5,11 +5,13 @@ import { TheaterInfo } from 'interfaces/theater';
 import { memo, useEffect, useMemo } from 'react';
 
 interface TheaterTimeTableProps {
+  index: number;
   theaterInfo: TheaterInfo;
-  onSetMovies: (movieCard: SearchedMovieCard[]) => void;
+  onSetMovies: (movieCard: SearchedMovieCard[], index?: number) => void;
 }
 
-const TheaterTimeTable = memo(({
+export const TheaterTimeTable = memo(({
+  index,
   theaterInfo,
   onSetMovies,
 }: TheaterTimeTableProps) => {
@@ -18,11 +20,11 @@ const TheaterTimeTable = memo(({
     type, type === TheaterType.LOTTE ? title : link,
   );
 
-  const movies: SearchedMovieCard[] = useMemo(() => data?.flatMap((table, index) => {
+  const movies: SearchedMovieCard[] = useMemo(() => data?.flatMap((table, flatMapIndex) => {
     const { title: tableTitle, timeInfo, image } = table;
     return timeInfo.map(
       (info, timeIndex): SearchedMovieCard => ({
-        id: `${index}-${timeIndex}`,
+        id: `${index}-${flatMapIndex}-${timeIndex}`,
         type,
         location: title,
         title: tableTitle,
@@ -30,12 +32,13 @@ const TheaterTimeTable = memo(({
         image,
       }),
     );
-  }), [data, title, type]);
+  }), [index, data, title, type]);
 
   useEffect(() => {
     if (onSetMovies && movies) {
-      onSetMovies(movies);
+      onSetMovies(movies, index);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movies, onSetMovies]);
 
   if (isLoading) {
@@ -44,11 +47,9 @@ const TheaterTimeTable = memo(({
 
   if (isError) {
     console.error('Get time table error');
-    onSetMovies([]);
+    onSetMovies([], undefined);
     return null;
   }
 
   return <></>;
 });
-
-export default TheaterTimeTable;
