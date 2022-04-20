@@ -1,6 +1,8 @@
 /* eslint-disable implicit-arrow-linebreak */
 import { TheaterInfo } from 'interfaces/theater';
-import { createRef, RefObject, useCallback, useMemo, useRef } from 'react';
+import {
+  createRef, RefObject, useCallback, useMemo, useRef,
+} from 'react';
 import * as Styles from './styles';
 
 interface SearchedMoviesToolbarProps {
@@ -55,7 +57,8 @@ export const SearchedMoviesToolbar = ({
             ref={itemRefsMap[nearbyTheater.id]}
             key={nearbyTheater.id}
             isSelected={nearbyTheater.id === selectedId}
-            onClick={() => handleClickItem(nearbyTheater.id)}>
+            onClick={() => handleClickItem(nearbyTheater.id)}
+          >
             {`${nearbyTheater.type.toUpperCase()} ${nearbyTheater.title}`}
           </Styles.Menu>
         ))}
