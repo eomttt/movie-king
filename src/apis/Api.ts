@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 
-const BASE_URL = 'https://45w5vsjd0b.execute-api.ap-northeast-2.amazonaws.com/v1/movieCrawling';
+const BASE_URL = 'https://kb26nrwva5.execute-api.ap-northeast-2.amazonaws.com/dev/movie-crawl';
 
 class Api {
   private request: AxiosInstance;
@@ -43,6 +43,4 @@ class Api {
   }
 }
 
-export const MovieApi = new Api(BASE_URL, {
-  'x-api-key': 'pOP8I9qLeQ6ZCzd3W7tYx5fEcaWqxjb77ZxF4YxD',
-});
+export const MovieApi = new Api(BASE_URL);

@@ -22,7 +22,7 @@ export const MainMovies = () => {
   }, [data]);
 
   if (isLoading) {
-    return <Loading>잠시만 기다려주세요.무</Loading>;
+    return <Loading>박스오피스 가져오는 중...</Loading>;
   }
   if (isError) {
     return <Error />;
