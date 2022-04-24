@@ -2,12 +2,12 @@ import { SearchedMovie } from 'components/card/SearchedMovie';
 import { Empty } from 'components/Empty';
 import { Error } from 'components/Error';
 import { Loading } from 'components/Loading';
-import { TheaterType } from 'constants/theater';
+import { TheaterType, TheaterUrl } from 'constants/theater';
 import { useGetTheaterTimeTable } from 'hooks/useTheaterTimeTable';
 import { SearchedMovieCard } from 'interfaces/card';
 import { TheaterInfo } from 'interfaces/theater';
 import { getMinutes } from 'lib/utils/common';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import * as Styles from './styles';
 
 interface SearchedMoviesProps {
@@ -19,6 +19,13 @@ export const SearchedMovies = ({ nearbyTheater }: SearchedMoviesProps) => {
     nearbyTheater.type,
     nearbyTheater.type === TheaterType.LOTTE ? nearbyTheater.title : nearbyTheater.link,
   );
+
+  const handleOpenReservePage = useCallback(() => {
+    window.open(
+      `${TheaterUrl[nearbyTheater.type]}/${nearbyTheater.link}`,
+      '_blank', // <- This is what makes it open in a new window.
+    );
+  }, [nearbyTheater.link, nearbyTheater.type]);
 
   const movieCards: SearchedMovieCard[] = useMemo(
     () =>
@@ -54,7 +61,7 @@ export const SearchedMovies = ({ nearbyTheater }: SearchedMoviesProps) => {
   }
 
   return (
-    <Styles.Container>
+    <Styles.Container onClick={handleOpenReservePage}>
       {movieCards.map((movie: SearchedMovieCard, index: number) => (
         <Styles.Content key={movie.id}>
           <SearchedMovie
